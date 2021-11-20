@@ -1,0 +1,126 @@
+@use "../../foundation/variable" as v;
+
+.c-hamburger {
+  position: fixed;
+  display: inline;
+  width: v.$size--hamburger-container;
+  height: v.$size--hamburger-container;
+  user-select: none;
+  transition: transform 0.75s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+  
+  background: rgba(0,0,0, 0.5);
+  border-bottom-left-radius: 100%;
+  top: -2px;
+  right: 0;
+
+  z-index: 1000;
+
+  span {
+    position: absolute;
+    background-color: #fff;
+    transition: all 0.3s linear;
+    border-radius: 4px;
+    width: 30px;
+    height: 3px;
+    right: 10px;
+    z-index: 2000;
+  }
+
+  .line-top {
+    top: 16px;
+  }
+
+  .line-middle {
+    top: 26px;
+  }
+
+  .line-bottom {
+    top: 36px;
+  }
+}
+
+
+body.is-open {
+  // position: fixed;
+  .p-header,
+  .p-header--back {
+    transform: translateY(-250px);
+  }
+  
+  .c-nav {
+    width: 100%;
+    top: 300px;
+    z-index: 950;
+
+    li {
+      right: -10%;
+      transform: rotate(360deg);
+    }
+  }
+}
+
+
+
+.c-hamburger.is-open {
+  span {
+    background-color: #fff;
+    box-shadow: 1px 1px 5px 1px #fff;
+    width: 40px;
+    height: 5px;
+    top: 25px;
+    right: 0;
+  }
+  .line-top {
+    animation: line-top .6s linear forwards;
+  }
+  
+  .line-middle {
+    right: 110vw;
+    box-shadow: 20px 2px 8px 3px #fff;
+  }
+  
+  .line-bottom {
+    animation: line-bottom .6s linear forwards;
+  }
+
+  & ~ .c-overlay {
+    will-change: transform;
+    transform: scale(80);
+    border-right: none;
+    border-bottom: none;
+    top: 22px;
+  }
+}
+
+@keyframes line-top {
+  0% {
+    background-color: v.$color--yellow;
+  }
+  40% {
+    box-shadow: 1px 1px 4px 4px v.$color--yellow;
+    width: 100px;
+    height: 10px;
+    top: 50px;
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+
+@keyframes line-bottom {
+  0% {
+    background-color: v.$color--yellow;
+  }
+  40% {
+    box-shadow: 1px 1px 4px 4px v.$color--yellow;
+    width: 100px;
+    height: 10px;
+    top: 50px;
+    transform: rotate(310deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}

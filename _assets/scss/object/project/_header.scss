@@ -1,0 +1,138 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+// *
+// トップ画面のp-header
+// *
+.p-header {
+  padding: 10px;
+  transition: all .5s ease-out;
+
+  .c-header-ttl {
+    display: none;
+
+    &--top {
+      visibility: hidden;
+    }
+  }
+
+  .c-nav a {
+    font-size: v.$font-size--hamburger-nav;
+
+    @include m.breakpoint( moon-mini ) {
+      font-size: v.$font-size--header-nav;
+      padding: 0;
+    }
+  }
+
+  &.is-fade {
+    @include m.breakpoint( moon-mini ) {
+      opacity: 0;
+      padding: 0;
+      transition: all 1s ease-out;
+    }
+  }
+
+  #marker {
+    visibility: hidden;
+  }
+}
+
+// *
+// スクロール途中からp-header--back
+// *
+.p-header--back {
+  background:rgba(#333, .5);
+  margin-top: 5px;
+  padding: 0 10px;
+  border-radius: 10px;
+  transition: all .5s ease-out;
+  
+  @include m.breakpoint( moon-mini ) {
+    margin-top: 10px;
+    padding: 0 20px;
+  }
+
+  .c-header-ttl {
+    display: none;
+
+    &--top {
+      font-size: v.$font-size--header-back--ttl;
+      visibility: visible;
+      white-space: nowrap;
+    }
+  }
+
+  a {
+    font-size: v.$font-size--hamburger-nav;
+    border-radius: 5px;
+    
+    @include m.breakpoint( moon-mini ) {
+      font-size: v.$font-size--header-nav-back;
+      backdrop-filter: blur(15px);
+    }
+  }
+
+  .cnav li {
+    @include m.breakpoint( moon-mini ) {
+      padding-left: 20px;
+    }
+  }
+
+  .c-bubbly-button--white:hover {
+    color: #fff;
+  }
+}
+
+
+
+
+
+
+/*========= UpMove/DownMoveを使いたい場合 ===============*/
+/*上に上がる動き*/
+// .js-header.UpMove{
+// 	position: fixed;
+// 	width:100%;
+// 	// animation: UpAnime 0.5s forwards;
+//   height: 70px;
+//   background: transparent;
+// }
+
+
+// .js-header.UpMove + .DownMove {
+//   background: none;
+// }
+
+// /*下に下がる動き*/
+// .js-header.DownMove{
+// 	position: fixed;
+//   opacity: 1;
+// 	width:100%;
+// 	// animation: DownAnime 1s forwards;
+//   background:rgba(#333, .5);
+// }
+
+// @keyframes UpAnime{
+//   from {
+//   opacity: 1;
+// 	transform: translateY(0);
+//   }
+//   to {
+//   opacity: 0;
+// 	transform: translateY(-100px);
+//   }
+// }
+
+// @keyframes DownAnime{
+//   from {
+//     opacity: 0;
+//     transform: translateY(-100px);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+

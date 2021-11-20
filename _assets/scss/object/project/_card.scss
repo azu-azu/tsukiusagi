@@ -1,0 +1,91 @@
+@use "../../foundation/variable" as v;
+
+.p-card {
+  position: relative;
+  width: 250px;
+  border-radius: 12px;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  overflow: hidden;
+  
+  &__inner {
+    background-color: #fff;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+    opacity: 0;
+  }
+
+  &__header {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+  }
+
+  &__info {
+    z-index: 2;
+    background-color: #fff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 24px 24px 24px;
+  }
+}
+
+
+// ホバー時
+.p-card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+  transform: scale(1.10, 1.10);
+
+  & .c-card-img__hover {
+    height: 100%;
+    opacity: 0.3;
+  }
+  & .p-card-info {
+    background-color: transparent;
+    position: relative;
+  }
+  & .p-card__header {
+    opacity: 1;
+  }
+  .c-site-desc {
+    display: block;
+  }
+}
+
+
+.show {
+  &.p-card__inner {
+    
+    &:nth-child(1) {
+      // animation: show .5s both;//早いv
+      animation: show 1s both;//遅いv
+    }
+    &:nth-child(2) {
+      // animation: show .5s both;//早いv
+      animation: show 1s both;//遅いv
+    }
+    &:nth-child(3) {
+      // animation: show .5s both;//早いv
+      animation: show 1s both;//遅いv
+    }
+
+    // @for $i from 1 to 4 {
+    //   &:nth-child(#{$i}) {
+    //     animation-delay: 2s * $i ;
+    //   }
+    // }
+  }
+}
+
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  99%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

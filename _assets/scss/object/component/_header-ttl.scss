@@ -1,0 +1,8 @@
+@use "../../foundation/variable" as v;
+
+.c-header-ttl,
+.c-header-ttl--top {
+  font-weight: v.$font-weight--normal;
+  color: #fff;
+  cursor: pointer;
+}

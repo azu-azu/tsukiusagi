@@ -1,0 +1,107 @@
+// *
+// セクションの余白
+// *
+$gap--sec-top: 100px;
+$gap--sec-bottom: 300px;
+
+
+// *
+// フォントサイズ
+// *
+// ナビゲーション
+$font-size--header-nav: 1.8rem; // ナビゲーション:first-view
+$font-size--header-nav-back: 1.6rem; // ナビゲーション:back
+$font-size--header-back--ttl: 1.5rem; // ヘッダータイトル:back
+$font-size--hamburger-nav: 2.5rem; // ハンバーガーメニューのとき 
+
+$font-size--moon--pc: 2.5rem; // 月の中のテキスト
+$font-size--firstview--pc: 1.8rem; // ファーストビューのテキスト
+$font-size--firstview--small--pc: 1.5rem; // ファーストビューのテキスト
+
+
+// *
+// フォントウェイト
+// *
+$font-weight--normal: 100;
+$font-weight--ttl: 300;
+$font-weight--wide: 400;
+$font-weight--light: 300;
+$font-weight--regular: 400;
+
+
+// *
+// ラインハイト
+// *
+$line-height--normal: 1.5;
+$line-height--middle: 1.8;
+$line-height--wide: 2;
+$line-height--very-wide: 3;
+
+
+// *
+// カラー設定
+// *
+// デフォルト
+$color--yellow: rgb(255, 255, 0);
+$color--green: #90feb5;
+$color--fuschia: rgb(103, 12, 103);
+$color--white--opacity50: rgba(255, 255, 255, 0.5);
+$color--white--opacity20: rgba(255, 255, 255, 0.2);
+
+// 月
+$color--crater-waning: rgba(255, 140, 140, 0.5);
+$color--moon-main: rgb(255, 255, 101);
+$color--moon-waning-shadow: $color--yellow;
+$color--moon-waning: rgba(102, 0, 102, 0.5);
+$color--moon-shadow-start: rgba(255, 255, 1, 0.5);
+$color--moon-shadow-middle: rgba(255, 140, 140, 0.5);
+
+// 泡ボタン
+$color--bubbly-btn-default: #fff;
+$color--bubbly-btn-pink: $color--fuschia;
+$color--bubbly-btn-yellow: $color--yellow;
+$color--bubbly-btn-text: #000;
+
+// swiperボタン
+$color--profile-swiper-btn: #a3519b;
+
+// ホバーのマーカー
+$color--hover-marker--white: rgba(#fff, .2);
+$color--hover-marker--yellow: rgba($color--yellow, .2);
+
+
+
+// *
+// サイズ
+// *
+// 月サイズ
+$size--moon-mini: 35vmin;
+$size--moon-big: 80vw;
+$position--moon-mini-top: 15vmin;
+$position--moon-big-top: 15vmin;
+
+// ハンバーガー
+$size--hamburger-container: 60px;// ボタン全体
+$position--hamburger-nav-top: 350px; //メニューのトップ位置
+$gap--hamburger-nav: 80px;//メニューの縦gap
+
+// $height--swiper: 240px;
+$width--profile-swiper: min(80vw, 420px);
+$height--profile-swiper: min(43vmin, 232px);// swiper（プロフィール）の高さ
+
+
+// *
+// ボックスシャドウ
+// *
+$shadow--bg-square-main: 0 25px 45px rgba($color--yellow, 0.1);
+$shadow--bg-square-sub: 0 25px 45px rgba(#f00, 0.1);
+
+
+
+// *
+// tooltip
+// *
+// $back-color: #fff;
+// $action-color: $color--green;
+// $dark-blue: #222;
+// $tooltip-color: rgba($color--green, 0.9);

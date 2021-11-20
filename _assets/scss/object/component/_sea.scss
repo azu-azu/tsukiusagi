@@ -1,0 +1,12 @@
+.c-sea {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	top: 45%;
+	// background: radial-gradient(at 50% 0%, rgb(238, 168, 255), rgb(182, 247, 255));
+	// background: radial-gradient(at 50% 0%, rgba(#ffeda8, .5), rgba(#b6f7ff, .8));
+	// background: radial-gradient(at 50% 0%, rgba(#2c52ff, .5), rgba(#b6f7ff, .8));
+	// background: rgba(#fff5be, .5);
+	filter: blur(20px);
+	z-index: 20;
+}

@@ -1,0 +1,94 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+.c-moon {
+	position: absolute;
+	width: v.$size--moon-big;
+	height: v.$size--moon-big;
+	top: v.$position--moon-big-top;
+	border-radius: 50%;
+	background: v.$color--fuschia;
+	filter: blur(4px);
+	transition: all 1s linear;
+
+	@include m.breakpoint( moon-mini ) {
+		width: v.$size--moon-mini;
+		height: v.$size--moon-mini;
+		top: v.$position--moon-mini-top;
+	}
+
+	&__txt {
+		position: absolute;
+		width: 100%;
+		color: v.$color--moon-waning-shadow;
+		font-family: "Gluten", cursive;
+		font-size: 2.5rem;
+		line-height: v.$line-height--wide;
+		letter-spacing: -8px;
+		bottom: 46%;
+
+		@include m.breakpoint( moon-mini ) {
+			font-size: min(3.5vmin, 2.5rem);
+			bottom: 18vmin;
+		}
+
+		.c-txt-typer {
+			right: 10%;
+		}
+	}
+
+	&::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-color: transparent;
+		border-radius: 50%;
+		-webkit-filter: blur(100px);
+		filter: blur(100px);
+	}
+
+	&__waning {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		filter: blur(4px);
+		box-shadow: inset 5vmin -4vmin 0vmin v.$color--moon-waning-shadow;
+		
+		@include m.breakpoint( moon-mini ) {
+			animation: moon-waning 15s alternate-reverse infinite; //alternate:前後反転
+		}
+	}
+
+	img {
+		position: absolute;
+		top: 16%;
+		width: 60%;
+		opacity: 0.7;
+	}
+}
+
+@keyframes moon {
+	0% {
+		box-shadow: 0px 0px 40px 30px v.$color--moon-shadow-start;
+	}
+	50% {
+		box-shadow: 0px 0px 40px 30px v.$color--moon-shadow-middle;
+	}
+	100% {
+		box-shadow: 0px 0px 40px 30px v.$color--moon-shadow-start;
+	}
+}
+
+@keyframes moon-waning {
+	0% {
+		background: v.$color--moon-main;
+		box-shadow: inset 30vmin -4vmin 0vmin v.$color--moon-waning-shadow;
+	}
+	100% {
+		background: v.$color--moon-waning;
+		box-shadow: inset 5vmin -4vmin 0vmin v.$color--moon-waning-shadow;
+	}
+}

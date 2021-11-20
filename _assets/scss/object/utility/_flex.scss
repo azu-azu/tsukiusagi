@@ -1,0 +1,233 @@
+.u-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-around {
+  justify-content: space-around;
+}
+
+
+
+.u-flex-container.and-nowrap {
+  flex-wrap: nowrap; }
+
+.u-flex-item {
+  padding-left: 0.05859rem;
+  padding-right: 0.05859rem;
+  flex: 1 1 0px; }
+
+.u-flex-item-shrink {
+  flex: 0 0 auto; }
+
+
+
+
+
+@media only screen {
+  .u-flex-container.is-smallRow {
+    flex-direction: row; }
+  .u-flex-container.is-smallRowReverse {
+    flex-direction: row-reverse; }
+  .u-flex-container.is-smallColumn {
+    flex-direction: column; }
+  .u-flex-container.is-smallColumnReverse {
+    flex-direction: column-reverse; }
+  .u-flex-container.is-smallJustifyStart {
+    justify-content: flex-start; }
+  .u-flex-container.is-smallJustifyEnd {
+    justify-content: flex-end; }
+  .u-flex-container.is-smallJustifyCenter {
+    justify-content: center; }
+  .u-flex-container.is-smallBetween {
+    justify-content: space-between; }
+  .u-flex-container.is-smallJustifyAround {
+    justify-content: space-around; }
+  .u-flex-container.is-smallAlignStart {
+    align-items: flex-start; }
+  .u-flex-container.is-smallAlignEnd {
+    align-items: flex-end; }
+  .u-flex-container.is-smallAlignCenter {
+    align-items: center; }
+  .u-flex-container.is-smallAlignStretch {
+    align-items: stretch; }
+  .u-flex-container.is-smallAlignBaseline {
+    align-items: baseline; }
+  .u-flex-small-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%; }
+  .u-flex-small-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%; }
+  .u-flex-small-3 {
+    flex: 0 0 25%;
+    max-width: 25%; }
+  .u-flex-small-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%; }
+  .u-flex-small-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%; }
+  .u-flex-small-6 {
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .u-flex-small-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%; }
+  .u-flex-small-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%; }
+  .u-flex-small-9 {
+    flex: 0 0 75%;
+    max-width: 75%; }
+  .u-flex-small-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%; }
+  .u-flex-small-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%; }
+  .u-flex-small-12 {
+    flex: 0 0 100%;
+    max-width: 100%; } }
+
+@media only screen and (min-width: 768px) {
+  .u-flex-container.is-mediumRow {
+    flex-direction: row; }
+  .u-flex-container.is-mediumRowReverse {
+    flex-direction: row-reverse; }
+  .u-flex-container.is-mediumColumn {
+    flex-direction: column; }
+  .u-flex-container.is-mediumColumnReverse {
+    flex-direction: column-reverse; }
+  .u-flex-container.is-mediumJustifyStart {
+    justify-content: flex-start; }
+  .u-flex-container.is-mediumJustifyEnd {
+    justify-content: flex-end; }
+  .u-flex-container.is-mediumJustifyCenter {
+    justify-content: center; }
+  .u-flex-container.is-mediumBetween {
+    justify-content: space-between; }
+  .u-flex-container.is-mediumJustifyAround {
+    justify-content: space-around; }
+  .u-flex-container.is-mediumAlignStart {
+    align-items: flex-start; }
+  .u-flex-container.is-mediumAlignEnd {
+    align-items: flex-end; }
+  .u-flex-container.is-mediumAlignCenter {
+    align-items: center; }
+  .u-flex-container.is-mediumAlignStretch {
+    align-items: stretch; }
+  .u-flex-container.is-mediumAlignBaseline {
+    align-items: baseline; }
+  .u-flex-medium-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%; }
+  .u-flex-medium-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%; }
+  .u-flex-medium-3 {
+    flex: 0 0 25%;
+    max-width: 25%; }
+  .u-flex-medium-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%; }
+  .u-flex-medium-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%; }
+  .u-flex-medium-6 {
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .u-flex-medium-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%; }
+  .u-flex-medium-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%; }
+  .u-flex-medium-9 {
+    flex: 0 0 75%;
+    max-width: 75%; }
+  .u-flex-medium-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%; }
+  .u-flex-medium-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%; }
+  .u-flex-medium-12 {
+    flex: 0 0 100%;
+    max-width: 100%; } }
+
+@media only screen and (min-width: 1025px) {
+  .u-flex-container.is-largeRow {
+    flex-direction: row; }
+  .u-flex-container.is-largeRowReverse {
+    flex-direction: row-reverse; }
+  .u-flex-container.is-largeColumn {
+    flex-direction: column; }
+  .u-flex-container.is-largeColumnReverse {
+    flex-direction: column-reverse; }
+  .u-flex-container.is-largeJustifyStart {
+    justify-content: flex-start; }
+  .u-flex-container.is-largeJustifyEnd {
+    justify-content: flex-end; }
+  .u-flex-container.is-largeJustifyCenter {
+    justify-content: center; }
+  .u-flex-container.is-largeJustifyBetween {
+    justify-content: space-between; }
+  .u-flex-container.is-largeJustifyAround {
+    justify-content: space-around; }
+  .u-flex-container.is-largeAlignStart {
+    align-items: flex-start; }
+  .u-flex-container.is-largeAlignEnd {
+    align-items: flex-end; }
+  .u-flex-container.is-largeAlignCenter {
+    align-items: center; }
+  .u-flex-container.is-largeAlignStretch {
+    align-items: stretch; }
+  .u-flex-container.is-largeAlignBaseline {
+    align-items: baseline; }
+  .u-flex-large-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%; }
+  .u-flex-large-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%; }
+  .u-flex-large-3 {
+    flex: 0 0 25%;
+    max-width: 25%; }
+  .u-flex-large-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%; }
+  .u-flex-large-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%; }
+  .u-flex-large-6 {
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .u-flex-large-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%; }
+  .u-flex-large-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%; }
+  .u-flex-large-9 {
+    flex: 0 0 75%;
+    max-width: 75%; }
+  .u-flex-large-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%; }
+  .u-flex-large-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%; }
+  .u-flex-large-12 {
+    flex: 0 0 100%;
+    max-width: 100%; } }

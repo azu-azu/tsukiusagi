@@ -1,0 +1,64 @@
+@use "../../foundation/variable" as v;
+
+.p-train__container {
+	position: absolute;
+	top: 40.3%;
+	z-index: 100;
+
+	// fixedがついたら固定
+	&.fixed {
+		position: fixed;
+		top: 2%;
+	}
+}
+
+.p-train {
+	position: relative;
+
+	&__running {
+		position: absolute;
+		animation: run 100s infinite linear;
+	}
+
+	&__light {
+		animation: turn 100s infinite;
+		height: 0;
+		width: 100px;
+		box-shadow: 5px 5px 32px 7px v.$color--yellow;
+	}
+
+	img {
+		width: 150px;
+		display: block;
+		transform: scale(-1, 1);
+	}
+}
+
+@keyframes run {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(100vw);
+	}
+	100% {
+		transform: translateX(-200px);
+	}
+}
+@keyframes turn {
+	0% {
+		transform: scaleX(1);
+	}
+	49% {
+		transform: scaleX(1);
+	}
+	50% {
+		transform: scaleX(-1);
+	}
+	99% {
+		transform: scaleX(-1);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}

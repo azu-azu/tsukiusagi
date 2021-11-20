@@ -1,0 +1,59 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+.c-nav {
+  width: 0;
+
+  @include m.breakpoint( moon-mini ) {
+    width: auto;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  
+  li {
+    cursor: pointer;
+
+    position: absolute;
+    width: 250px;
+    right: -100vw;
+    padding-left: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50px;
+    filter: drop-shadow(2px 4px 6px);
+
+    transition: 0.2s;
+    transition-delay: calc(0.1s * var(--i));
+    transition: transform 0.75s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+    // transform-origin: 100px;
+    // transform: rotate(0deg) translateX(100px);
+
+    &:nth-child(1) {
+      top: v.$position--hamburger-nav-top;
+    }
+    &:nth-child(2) {
+      top: v.$position--hamburger-nav-top + v.$gap--hamburger-nav;
+    }
+    &:nth-child(3) {
+      top: v.$position--hamburger-nav-top + (v.$gap--hamburger-nav * 2);
+    }
+
+    @include m.breakpoint( moon-mini ) {
+      position: static;
+      width: auto;
+      padding-left: 40px;
+      background: none;
+      filter: none;
+      border-radius: 0;
+    }
+  }
+  
+  a {
+    color: #fff;
+    @include m.breakpoint( moon-mini ) {
+    }
+	}
+}

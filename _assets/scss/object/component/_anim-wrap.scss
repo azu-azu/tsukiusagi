@@ -1,0 +1,22 @@
+@use "../../foundation/variable" as v;
+
+.c-anim-wrap {
+  display: block;
+  position: absolute;
+  font-size: v.$font-size--firstview--pc;
+  text-align: center;
+  color: #fff;
+  // bottom: 10%;
+  // right: 10%;
+  line-height: v.$line-height--very-wide;
+
+  .small {
+    font-size: v.$font-size--firstview--small--pc;
+  }
+}
+
+.p-sec-works {
+  .c-anim-wrap {
+    margin-left: 300px;
+  }
+}

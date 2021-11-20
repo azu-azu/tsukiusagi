@@ -1,0 +1,39 @@
+@use "../../foundation/variable" as v;
+
+.c-rotate-text {
+  perspective: 800px;
+
+  span {
+    display: inline-block;
+    transform-origin: 50% 70%;
+
+    &:nth-child(2n) {// Every second span
+      color: v.$color--yellow;
+    }
+  }
+}
+
+
+$count: 11;
+@for $i from 1 through $count {
+  $delay: $i * .2 +s;
+  $time:  6 - $i * .5 +s;
+
+  .css-anim span:nth-child(#{$i}) {
+    animation: StandUp 5s cubic-bezier(0.68, -0.55, 0.26, 1.55) $delay both;
+  }
+}
+
+
+
+@keyframes StandUp {
+  0% {
+    transform: rotateX(90deg);//90deg:後ろに倒れてる
+  }
+  50% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(90deg);
+  }
+}

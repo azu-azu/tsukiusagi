@@ -1,0 +1,61 @@
+
+
+// .tooltiper {
+//   position: relative;
+//   display: inline-block;
+//   // color: rgb(255, 139, 211); //文字色
+//   z-index: 3;
+//   white-space: nowrap;
+// }
+
+// .tooltiper .tooltip {
+//   position: absolute;
+//   font-size: .7rem;
+//   text-align: center;
+//   background: $tooltip-color;
+//   color: $dark-blue;
+//   padding: 5px 10px;
+//   border-radius: 5px;
+//   display: block;
+//   top: -30px;
+//   left: 85%;//吹き出しの横位置
+//   // height: 0;
+//   transform: translateX(-50%) translateY(50%);
+//   -webkit-transform: translateX(-50%) translateY(50%);
+//   -o-transform: translateX(-50%) translateY(50%);
+//   line-height: 1.4em;
+//   opacity: 0;
+//   transform-origin: top;
+//   transition: transform 1s ease-out, opacity .5s ease-out .5s;
+//   -webkit-transition: transform 1s ease-out, opacity .5s ease-out .5s;
+//   -o-transition: transform 1s ease-out, opacity .5s ease-out .5s;
+// }
+
+// .tooltiper:hover .tooltip {
+//   color: $dark-blue;
+//   opacity: 1;
+//   height: auto;
+//   transform: translateX(-50%) translateY(0);
+//   -webkit-transform: translateX(-50%) translateY(0);
+//   -o-transform: translateX(-50%) translateY(0);
+//   transition: transform .2s ease-out, opacity .05s ease-out;
+//   -webkit-transition: transform .2s ease-out, opacity .05s ease-out;
+//   -o-transition: transform .2s ease-out, opacity .05s ease-out;
+// }
+
+// // 吹き出し（三角）部分
+// .tooltiper .tooltip:after {
+//   left: calc(30% - 4px);//中央にする場合は(50%-4px)
+//   top: calc(100% + 4px);
+//   border: solid transparent;
+//   content: " ";
+//   height: 0;
+//   width: 0;
+//   position: absolute;
+//   pointer-events: none;
+
+//   border-color: transparent;
+//   border-top-color: $tooltip-color;
+//   border-width: 4px;
+//   margin-top: -4px;
+// }

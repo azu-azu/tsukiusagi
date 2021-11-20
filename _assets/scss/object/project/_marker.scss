@@ -1,0 +1,42 @@
+@use "../../foundation/variable" as v;
+
+#marker {
+	position: absolute;
+	top: 7px;
+  left: calc(100% - 30px);
+	transition: .5s;
+	z-index: 1;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 50px;
+		height: 40px;
+    filter: blur(5px);
+	}
+}
+
+
+$marker-color--white: rgba(#fff, .2);
+$marker-color--yellow: rgba(#ff0, .2);
+.p-header--back {
+  .c-header-ttl--top.marker-active ~ ul #marker::before,
+  .c-nav li.marker-active ~ #marker::before {
+    background: v.$color--hover-marker--white;
+    box-shadow: 0 0 15px v.$color--hover-marker--white,
+    0 0 30px v.$color--hover-marker--white,
+    0 0 45px v.$color--hover-marker--white,
+    0 0 60px v.$color--hover-marker--white;
+  }
+
+  .c-nav li:nth-child(3).marker-active ~ #marker::before {
+    background: v.$color--hover-marker--yellow;
+    box-shadow: 0 0 15px v.$color--hover-marker--yellow,
+    0 0 30px v.$color--hover-marker--yellow,
+    0 0 45px v.$color--hover-marker--yellow,
+    0 0 60px v.$color--hover-marker--yellow;
+  }
+}

@@ -1,0 +1,15 @@
+@use "../../foundation/variable" as v;
+
+.c-overlay {
+  position: fixed;
+  height: v.$size--hamburger-container + 10px;
+  width: v.$size--hamburger-container + 10px;
+  background: radial-gradient(#fff, rgba(v.$color--yellow, .8));
+  transition: transform .3s cubic-bezier(1, 0, 0, 1);
+  filter: blur(5px);
+  z-index: -1;
+
+  border-bottom-left-radius: 100%;
+  top: -5px;
+  right: -5px;
+}

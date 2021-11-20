@@ -1,0 +1,45 @@
+@mixin breakpoint( $point ) {
+	@if $point == moon-mini {
+		@media ( min-width: 570px ) {
+			@content ;
+		}
+	}
+	@if $point == tablet {
+		@media ( min-width: 600px ) {
+			@content ;
+		}
+	}
+}
+
+
+
+
+
+
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($animation-name) {
+  -webkit-animation: $animation-name;
+  -moz-animation: $animation-name;
+  animation: $animation-name;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@mixin prefixes($property, $value) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, "" {
+    #{$prefix}#{$property}: $value;
+  }
+}

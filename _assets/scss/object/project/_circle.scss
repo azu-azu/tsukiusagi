@@ -1,0 +1,18 @@
+@use "../../foundation/variable" as v;
+
+.p-circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+  background: none;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vw;
+
+  @media screen and (min-width: 570px) {
+    width: 80vmin;
+    height: 80vmin;
+  }
+}

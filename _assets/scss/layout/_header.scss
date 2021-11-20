@@ -1,0 +1,18 @@
+@use "../foundation/mixin" as m;
+@use "../foundation/variable" as v;
+
+.l-header {
+  position: fixed;
+  width: 90%;
+  top: 0;
+  padding: 0 10px;
+  z-index: 1000;
+
+  @include m.breakpoint( moon-mini ) {
+    width: 100%;
+  }
+
+  @media screen and (min-width:740px) {
+    padding: 0 40px;
+  }
+}

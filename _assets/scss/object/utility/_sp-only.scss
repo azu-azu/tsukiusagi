@@ -1,0 +1,8 @@
+@use "../../foundation/mixin" as m;
+
+.sp-only {
+  display: block;
+  @include m.breakpoint( moon-mini ) {
+    display: none;
+	}
+}

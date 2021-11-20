@@ -1,0 +1,33 @@
+@use "../../foundation/variable" as v;
+
+
+.c-sec-ttl,
+.c-sec-ttl--small {
+  font-weight: v.$font-weight--ttl;
+  color: #fff;
+  text-shadow: 2px 2px 5px #fff;
+}
+
+.c-sec-ttl {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   left: 50%;
+  //   bottom: -10px;
+  //   transform: translateX(-50%);
+  //   width: 80%;
+  //   height: 4px;
+  //   background: #fff;
+  // }
+
+  &__wrapper {
+    text-align: center;
+  }
+}

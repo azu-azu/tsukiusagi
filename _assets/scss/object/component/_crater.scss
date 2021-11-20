@@ -1,0 +1,170 @@
+@use "../../foundation/variable" as v;
+
+/* クレーター */
+.c-crater {
+  &__wrap {
+    position: relative;
+    width: v.$size--moon-big;
+    height: v.$size--moon-big;
+    top: v.$position--moon-mini-top;
+
+    @media screen and (min-width: 570px) {
+      width: v.$size--moon-mini;
+      height: v.$size--moon-mini;
+    }
+  }
+
+  position: absolute;
+  width: 3.2vmin;
+  height: 3.2vmin;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+}
+
+.c1, .c2, .c3, .c4, .c5, .c6, .c7 {
+  background: v.$color--crater-waning;
+  animation: twinkle .5s alternate infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.c1 {
+  left: 71%;
+  top: 20%;
+  width: 3vmin;
+  height: 3vmin;
+}
+
+.c2 {
+  left: 88%;
+  top: 42%;
+  width: 2vmin;
+  height: 2vmin;
+  animation-delay: .2s;
+}
+
+
+.c3 {
+  left: 80%;
+  top: 70%;
+  width: 1vmin;
+  height: 1vmin;
+  animation-delay: .6s;
+}
+
+.c4 {
+  left: 25%;
+  top: 30%;
+  width: 1vmin;
+  height: 1vmin;
+  animation-delay: .8s;
+}
+
+.c5 {
+  left: 40%;
+  top: 13%;
+  width: 1.5vmin;
+  height: 1.5vmin;
+  animation-delay: 1s;
+}
+
+.c6 {
+  left: 40%;
+  top: 45%;
+  width: 1.8vmin;
+  height: 1.8vmin;
+  animation-delay: .2s;
+}
+
+.c7 {
+  left: 30%;
+  top: 80%;
+  width: .5vmin;
+  height: .5vmin;
+  animation-delay: .4s;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: .45;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// /* クレーター */
+// .c-crater {
+//   position: absolute;
+//   width: 3.2vmin;
+//   height: 3.2vmin;
+//   border-radius: 50%;
+//   left: 8vmin;
+//   top: 30vmin;
+//   // background: lightgray;
+// }
+
+// .c1, .c2, .c3, .c4, .c5, .c6, .c7 {
+//   background: v.$crater-waningcolor;
+//   animation: twinkle .5s alternate infinite;
+//   pointer-events: none;
+//   z-index: 1;
+// }
+
+// .c1 {
+//   left: 50.5vmin;
+//   top: 24.5vmin;
+//   width: 3vmin;
+//   height: 3vmin;
+// }
+
+// .c2 {
+//   left: 46vmin;
+//   top: 19.5vmin;
+//   width: 2vmin;
+//   height: 2vmin;
+//   animation-delay: .2s;
+// }
+
+
+// .c3 {
+//   left: 48vmin;
+//   top: 37vmin;
+//   width: 1vmin;
+//   height: 1vmin;
+//   animation-delay: .6s;
+// }
+
+// .c4 {
+//   left: 35vmin;
+//   top: 20vmin;
+//   width: 1vmin;
+//   height: 1vmin;
+//   animation-delay: .8s;
+// }
+
+// .c5 {
+//   left: 31vmin;
+//   top: 35vmin;
+//   width: 1.5vmin;
+//   height: 1.5vmin;
+//   animation-delay: 1s;
+// }
+
+// .c6 {
+//   left: 29vmin;
+//   top: 26vmin;
+//   width: 1.8vmin;
+//   height: 1.8vmin;
+//   animation-delay: .2s;
+// }
+
+// .c7 {
+//   left: 44vmin;
+//   top: 26vmin;
+//   width: .5vmin;
+//   height: .5vmin;
+//   animation-delay: .4s;
+// }

@@ -1,0 +1,18 @@
+@use "../../foundation/mixin" as m;
+
+.p-gmenu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  p,
+  a {
+    z-index: 10;
+  }
+
+  a {
+    padding: 10px;
+  }
+}
