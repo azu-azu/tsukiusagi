@@ -1,4 +1,5 @@
 <?php get_header();?>
+<?php get_template_part('components/parts/loading-panel');?>
 <?php get_template_part('components/parts/train');?>
 
 <article class="l-main">

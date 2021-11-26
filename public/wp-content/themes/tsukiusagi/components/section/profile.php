@@ -1,10 +1,12 @@
 <section class="p-sec-profile" id="profile">
   <article class="c-sec-ttl__wrapper">
-    <h2 class="c-sec-ttl c-anim-box--lr txt js-show">Profile</h2>
+    <h2 class="c-sec-ttl c-anim-box--lr txt c-linear-light js-scroll-show">
+      Profile
+    </h2>
   </article>
 
-  <article class="p-sec-profile__cards c-anim-box--up js-show">
-    <div class="swiper-container js-swiper">
+  <article class="p-sec-profile__cards c-anim-box--up js-scroll-show">
+    <section class="swiper-container js-swiper">
       <ul class="swiper-wrapper">
         <li class="slider-item swiper-slide">
           <figure class="slider-image-wrapper">
@@ -24,9 +26,10 @@
             <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/2.png" alt="SliderImg">
           </figure>
           <div class="slider-item-content right">
-            <p>
-              名　前：まつもと<br>
-              居住地：東京
+          <h3>月うさぎWeb</h3>
+          <p>
+              管理人：まつもと<br>
+              所在地：東京
             </p>
           </div>
         </li>
@@ -74,7 +77,7 @@
       </ul>
 
       <div class="swiper-pagination"></div>
-    </div>
+    </section>
     <article class="slider-buttons">
       <button class="swiper-button-prev">Prev</button>
       <button class="swiper-button-next">Next</button>
@@ -82,4 +85,5 @@
   </article>
 
   <?php get_template_part('components/parts/skills');?>
+  <?php get_template_part('components/parts/star-way');?>
 </section>

@@ -27,8 +27,6 @@ const headerFade = () => {
 }
 
 
-
-
 // **
 // p-header-back:スクロール途中で出現
 // **
@@ -51,55 +49,66 @@ const headerBackDown = () => {
 }
 
 
-
 // **
 // ハンバーガーボタン：クリックイベント
 // **
 const hamburger = document.getElementById('js-hamburger');
+const myBody = document.body;
 hamburger.addEventListener('click', () => {
 	let myPosition = window.pageYOffset || document.documentElement.scrollTop;
 
+	//is-closeがあったら
 	if (hamburger.classList.contains("is-close")) {
+		//is-closeを外す
 		hamburger.classList.remove('is-close');
+		myBody.classList.remove('is-close');
 
-		hamburger.classList.toggle('is-open');
-		document.body.classList.toggle('is-open');
-		document.body.style.position = "fixed";
-		document.body.style.top = `-${myPosition}px`;
+		//is-openをつける
+		hamburger.classList.add('is-open');
+		myBody.classList.add('is-open');
+		myBody.style.position = "fixed";
+		myBody.style.top = `-${myPosition}px`;
 	} else {
+		//is-openがあったら
 		if (hamburger.classList.contains("is-open")) {
+			// スクロール位置の記憶
+			const scrollY = myBody.style.top;
+
+			// is-openを外す
 			hamburger.classList.remove('is-open');
-			document.body.classList.remove('is-open');
+			myBody.classList.remove('is-open');
+
+			// is-closeをつける
 			hamburger.classList.add('is-close');
+			myBody.classList.add('is-close');
+
+			// bodyのfixedを外す
+			bodyFixedNone();
 
 			// スクロール位置の保持
-			const scrollY = document.body.style.top;
-			document.body.style.position = "";
-			document.body.style.top = "";
 			window.scrollTo(0, parseInt(scrollY || '0') * -1);
 		}
 	}
 });
 
 
-// const hamburger = document.getElementById('js-hamburger');
-// hamburger.addEventListener('click', () => {
-// 	hamburger.classList.toggle('is-open');
-// 	document.body.classList.toggle('is-open');
-// });
-
-
 // **
 // is-openを消す
 // **
-// ハンバーガーメニューをクリックしたとき
+// ハンバーガーメニューのリストをクリックしたとき
 const navList = document.querySelectorAll(".js-marker");
 navList.forEach((elm) => {
 	elm.addEventListener('click', () => {
 		hamburger.classList.remove('is-open');
-		document.body.classList.remove('is-open');
+		myBody.classList.remove('is-open');
+		hamburger.classList.add('is-close');
+		myBody.classList.add('is-close');
+
+		//bodyのfixedを外す
+		bodyFixedNone();
 	});
 });
+
 
 // ウィンドウ幅が切り替わったとき
 const moonMiniSize = 570;
@@ -112,12 +121,24 @@ jQuery(function ($) {
 			$("body").removeClass("is-open");
 			$("#js-hamburger").addClass("is-close");
 			$("body").addClass("is-close");
+
+			//bodyのfixedを外す
+			bodyFixedNone();
 		}
 		else {
 		}
 	});
 })
 
+
+// **
+// 関数：bodyのfixedを外す
+// **
+const bodyFixedNone = () => {
+	document.body.style.position = "";
+	document.body.style.top = "";
+	document.body.style.paddingTop = "";
+};
 
 
 

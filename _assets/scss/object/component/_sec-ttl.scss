@@ -9,12 +9,16 @@
 }
 
 .c-sec-ttl {
+  &__wrapper {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
   position: relative;
   display: inline-block;
   text-align: center;
-  font-size: 24px;
-  letter-spacing: 1px;
-  margin-bottom: 40px;
+  font-size: 2.4rem;
+  letter-spacing: 8px;
 
   // &::before {
   //   content: '';
@@ -26,8 +30,4 @@
   //   height: 4px;
   //   background: #fff;
   // }
-
-  &__wrapper {
-    text-align: center;
-  }
 }

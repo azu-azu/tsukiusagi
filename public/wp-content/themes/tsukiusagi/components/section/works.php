@@ -1,11 +1,13 @@
 <section class="p-sec-works" id="works">
   <article class="c-sec-ttl__wrapper">
-    <h2 class="c-sec-ttl c-anim-box--lr txt js-show"><span>Works</span></h2>
+    <h2 class="c-sec-ttl c-anim-box--lr txt c-linear-light js-scroll-show">
+      <span>Works</span>
+    </h2>
   </article>
 
   <ul class="p-cards">
-    <li class="p-card p-scroll-anim js-show" data-js_delay="0">
-      <article class="p-card__inner js-show" data-js_delay="0">
+    <li class="p-card p-scroll-anim js-scroll-show" data-js_delay="0">
+      <article class="p-card__inner js-scroll-show" data-js_delay="0">
         <article class="p-card__header"></article>
         <figure class="c-card-img card1"></figure>
         <a href="#" class="card_link">
@@ -19,8 +21,8 @@
       </article>
     </li>
 
-    <li class="p-card p-scroll-anim js-show" data-js_delay="300">
-      <article class="p-card__inner js-show" data-js_delay="300">
+    <li class="p-card p-scroll-anim js-scroll-show" data-js_delay="300">
+      <article class="p-card__inner js-scroll-show" data-js_delay="300">
         <article class="p-card__header"></article>
         <figure class="c-card-img card2"></figure>
         <a href="#" class="card_link">
@@ -34,4 +36,5 @@
       </article>
     </li>
   </ul>
+  <div class="p-fireworks"></div>
 </section>

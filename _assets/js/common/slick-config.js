@@ -1,5 +1,5 @@
-$( function() {
-    $( '.slider' ).slick( {
+$(function () {
+    $('.slider').slick({
         dots: true,
         infinite: true,
         centerMode: true,
@@ -9,10 +9,10 @@ $( function() {
             {
                 breakpoint: 600,
                 settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
             },
         ]
-    } );
-} );
+    });
+});

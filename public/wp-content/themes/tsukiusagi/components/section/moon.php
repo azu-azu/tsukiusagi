@@ -1,3 +1,5 @@
+<div class="c-floating-star--01"></div>
+
 <article class="p-sec-moon">
   <article class="p-circle">
     <article class="c-moon">
@@ -20,8 +22,7 @@
       <div class="c-crater c7"></div>
     </div>
   </article>
-  <div class="p-shooting-star--01"></div>
-  <div class="p-shooting-star--02"></div>
+  <?php get_template_part('components/parts/shooting-star');?>
 </article>
 
 <?php get_template_part('components/parts/milky-way');?>

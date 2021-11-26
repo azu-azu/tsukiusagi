@@ -8,6 +8,10 @@
   padding: 10px;
   transition: all .5s ease-out;
 
+  // タイトル表示するならflexかける
+  // display: flex;
+  // justify-content: space-between;
+
   .c-header-ttl {
     display: none;
 

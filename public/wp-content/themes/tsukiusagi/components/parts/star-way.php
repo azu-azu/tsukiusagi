@@ -1,0 +1,1 @@
+<div class="p-star-way" id="js-star-way"></div>

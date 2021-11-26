@@ -1,0 +1,110 @@
+// スターの天の川
+@use "../../foundation/variable" as v;
+@use "sass:math";
+
+$stars: 100;
+$speed: 8;
+
+@function starPath($x) {
+	$starPath: "m0, 0";
+
+	@for $i from 1 through 2 {
+		$starPath: append(
+			$starPath,
+			"s" +
+        math.div($x, 2) * $i
+				math.div($x, -2) * $i +
+				" " +
+				($x * $i)
+				(0)
+				"s" +
+				($x * $i)
+				($x * $i)
+				($x * 2 * $i)
+				(0),
+			space
+		);
+	}
+
+	@return ("#{$starPath}");
+}
+
+.p-star-way {
+  position: absolute;
+
+  .star {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+		background: rgba(v.$color--light-purple, 0.1);
+    offset-distance: 0;
+    opacity: 0.5;
+		animation: path-offset $speed * 2s infinite linear alternate,
+		star $speed * 2s infinite linear alternate;
+    // box-shadow: 3px 3px 5px yellow;
+    // filter: blur(10px);
+  
+    @for $i from 1 through $stars {
+      $size: random(10) * 1vmin;
+  
+      &:nth-child(#{$i}) {
+        height: $size;
+        width: $size;
+        animation-delay: math.div($speed, $stars) * $i * -3s;
+        // background: lighten(rgba(#888, 0.1), random(25) * 2%);
+        offset-path: path(starPath(random(100) + 100));
+        transform: translate(-100%, -50%)
+          rotate(random(360) * 1deg)
+          scale(1);
+        // filter: blur(3px);
+  
+        @media (min-width: 500px) {
+          offset-path: path(starPath(random(300) + 300));
+        }
+      }
+    }
+  }
+}
+
+@keyframes path-offset {
+	100% {
+		offset-distance: 100%;
+	}
+}
+
+@keyframes star {
+	0% {
+		background: rgba(v.$color--light-purple, 0.1);
+	}
+	10% {
+		opacity: 1;
+	}
+	70% {
+		background: rgb(255,255,255);
+		opacity: 1;
+	}
+	80% {
+		background: rgba(255,255,0, 0.5);
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.5;
+		transform: translate(-100%, -50%) rotate(0) scale(0);
+		background: rgb(255,255,0);
+	}
+}

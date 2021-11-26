@@ -28,6 +28,8 @@ public/wp-settings.php/
 public/wp-signup.php/
 public/wp-trackback.php/
 public/xmlrpc.php/
+sql/
+.DS_Store/
 
 Search-Replace-DB/
 .vscode/sftp.json

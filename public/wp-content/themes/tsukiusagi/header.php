@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tsukiusagi</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <?php wp_head();?>
   </head>
 
-  <body>
+  <body class="is-close">
     <header class="l-header">
+      <?php get_template_part('components/common/hamburger');?>
       <section class="p-header is-close" id="js-header">
-        <h1 class="c-header-ttl">月うさぎ</h1>
+        <h1 class="c-header-ttl">月うさぎWeb</h1>
         <nav class="p-gmenu">
           <a class="c-header-ttl--top js-page-top c-bubbly-button--white js-bubbly js-marker" href="#">月へ戻る</a>
           <ul class="c-nav">
@@ -26,10 +27,4 @@
           </ul>
         </nav>
       </section>
-      <article class='c-hamburger sp-only is-close' id="js-hamburger">
-        <span class="line-top"></span>
-        <span class="line-middle"></span>
-        <span class="line-bottom"></span>
-      </article>
-      <div class="c-overlay sp-only"></div>
     </header>
