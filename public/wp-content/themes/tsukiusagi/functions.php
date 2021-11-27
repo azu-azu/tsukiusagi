@@ -62,7 +62,7 @@ wp_enqueue_script('easing', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/
 wp_enqueue_script('tweenlite', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js', array(), true);
 wp_enqueue_script('timelinelite', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js', array(), true);
 wp_enqueue_script('swiper-bundle', '//unpkg.com/swiper/swiper-bundle.min.js', array(), true);
-wp_enqueue_script('splitting', 'https://unpkg.com/splitting@1.0.6/dist/splitting.min.js', array(), true);//うねうねテキスト
+wp_enqueue_script('splitting', 'https://unpkg.com/splitting@1.0.6/dist/splitting.min.js', array(), true);//data-splitting
 
 
 // wp_enqueue_script('swiper-bundle', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js', array(), true);

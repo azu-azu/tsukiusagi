@@ -30,6 +30,6 @@
     </div>
   </div>
   <article class="p-offset-text">
-    <p data-splitting>月うさぎＷｅｂ</p>
+    <p data-splitting>♪月うさぎＷｅｂ♪</p>
   </article>
 </section>

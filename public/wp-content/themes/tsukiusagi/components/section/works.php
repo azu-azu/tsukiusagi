@@ -36,5 +36,7 @@
       </article>
     </li>
   </ul>
-  <div class="p-fireworks"></div>
+
+  <?php get_template_part('components/parts/orbit');?>
+  <!-- <div class="p-fireworks"></div> -->
 </section>

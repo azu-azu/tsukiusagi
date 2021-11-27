@@ -1,6 +1,7 @@
 @use "../../foundation/variable" as v;
 
 .p-sec-contact {
+  position: relative;
 	padding-top: v.$gap--sec-top;
 	padding-bottom: v.$gap--sec-bottom;
   min-height: 100vh;

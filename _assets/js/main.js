@@ -16,6 +16,7 @@ import './common/myHeader.js';
 import './common/myHover';
 import './common/smooth-scroll';
 import './common/myMilkyWay';
+import './common/myOrbit';
 import './common/mySwiper.js';
 import './common/myScrollShow.js';
 import './common/data-splitting';
