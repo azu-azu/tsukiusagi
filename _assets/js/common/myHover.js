@@ -4,15 +4,6 @@ function moveIndicator(e) {
   marker.style.width = e.offsetWidth + 'px';
 }
 
-const list = document.querySelectorAll('.js-marker');
-list.forEach(link => {
-  link.addEventListener('mousemove', (e) => {
-    marker.style.opacity = 1;
-    moveIndicator(e.target);
-  })
-})
-
-
 function activeLink() {
   list.forEach((item) => item.classList.remove('marker-active'));
   this.classList.add('marker-active');
@@ -21,6 +12,17 @@ function activeLink() {
 function removeActive() {
   list.forEach((item) => item.classList.remove('marker-active'));
 }
+
+
+// mouseoverしたらmoveIndecator呼び出し
+const list = document.querySelectorAll('.js-marker');
+list.forEach(link => {
+  link.addEventListener('mousemove', (e) => {
+    marker.style.opacity = 1;
+    moveIndicator(e.target);
+  })
+})
+
 
 list.forEach((item) => item.addEventListener('mouseover', activeLink));
 list.forEach((item) => item.addEventListener('mouseleave', removeActive));

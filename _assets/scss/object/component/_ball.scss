@@ -1,0 +1,26 @@
+@use "../../foundation/variable" as v;
+@use "sass:math";
+
+.c-ball {
+  background: linear-gradient(0deg,
+  v.$color--white--opacity10,
+  v.$color--white--opacity20,
+  v.$color--white--opacity30,
+  v.$color--white--opacity40);
+  border-radius: 100%;
+  border-left: 1px solid v.$color--white--opacity20;
+  box-shadow: -20px -10px 40px v.$color--white--opacity20 inset,
+  0 0 40px v.$color--white--opacity50;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: math.div(100%, 2);
+    height: math.div(100%, 3);
+    background: v.$color--white--opacity20;
+    border-radius: 100%;
+    filter: blur(10px);
+  }
+}

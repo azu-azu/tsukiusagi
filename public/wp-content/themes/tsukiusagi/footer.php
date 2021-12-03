@@ -6,15 +6,6 @@
       </div>
       <div class="c-light"></div>
 
-      <figure class="c-leaf">
-        <img src="<?php echo do_shortcode('[uri]'); ?>/img/common/leaf.png" alt="落ち葉">
-      </figure>
-
-      <div class="c-bird--1"></div>
-      <div class="c-bird--r1"></div>
-      <div class="c-bird--2"></div>
-      <div class="c-bird--r2"></div>
-
       <div class="c-fin">
         <div class="c-fin__wave"></div>
       </div>

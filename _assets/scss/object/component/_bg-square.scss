@@ -2,14 +2,6 @@
 
 .c-bg-square {
   position: absolute;
-  background: v.$color--white--opacity20;
-  box-shadow: v.$shadow--bg-square-main;
-  
-  border-radius: 100%;
-  border: 1px solid v.$color--white--opacity50;
-  border-right: 1px solid v.$color--white--opacity20;
-  border-bottom: 1px solid v.$color--white--opacity20;
-
   animation: square 5s linear infinite;
   animation-delay: calc(-1s * var(--i));
 }

@@ -2,7 +2,7 @@
 // セクションの余白
 // *
 $gap--sec-top: 100px;
-$gap--sec-bottom: 300px;
+$gap--sec-bottom: 200px;
 
 
 // *
@@ -45,26 +45,34 @@ $line-height--very-wide: 3;
 $color--yellow: rgb(255, 255, 0);
 $color--green: #90feb5;
 $color--fuschia: rgb(103, 12, 103);
+
 $color--light-purple: rgb(210,189,255);
+$color--light-purple--opacity90: rgba($color--light-purple, .9);
+
 $color--light-green: rgb(200,255,230);
+$color--light-green--opacity70: rgba($color--light-green, .7);
+
+$color--pink--opacity80: rgba(255,200,200,.8);
+
 $color--white: rgb(255, 255, 255);
+$color--white--opacity10: rgba(255, 255, 255, 0.1);
+$color--white--opacity20: rgba(255, 255, 255, 0.2);
+$color--white--opacity30: rgba(255, 255, 255, 0.3);
+$color--white--opacity40: rgba(255, 255, 255, 0.4);
 $color--white--opacity50: rgba(255, 255, 255, 0.5);
 $color--white--opacity80: rgba(255, 255, 255, 0.8);
-$color--white--opacity20: rgba(255, 255, 255, 0.2);
-$color--pink--opacity80: rgba(255,200,200,.8);
-$color--light-purple--opacity90: rgba($color--light-purple, .9);
-$color--light-green--opacity70: rgba($color--light-green, .7);
+
 
 // 月
 $color--crater-waning: rgba(255, 140, 140, 0.5);
-$color--moon-main: rgb(255, 255, 101);
+$color--moon-main: $color--yellow;
 $color--moon-waning-shadow: $color--yellow;
 $color--moon-waning: rgba(102, 0, 102, 0.5);
 $color--moon-shadow-start: rgba(255, 255, 1, 0.5);
 $color--moon-shadow-middle: rgba(255, 140, 140, 0.5);
 
 // 泡ボタン
-$color--bubbly-btn-default: #fff;
+$color--bubbly-btn-white: #fff;
 $color--bubbly-btn-pink: $color--fuschia;
 $color--bubbly-btn-yellow: $color--yellow;
 $color--bubbly-btn-text: #000;
@@ -98,20 +106,84 @@ $height--profile-swiper: min(43vmin, 232px);// swiper（プロフィール）の
 
 
 // *
+// バックグラウンド
+// *
+// 泡ボタン
+$bg-img--bubbly-btn--white-before:
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, transparent 20%, $color--bubbly-btn-white 20%, transparent 30%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, transparent 20%, $color--bubbly-btn-white 20%, transparent 30%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%);
+
+
+$bg-img--bubbly-btn--white-after:
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%);
+
+
+$bg-img--bubbly-btn--yellow-before:
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, transparent 20%, $color--bubbly-btn-yellow 20%, transparent 30%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%), 
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, transparent 10%, $color--bubbly-btn-yellow 15%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%);
+
+
+$bg-img--bubbly-btn--yellow-after:
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%), 
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, transparent 10%, $color--bubbly-btn-yellow 15%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%);
+
+
+
+// *
 // ボックスシャドウ
 // *
 $shadow--bg-square-main: 0 25px 45px rgba($color--yellow, 0.1);
 $shadow--bg-square-sub: 0 25px 45px rgba(#f00, 0.1);
 
 
-
-
+// 背景の星のbox-shadow
 $star-color--01: $color--white--opacity80;
 $star-color--02: $color--pink--opacity80;
 $star-color--03: $color--light-purple--opacity90;
 $star-color--04: $color--light-green--opacity70;
 
-// 背景の星のbox-shadow
 $box-shadow--star-white: 93vw 63vh .3vmin $star-color--01,
 3vw 17vh .3vmin $star-color--01,
 28vw 85vh .3vmin $star-color--01,

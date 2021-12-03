@@ -1,4 +1,5 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
 
 .c-hamburger {
   position: fixed;
@@ -21,8 +22,8 @@
     transition: all 0.3s linear;
     border-radius: 4px;
     width: 30px;
-    height: 3px;
-    right: 10px;
+    height: 4px;
+    right: 12px;
     z-index: 2000;
   }
 
@@ -36,6 +37,7 @@
 
   .line-bottom {
     top: 36px;
+    transform-origin: 100% 100%;
   }
 }
 
@@ -62,20 +64,11 @@ body.is-open {
 }
 
 .c-hamburger.is-open {
-  span {
-    background-color: #fff;
-    box-shadow: 1px 1px 5px 1px #fff;
-    width: 40px;
-    height: 5px;
-    top: 25px;
-    right: 0;
-  }
   .line-top {
     animation: line-top .6s linear forwards;
   }
   
   .line-middle {
-    box-shadow: 0 0 10px 6px #fff;
     animation: line-middle .6s linear forwards;
   }
   
@@ -102,43 +95,32 @@ body.is-open {
 }
 
 @keyframes line-top {
-  0% {
-    background-color: v.$color--yellow;
-  }
   40% {
-    box-shadow: 1px 1px 4px 4px v.$color--yellow;
-    width: 100px;
-    height: 10px;
-    top: 50px;
-    transform: rotate(45deg);
+    transform: scale(2, 2) rotate(405deg);
+  }
+  80% {
+    transform: scale(1, 1) rotate(495deg) translate(3px, -10px);
   }
   100% {
-    transform: rotate(135deg);
-  }
-}
-
-@keyframes line-bottom {
-  0% {
-    background-color: v.$color--yellow;
-  }
-  40% {
-    box-shadow: 1px 1px 4px 4px v.$color--yellow;
-    width: 100px;
-    height: 10px;
-    top: 50px;
-    transform: rotate(310deg);
-  }
-  100% {
-    transform: rotate(405deg);
+    transform: scale(1, 1) rotate(495deg) translate(3px, -10px);
   }
 }
 
 @keyframes line-middle {
   0% {
-    right: 10px;
+    transform: translateX(0);
   }
   100% {
-    right: 110vw;
+    transform: translateX(-110vw);
+  }
+}
+
+@keyframes line-bottom {
+  99% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(45deg);
   }
 }
 
@@ -147,6 +129,11 @@ body.is-open {
 // **
 body.is-close {
   .c-nav {
+    width: 0;
+    @include m.breakpoint( moon-mini ) {
+      width: auto;
+    }
+
     li {
       animation: list .6s linear forwards;
     }
@@ -194,46 +181,32 @@ body.is-close {
 }
 
 @keyframes line-top-back {
-  0% {
-    background-color: v.$color--yellow;
-  }
   40% {
-    box-shadow: 1px 1px 4px 4px v.$color--yellow;
-    width: 100px;
-    height: 10px;
-    top: 50px;
-    transform: rotate(-45deg);
+    transform: scale(2,2) rotate(45deg) translateY(50px);
   }
   100% {
-    transform: rotate(-180deg);
+    transform: scale(1,1) rotate(-180deg) translateY(0);
   }
 }
 
 
 @keyframes line-bottom-back {
-  0% {
-    background-color: v.$color--yellow;
-  }
-  40% {
-    box-shadow: 1px 1px 4px 4px v.$color--yellow;
-    width: 100px;
-    height: 10px;
-    top: 50px;
-    transform: rotate(-310deg);
-  }
+  // 40% {
+  //   transform: rotate(0);
+  // }
   100% {
-    transform: rotate(-540deg);
+    transform: rotate(-360deg);
   }
 }
 
 @keyframes line-middle-back {
   0% {
-    right: 110vw;
+    transform: translateX(-110vw);
   }
   70% {
-    right: 110vw;
+    transform: translateX(-50vw);
   }
   100% {
-    right: 10px;
+    transform: translateX(0);
   }
 }

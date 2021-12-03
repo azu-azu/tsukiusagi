@@ -7,7 +7,7 @@
 	height: v.$size--moon-big;
 	top: v.$position--moon-big-top;
 	border-radius: 50%;
-	background: v.$color--fuschia;
+	background: v.$color--moon-main;
 	filter: blur(4px);
 	transition: all 1s linear;
 
@@ -19,21 +19,18 @@
 
 	&__txt {
 		position: absolute;
-		width: 100%;
-		color: v.$color--moon-waning-shadow;
+		width: auto;
+		color: v.$color--moon-main;
 		font-family: "Gluten", cursive;
 		font-size: 2.5rem;
 		line-height: v.$line-height--wide;
-		letter-spacing: -8px;
-		bottom: 46%;
+		letter-spacing: 5px;
+		top: 53%;
+		right: 5%;
 
 		@include m.breakpoint( moon-mini ) {
 			font-size: min(3.5vmin, 2.5rem);
 			bottom: 18vmin;
-		}
-
-		.c-txt-typer {
-			right: 10%;
 		}
 	}
 
@@ -51,14 +48,27 @@
 	}
 
 	&__waning {
-		width: 100%;
+		width: 102%;
 		height: 100%;
+		margin: auto;
 		border-radius: 50%;
 		filter: blur(4px);
-		box-shadow: inset 5vmin -4vmin 0vmin v.$color--moon-waning-shadow;
-		
-		@include m.breakpoint( moon-mini ) {
-			animation: moon-waning 15s alternate-reverse infinite; //alternate:前後反転
+		overflow: hidden;
+
+		//box-shadowのアニメーションをやめたため、疑似要素追加
+		&::before {
+			content: '';
+			display: block;
+			width: 110%;
+			height: 100%;
+			border-radius: 50%;
+			background: v.$color--fuschia;
+			transform: rotate(237deg) translateY(83px) translateX(29px);
+			animation: moon-waning-sp 17s alternate-reverse infinite;
+
+			@include m.breakpoint( moon-mini ) {
+				animation: moon-waning 17s alternate-reverse infinite -1s;
+			}
 		}
 	}
 
@@ -70,25 +80,20 @@
 	}
 }
 
-@keyframes moon {
+@keyframes moon-waning-sp {
 	0% {
-		box-shadow: 0px 0px 40px 30px v.$color--moon-shadow-start;
-	}
-	50% {
-		box-shadow: 0px 0px 40px 30px v.$color--moon-shadow-middle;
+		transform: rotate(227deg) translateY(340px) translateX(17px);
 	}
 	100% {
-		box-shadow: 0px 0px 40px 30px v.$color--moon-shadow-start;
+		transform: rotate(227deg) translateY(44px) translateX(17px);
 	}
 }
 
 @keyframes moon-waning {
 	0% {
-		background: v.$color--moon-main;
-		box-shadow: inset 30vmin -4vmin 0vmin v.$color--moon-waning-shadow;
+		transform: rotate(227deg) translateY(272px) translateX(17px);
 	}
 	100% {
-		background: v.$color--moon-waning;
-		box-shadow: inset 5vmin -4vmin 0vmin v.$color--moon-waning-shadow;
+		transform: rotate(227deg) translateY(44px) translateX(17px);
 	}
 }

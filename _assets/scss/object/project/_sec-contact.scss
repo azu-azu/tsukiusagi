@@ -1,7 +1,6 @@
 @use "../../foundation/variable" as v;
 
 .p-sec-contact {
-  position: relative;
 	padding-top: v.$gap--sec-top;
 	padding-bottom: v.$gap--sec-bottom;
   min-height: 100vh;
@@ -26,7 +25,12 @@
     }
   }
 
-  .c-bg-square {
+  .c-ball {
+    background: v.$color--white--opacity20;
+    box-shadow: v.$shadow--bg-square-main;
+    border-right: 1px solid v.$color--white--opacity20;
+    border-bottom: 1px solid v.$color--white--opacity20;
+
     &:nth-child(2) {
       top: -30%;
       left: -10%;

@@ -15,7 +15,7 @@
   <body class="is-close">
     <header class="l-header">
       <?php get_template_part('components/common/hamburger');?>
-      <section class="p-header is-close" id="js-header">
+      <section class="p-header p-header--top is-close" id="js-header">
         <h1 class="c-header-ttl">月うさぎWeb</h1>
         <nav class="p-gmenu">
           <a class="c-header-ttl--top js-page-top c-bubbly-button--white js-bubbly js-marker" href="#">月へ戻る</a>

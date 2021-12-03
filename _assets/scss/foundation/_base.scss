@@ -1,9 +1,12 @@
 @use "variable" as v;
+@use "mixin" as m;
 
 html {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 100;
   font-size: 62.5%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;//スマホのカクカク回避
 
   @media screen and (min-width: 460px) {
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -12,6 +15,11 @@ html {
 
 body {
   overflow-x: hidden;
+}
+
+// スクロール時のホバーを無効にする
+.disable-hover {
+  pointer-events: none;
 }
 
 a {
@@ -63,3 +71,5 @@ body {
     box-shadow: v.$box-shadow--star-green;
   }
 }
+
+

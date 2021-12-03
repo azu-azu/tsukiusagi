@@ -2,6 +2,7 @@
 
 $position-bottom--line: -50px;
 $width--linear-light: 300px;
+$anim-time: 7s;
 
 
 .c-linear-light {
@@ -22,27 +23,30 @@ $width--linear-light: 300px;
     height: 100%;
     bottom: $position-bottom--line;
     transform-origin: 0 0;
-    background: linear-gradient(to right, rgba(255,255,255, 0.1) 10%, rgba(255,255,255, 0.4) 80%, rgba(255,255,255, 1));
+    background: linear-gradient(to right, 
+    v.$color--white--opacity10 10%, 
+    v.$color--white--opacity40 80%, 
+    v.$color--white);
     border-radius: 50%;
-    animation: line 2s infinite;
+    animation: line $anim-time infinite;
   }
   
   // 光
-  &:after {
-    width: 30px;
-    height: 21px;
-    bottom: $position-bottom--line - 10px;
-    transform-origin: 90% 50%;
-    border-radius: 2px;
-    background: rgba(v.$color--light-purple, .55);
-    box-shadow: 0 0 10px 6px rgba(v.$color--light-purple, .4),
-    -20px 0 15px 4px rgba(v.$color--light-purple, .3),
-    -40px 0 15px 2px rgba(v.$color--light-purple, .2),
-    -60px 0 10px 1px rgba(v.$color--light-purple, .1),
-    -80px 0 10px 1px rgba(v.$color--light-purple, .05);
-    filter: blur(8px);
-    animation: light 2s infinite;
-  }
+  // &:after {
+  //   width: 30px;
+  //   height: 21px;
+  //   bottom: $position-bottom--line - 10px;
+  //   transform-origin: 90% 50%;
+  //   border-radius: 2px;
+  //   background: rgba(v.$color--light-purple, .55);
+  //   box-shadow: 0 0 10px 6px rgba(v.$color--light-purple, .4),
+  //   -20px 0 15px 4px rgba(v.$color--light-purple, .3),
+  //   -40px 0 15px 2px rgba(v.$color--light-purple, .2),
+  //   -60px 0 10px 1px rgba(v.$color--light-purple, .1),
+  //   -80px 0 10px 1px rgba(v.$color--light-purple, .05);
+  //   filter: blur(8px);
+  //   animation: light $anim-time infinite 3s;
+  // }
 }
 
 
@@ -56,10 +60,6 @@ $width--linear-light: 300px;
     transform: scaleX(1);
     opacity: 1;
   }
-  92% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
   100% {
     transform: scaleX(1);
     opacity: 0;
@@ -68,33 +68,11 @@ $width--linear-light: 300px;
 
 @keyframes light {
   0% {
-    transform: scale(.3,.8) translateZ(0);
-    left: 0;
-    box-shadow: 0 0 10px 6px rgba(v.$color--yellow, .4),
-    -20px 0 15px 4px rgba(v.$color--yellow, .3),
-    -40px 0 15px 2px rgba(v.$color--yellow, .2),
-    -60px 0 10px 1px rgba(v.$color--yellow, .1),
-    -80px 0 10px 1px rgba(v.$color--yellow, .05);
-    background: rgba(v.$color--yellow,  .5);
+    transform: scale(0,0) translateX(52px);
     opacity: 1;
   }
-  22% {
-    transform: scale(2,2) translateZ(0);
-    background: rgba(v.$color--light-purple, .55);
-  }
-  50% {
-    transform: scale(1,1) translateZ(0);
-    box-shadow: 0 0 10px 6px rgba(v.$color--light-purple, .4),
-    -20px 0 15px 4px rgba(v.$color--light-purple, .3),
-    -40px 0 15px 2px rgba(v.$color--light-purple, .2),
-    -60px 0 10px 1px rgba(v.$color--light-purple, .1),
-    -80px 0 10px 1px rgba(v.$color--light-purple, .05);
-    opacity: .5;
-  }
   100% {
-    transform: scale(1,1) translateZ(0);
-    left: 105%;
-    opacity: 0;
+    transform: scale(2,2) translateX(52px);
+    opacity: 0; 
   }
 }
-

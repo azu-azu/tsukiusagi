@@ -3,11 +3,12 @@
 
 .c-nav {
   width: 0;
-
   @include m.breakpoint( moon-mini ) {
     width: auto;
-    
-    display: flex;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -15,11 +16,11 @@
   
   li {
     cursor: pointer;
+    width: 250px;
 
     position: absolute;
     width: 250px;
     right: -100vw;
-    padding-left: 0;
 
     background: rgba(0, 0, 0, 0.6);
     border-radius: 50px;
@@ -44,16 +45,19 @@
     @include m.breakpoint( moon-mini ) {
       position: static;
       width: auto;
-      padding-left: 40px;
       background: none;
       filter: none;
       border-radius: 0;
+      animation: none;
+    }
+
+
+    a {
+      font-size: v.$font-size--hamburger-nav;
+
+      @include m.breakpoint( moon-mini ) {
+        font-size: v.$font-size--header-nav-back;
+      }
     }
   }
-  
-  a {
-    color: #fff;
-    @include m.breakpoint( moon-mini ) {
-    }
-	}
 }

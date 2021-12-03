@@ -29,10 +29,10 @@ const scrollAnimation = () => {
 
 // トップへ戻る要素をクリックしたらスクロールアニメーション実行
 document.querySelectorAll("a[href^='#']").forEach((element) => {
-  element.addEventListener("click", (event) => {
-    event.preventDefault();
+  element.addEventListener("click", (e) => {
+    e.preventDefault();
 
-    const targetId = event.target.getAttribute("href");// ターゲットの要素を取得
+    const targetId = e.target.getAttribute("href");// ターゲットの要素を取得
     if (targetId === "#") {
       targetScrollY = 0;// href="#"の場合はページトップなので0
     } else {

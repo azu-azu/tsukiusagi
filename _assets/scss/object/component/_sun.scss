@@ -6,28 +6,23 @@
 	height: 200px;
 	border-radius: 50%;
 	left: 50%;
-	transform: translateX(-50%);
 	background-color: transparent;
-
-	// background: linear-gradient(#ff0, #d00);
 	background: v.$color--yellow;
 
 	box-shadow: -1px -1px 20px 6px rgba(v.$color--yellow, 0.5),
-		1px 1px 20px 6px rgba(#d00, 0.5), 70px 40px 80px 10px rgba(v.$color--yellow, 0.5),
-		-70px -40px 80px 10px rgba(v.$color--yellow, 0.5),
-		-40px 70px 80px 10px rgba(v.$color--yellow, 0.5),
-		40px -70px 80px 10px rgba(v.$color--yellow, 0.5);
-	// box-shadow: 0 0 40px 6px rgb(255, 151, 246), 0 0 150px 10px rgb(255, 98, 208);
-	// box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33;
-	animation: rise 24s ease forwards;
+	1px 1px 20px 6px rgba(#d00, 0.5), 70px 40px 80px 10px rgba(v.$color--yellow, 0.5),
+	-70px -40px 80px 10px rgba(v.$color--yellow, 0.5),
+	-40px 70px 80px 10px rgba(v.$color--yellow, 0.5),
+	40px -70px 80px 10px rgba(v.$color--yellow, 0.5);
 	filter: blur(3px);
+	animation: rise 24s ease forwards;
 }
 
 @keyframes rise {
 	0% {
-		top: 50%;
+		transform: translateY(160px) translateX(-50%);
 	}
 	100% {
-		top: 15%;
+		transform: translateY(60px) translateX(-50%);
 	}
 }

@@ -2,7 +2,7 @@
 @use "sass:math";
 
 .p-offset-text {
-	position: absolute;
+	position: relative;
 	bottom: 15%;
 	left: 50%;
 	transform: translateX(-50%);

@@ -67,7 +67,7 @@ const distBase = '../_static/dist';
 const serverBase = '../public/wp-content/themes/tsukiusagi';
 
 const publicPath = {
-  'public':[publicBase + '/**/*', '!' + publicBase + '/**/*.gitkeep']
+  'public': [publicBase + '/**/*', '!' + publicBase + '/**/*.gitkeep']
 };
 
 const srcPath = {
@@ -84,7 +84,7 @@ const srcPath = {
 };
 
 const watchPath = {
-  'ejs': [assetsBase + '/ejs/**/*.ejs',assetsBase + '/ejs/**/*.json']
+  'ejs': [assetsBase + '/ejs/**/*.ejs', assetsBase + '/ejs/**/*.json']
 }
 
 const ejsData = {
@@ -135,8 +135,8 @@ const TARGET_BROWSERS = [
 const cssSass = () => {
 
   return gulp.src(srcPath.scss, {
-      sourcemaps: thisCssMap
-    })
+    sourcemaps: thisCssMap
+  })
     .pipe(
       //エラーが出ても処理を止めない
       plumber({
@@ -198,8 +198,8 @@ const imgImagemin = () => {
             }]
           })
         ], {
-          verbose: true
-        }
+        verbose: true
+      }
       )
     )
     .pipe(gulp.dest(distPath.img))
@@ -218,19 +218,19 @@ const svg = () => {
     }))
     .pipe(svgmin({
       plugins: [{
-          removeTitle: true
-        },
-        {
-          removeAttrs: {
-            attrs: ['fill', 'class', 'id', 'data-name', 'stroke']
-          }
-        },
-        {
-          removeStyleElement: true
-        },
-        {
-          removeViewBox: false
-        },
+        removeTitle: true
+      },
+      {
+        removeAttrs: {
+          attrs: ['fill', 'class', 'id', 'data-name', 'stroke']
+        }
+      },
+      {
+        removeStyleElement: true
+      },
+      {
+        removeViewBox: false
+      },
       ]
     }))
     .pipe(svgSprite({

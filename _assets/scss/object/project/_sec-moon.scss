@@ -1,14 +1,13 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
 
 .p-sec-moon {
-  position: relative;
+  // position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 
   width: 100%;
-  min-height: 100vh;
-  margin-top: 100px;
-	// margin-bottom: v.$gap--sec-bottom;
-  z-index: 1;
+  height: 100vh;
+  // z-index: 1;
 }

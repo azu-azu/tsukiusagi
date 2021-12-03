@@ -36,6 +36,7 @@ function my_style_loader_tag_filter($html, $handle) {
     return $html;
 }
 
+// 第四引数：キャッシュ自動クリア
 function tsukiusagi_script() {
     // wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.6.1/css/all.css', array());
     wp_enqueue_style('m-plus-1p', 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&display=swap', array());
@@ -43,9 +44,9 @@ function tsukiusagi_script() {
     wp_enqueue_style('gluten', 'https://fonts.googleapis.com/css2?family=Gluten:wght@100&display=swap', array());
 
     wp_enqueue_style('ress', 'https://unpkg.com/ress/dist/ress.min.css', array(), '1.0.0');
-    wp_enqueue_style('style-css', get_template_directory_uri() . '/css/style.css', array(), '1.0.0');
-    wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), '1.0.0');
-    // wp_enqueue_style('swipe', '//unpkg.com/swiper/swiper-bundle.min.css', array(), '1.0.0');
+    wp_enqueue_style('style-css', get_template_directory_uri() . '/css/style.css', array(), date("YmdHi"));
+    wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), date("YmdHi"));
+    // wp_enqueue_style('swipe', '//unpkg.com/swiper/swiper-bundle.min.css', array(),date("YmdHi"), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'tsukiusagi_script');
 
@@ -53,7 +54,7 @@ add_action('wp_enqueue_scripts', 'tsukiusagi_script');
 //jsを読み込む
 //--------------------------------------------
 wp_enqueue_script('jquery');
-wp_enqueue_script('bundle', get_template_directory_uri() . '/js/bundle.js', array(), '', true);
+wp_enqueue_script('bundle', get_template_directory_uri() . '/js/bundle.js', array(), date("YmdHi"), true);
 
 // cdnの読み込み
 wp_enqueue_script('particles', 'http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js', array(), true); //milky-way

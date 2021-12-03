@@ -1,4 +1,5 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
 
 $duration: 4s;
 $color--border: v.$color--fuschia;
@@ -16,23 +17,39 @@ $deg--last: 20;
     opacity: 0.8;
     z-index: 1500;
   }
-  
+
   position: fixed;//fixedじゃないと表示されない
   width: 60%;
   height: 100vh;
   top: 0;
   background: -webkit-radial-gradient(36% 65%, circle, 
-  rgba(249, 249, 250, 0) 0%, rgba(189, 255, 254, 0) 0%, #08314e 0%, #081a38 80%, #04102e 90%, #02080d 100%);
+  rgba(249, 249, 250, 0) 0%, 
+  rgba(189, 255, 254, 0) 0%, 
+  #08314e 0%, 
+  #081a38 80%, 
+  #04102e 90%, 
+  #02080d 100%);
   // background: -webkit-radial-gradient(76% 55%, circle, rgba(249,249,250,1) -1%, rgba(189,255,254,1) 2%, rgba(8,49,78,1) 3%, rgba(8,26,56,1) 58%, rgba(4,16,46,1) 70%, rgba(2,8,13,1) 90%);
-  
+
   &--left {
     @extend .p-loading-panel;
     left: 0;
 
     border-right: 4px solid $color--border;
-    box-shadow: inset -40px 0 50px rgb(255 255 0 / 30%), inset -90px 0 120px rgb(255 255 255 / 30%);
-    will-change: animation;
-    animation: loading-left $duration ease-out forwards;
+    border-bottom-right-radius: 100%;//borderをアニメーションさせると重くなる
+    box-shadow: inset -40px 0 50px rgb(255 255 0 / 30%), 
+    inset -90px 0 120px rgb(255 255 255 / 30%);
+    animation: loading-left-sp $duration ease-out forwards;
+
+    @include m.breakpoint(moon-mini) {
+      animation: loading-left $duration ease-out forwards;
+    }
+
+    &::before {
+      left: 0;
+      border-bottom-right-radius: 100%;
+      animation: loading-left-before $duration ease-out forwards;
+    }
   }
 
   &--right {
@@ -40,9 +57,20 @@ $deg--last: 20;
     right: 0;
 
     border-left: 4px solid $color--border;
-    box-shadow: inset 40px 0 50px rgb(255 255 0 / 30%), inset 90px 0 120px rgb(255 255 255 / 30%);
-    will-change: animation;
-    animation: loading-right $duration ease-out forwards;
+    border-bottom-left-radius: 100%;
+    box-shadow: inset 40px 0 50px rgb(255 255 0 / 30%), 
+    inset 90px 0 120px rgb(255 255 255 / 30%);
+    animation: loading-right-sp $duration ease-out forwards;
+
+    @include m.breakpoint(moon-mini) {
+      animation: loading-right $duration ease-out forwards;
+    }
+
+    &::before {
+      right: 0;
+      border-bottom-left-radius: 100%;
+      animation: loading-right-before $duration ease-out forwards;
+    }
   }
 
   &--left::before,
@@ -55,71 +83,40 @@ $deg--last: 20;
     opacity: .11;
     background: url("../img/top/loading.jpeg") repeat center center;
   }
+}
 
-  &--left::before {
-    right: 0;
-    animation: loading-left-before $duration ease-out forwards;
+
+@keyframes loading-left-sp {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
   }
-  &--right::before {
-    left: 0;
-    animation: loading-right-before $duration ease-out forwards;
+  100% {
+    transform: translate(-60vw, -50vh) rotate($deg--last +deg);
+  }
+}
+@keyframes loading-right-sp {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(60vw, -50vh) rotate(-1 * $deg--last +deg);
   }
 }
 
-$myX: 50vw;
-$myY: -50vh;
 
 @keyframes loading-left {
   0% {
     transform: translate(0, 0) rotate(0deg);
-    border-bottom-right-radius: $radius--start;
-    top: 0;
-  }
-  10% {
-    // transform: translate(0, 0);
-    border-bottom-right-radius: 100%;
   }
   100% {
-    transform: translate(-1 * $myX, $myY) rotate($deg--last +deg);
-    border-bottom-right-radius: 100%;
-    top: -1% * $deg--last;
+    transform: translate(-50vw, -50vh) rotate($deg--last +deg);
   }
 }
 @keyframes loading-right {
   0% {
     transform: translate(0, 0) rotate(0deg);
-    border-bottom-left-radius: $radius--start;
-    top: 0;
-  }
-  10% {
-    // transform: translate(0, 0);
-    border-bottom-left-radius: 100%;
   }
   100% {
-    transform: translate($myX, $myY) rotate(-1 * $deg--last +deg);
-    border-bottom-left-radius: 100%;
-    top: -1% * $deg--last;
-  }
-}
-@keyframes loading-left-before {
-  0% {
-    border-bottom-right-radius: $radius--start;
-  }
-  10% {
-    border-bottom-right-radius: 90%;
-  }
-  100% {
-    border-bottom-right-radius: 100%;
-  }
-}
-@keyframes loading-right-before {
-  0% {
-    border-bottom-left-radius: $radius--start;
-  }
-  10% {
-    border-bottom-left-radius: 90%;
-  }
-  100% {
-    border-bottom-left-radius: 100%;
+    transform: translate(50vw, -50vh) rotate(-1 * $deg--last +deg);
   }
 }

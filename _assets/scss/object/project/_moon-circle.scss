@@ -1,6 +1,7 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
 
-.p-circle {
+.p-moon-circle {
   position: relative;
   display: flex;
   justify-content: center;
@@ -10,6 +11,12 @@
   overflow: hidden;
   width: 100vw;
   height: 100vw;
+  margin-top: 100px;
+  z-index: 1;//背景の星より上にするため
+
+  @include m.breakpoint(moon-mini) {
+    margin-top: 200px;
+  }
 
   @media screen and (min-width: 570px) {
     width: 80vmin;

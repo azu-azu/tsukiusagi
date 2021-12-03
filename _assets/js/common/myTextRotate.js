@@ -33,3 +33,5 @@ function textEffect(animationName) {
 };
 
 textEffect('fly-in-out');
+
+

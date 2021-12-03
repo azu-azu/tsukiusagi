@@ -15,14 +15,16 @@ window.addEventListener('load', () => {
 // **
 // p-header:スクロールしたら消える
 // **
-const headerClass = document.getElementById("js-header");
+const myHeader = document.getElementById("js-header");
+const headerClass = myHeader.classList;
 const headerFadePosition = 50;//スクロールしてページトップから〇〇に達したとき
+
 const headerFade = () => {
 	let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 	if (scrollTop >= headerFadePosition) {
-		headerClass.classList.add('is-fade');
+		headerClass.add('is-fade');
 	} else {
-		headerClass.classList.remove('is-fade');
+		headerClass.remove('is-fade');
 	};
 }
 
@@ -37,13 +39,13 @@ const headerBackDown = () => {
 	let targetTop = rect.top + scrollTop;
 
 	if (scrollTop >= targetTop) {
-		headerClass.classList.remove("UpMove", "p-header", "is-fade");// クラス名除去
-		headerClass.classList.add('DownMove', 'p-header--back');// クラス名追加
+		headerClass.remove("UpMove", 'p-header--top', "is-fade");// クラス名除去
+		headerClass.add('DownMove', 'p-header--back');// クラス名追加
 
 	} else {
-		if (headerClass.classList.contains("DownMove")) {//すでにクラス名がついていたら
-			headerClass.classList.remove('DownMove', 'p-header--back');// クラス名除去
-			headerClass.classList.add('UpMove', 'p-header');// クラス名追加
+		if (headerClass.contains("DownMove")) {//すでにクラス名がついていたら
+			headerClass.remove('DownMove', 'p-header--back');// クラス名除去
+			headerClass.add('UpMove', 'p-header--top');// クラス名追加
 		}
 	}
 }
@@ -53,34 +55,38 @@ const headerBackDown = () => {
 // ハンバーガーボタン：クリックイベント
 // **
 const hamburger = document.getElementById('js-hamburger');
+const hamburgerClass = hamburger.classList;
 const myBody = document.body;
+const myBodyClass = myBody.classList;
+
+
 hamburger.addEventListener('click', () => {
 	let myPosition = window.pageYOffset || document.documentElement.scrollTop;
 
 	//is-closeがあったら
-	if (hamburger.classList.contains("is-close")) {
+	if (hamburgerClass.contains("is-close")) {
 		//is-closeを外す
-		hamburger.classList.remove('is-close');
-		myBody.classList.remove('is-close');
+		hamburgerClass.remove('is-close');
+		myBodyClass.remove('is-close');
 
 		//is-openをつける
-		hamburger.classList.add('is-open');
-		myBody.classList.add('is-open');
+		hamburgerClass.add('is-open');
+		myBodyClass.add('is-open');
 		myBody.style.position = "fixed";
 		myBody.style.top = `-${myPosition}px`;
 	} else {
 		//is-openがあったら
-		if (hamburger.classList.contains("is-open")) {
+		if (hamburgerClass.contains("is-open")) {
 			// スクロール位置の記憶
 			const scrollY = myBody.style.top;
 
 			// is-openを外す
-			hamburger.classList.remove('is-open');
-			myBody.classList.remove('is-open');
+			hamburgerClass.remove('is-open');
+			myBodyClass.remove('is-open');
 
 			// is-closeをつける
-			hamburger.classList.add('is-close');
-			myBody.classList.add('is-close');
+			hamburgerClass.add('is-close');
+			myBodyClass.add('is-close');
 
 			// bodyのfixedを外す
 			bodyFixedNone();
@@ -99,10 +105,10 @@ hamburger.addEventListener('click', () => {
 const navList = document.querySelectorAll(".js-marker");
 navList.forEach((elm) => {
 	elm.addEventListener('click', () => {
-		hamburger.classList.remove('is-open');
-		myBody.classList.remove('is-open');
-		hamburger.classList.add('is-close');
-		myBody.classList.add('is-close');
+		hamburgerClass.remove('is-open');
+		myBodyClass.remove('is-open');
+		hamburgerClass.add('is-close');
+		myBodyClass.add('is-close');
 
 		//bodyのfixedを外す
 		bodyFixedNone();
@@ -135,9 +141,9 @@ jQuery(function ($) {
 // 関数：bodyのfixedを外す
 // **
 const bodyFixedNone = () => {
-	document.body.style.position = "";
-	document.body.style.top = "";
-	document.body.style.paddingTop = "";
+	myBody.style.position = "";
+	myBody.style.top = "";
+	myBody.style.paddingTop = "";
 };
 
 

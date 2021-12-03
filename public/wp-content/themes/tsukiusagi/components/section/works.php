@@ -1,6 +1,6 @@
 <section class="p-sec-works" id="works">
   <article class="c-sec-ttl__wrapper">
-    <h2 class="c-sec-ttl c-anim-box--lr txt c-linear-light js-scroll-show">
+    <h2 class="c-sec-ttl c-anim-box--down txt c-linear-light js-scroll-show">
       <span>Works</span>
     </h2>
   </article>
@@ -36,7 +36,4 @@
       </article>
     </li>
   </ul>
-
-  <?php get_template_part('components/parts/orbit');?>
-  <!-- <div class="p-fireworks"></div> -->
 </section>

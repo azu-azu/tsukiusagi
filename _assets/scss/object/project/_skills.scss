@@ -6,7 +6,9 @@
 
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 100;
-  text-shadow: 1px 1px 5px #fff;
+  text-shadow: 1px 1px 0px #555;
+  color: rgba(255, 255, 195, 0.4);
+  // color: rgba(255, 255, 255, 0.2);
 
   display: flex;
   justify-content: center;
@@ -29,18 +31,23 @@
     height: 300px;
   }
 
-  .c-bg-square {
+  .c-ball {
     display: grid;
     place-content: center;
     text-align: center;
-    color: #fff;
-    font-size: 2rem;
+    font-size: min(2vw, 1.5rem);
+    line-height: 1.2;
+    box-shadow: v.$shadow--bg-square-main;
+
+    &::before {
+      display: none;
+    }
 
     &.skill-html {
       top: -30px;
       left: 0;
-      width: min(20vmin, 120px);
-      height: min(20vmin, 120px);
+      width: min(15vmin, 100px);
+      height: min(15vmin, 100px);
       animation: html 20s linear infinite;
     }
     &.skill-css {
@@ -53,13 +60,11 @@
     &.skill-php {
       top: 0;
       left: 38vmin;
-      width: min(20vmin, 120px);
-      height: min(20vmin, 120px);
+      width: min(15vmin, 100px);
+      height: min(15vmin, 100px);
       animation: php 15s linear infinite;
     }
     &.skill-react {
-      font-size: min(3vw, 1.5rem);
-      line-height: min(3vw, 1.5rem);
       top: 115px;
       right: 8vmin;
       width: min(10vmin, 50px);
@@ -68,8 +73,6 @@
       animation: react 10s linear infinite;
     }
     &.skill-js {
-      font-size: min(3vw, 1.5rem);
-      line-height: min(3vw, 1.5rem);
       top: 60px;
       right: 0;
       width: min(12vmin, 60px);
@@ -78,8 +81,6 @@
       animation: js 20s linear infinite;
     }
     &.skill-gulp {
-      font-size: min(3vw, 1.5rem);
-      line-height: min(3vw, 1.5rem);
       top: 160px;
       left: 9vmin;
       width: min(8vmin, 40px);
@@ -89,8 +90,6 @@
       animation: gulp 15s linear infinite;
     }
     &.skill-git {
-      font-size: min(3vw, 1.5rem);
-      line-height: min(3vw, 1.5rem);
       top: 116px;
       left: 14vmin;
       width: min(10vmin, 50px);
@@ -99,45 +98,37 @@
       animation: git 15s linear infinite;
     }
     &.skill-wordpress {
-      font-size: min(5vw, 2rem);
-      line-height: min(5vw, 2rem);
       top: 0;
       left: 0;
-      width: min(20vmin, 120px);
-      height: min(20vmin, 120px);
+      width: min(15vmin, 100px);
+      height: min(15vmin, 100px);
     }
     &.skill-theme {
-      font-size: min(5vw, 1.5rem);
-      line-height: min(5vw, 1.5rem);
       top: 0;
-      left: 22vmin;
-      width: min(20vmin, 120px);
-      height: min(20vmin, 120px);
+      left: 28vmin;
+      width: min(15vmin, 100px);
+      height: min(15vmin, 100px);
     }
     &.skill-custom {
-      font-size: min(3vw, 1rem);
-      line-height: min(3vw, 1rem);
-      top: 50px;
-      right: 11vmin;
+      top: 0;
+      right: 2vmin;
       width: min(15vmin, 90px);
       height: min(15vmin, 90px);
     }
     &.skill-plugin {
-      font-size: min(3vw, 1rem);
-      line-height: min(3vw, 1rem);
-      top: 123px;
+      font-size: min(2vw, 1rem);
+      top: 155px;
       right: 0;
-      width: min(13vmin, 80px);
-      height: min(13vmin, 80px);
+      width: min(12vmin, 60px);
+      height: min(12vmin, 60px);
       box-shadow: v.$shadow--bg-square-sub;
     }
     &.skill-block {
       font-size: min(2vw, 1rem);
-      line-height: min(2vw, 1rem);
-      top: 160px;
-      left: 34vmin;
-      width: min(14vmin, 80px);
-      height: min(14vmin, 80px);
+      top: 120px;
+      left: 12vmin;
+      width: min(12vmin, 60px);
+      height: min(12vmin, 60px);
       box-shadow: v.$shadow--bg-square-sub;
       z-index: 2;
     }
@@ -151,10 +142,10 @@
     transform: translate(0);
   }
   10% {
-    transform: scale(2) rotateZ(20deg);
+    transform: scale(1.5) rotateZ(20deg);
   }
   20% {
-    transform: scale(2) rotateZ(-80deg);
+    transform: scale(1.5) rotateZ(-80deg);
   }
   30% {
     transform: scale(1) rotateZ(360deg);
@@ -172,10 +163,10 @@
     transform: scale(1) rotateZ(0deg);
   }
   10% {
-    transform: scale(2) rotateZ(-360deg);
+    transform: scale(1.5) rotateZ(-360deg);
   }
   20% {
-    transform: scale(2) rotateZ(0deg);
+    transform: scale(1.5) rotateZ(0deg);
   }
   30% {
     transform: scale(1) rotateZ(360deg);
@@ -191,10 +182,10 @@
     transform: scale(1) rotateZ(0deg);
   }
   70% {
-    transform: scale(2) rotateZ(360deg);
+    transform: scale(1.5) rotateZ(360deg);
   }
   80% {
-    transform: scale(2) rotateZ(0deg);
+    transform: scale(1.5) rotateZ(0deg);
   }
   82% {
     transform: scale(1) rotateZ(360deg);
@@ -208,9 +199,6 @@
 }
 
 @keyframes js {
-  0% {
-    transform: translate(0);
-  }
   10% {
     transform: scale(2) rotateZ(20deg);
   }

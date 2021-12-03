@@ -1,11 +1,11 @@
 <section class="p-sec-profile" id="profile">
   <article class="c-sec-ttl__wrapper">
-    <h2 class="c-sec-ttl c-anim-box--lr txt c-linear-light js-scroll-show">
+    <h2 class="c-sec-ttl c-anim-box--down txt c-linear-light js-scroll-show">
       Profile
     </h2>
   </article>
 
-  <article class="p-sec-profile__cards c-anim-box--up js-scroll-show">
+  <article class="p-sec-profile__cards">
     <section class="swiper-container js-swiper">
       <ul class="swiper-wrapper">
         <li class="slider-item swiper-slide">
@@ -85,5 +85,5 @@
   </article>
 
   <?php get_template_part('components/parts/skills');?>
-  <?php get_template_part('components/parts/star-way');?>
+  <?php get_template_part('components/parts/falling-box');?>
 </section>
