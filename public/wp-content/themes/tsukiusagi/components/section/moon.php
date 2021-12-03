@@ -18,3 +18,4 @@
   </article>
   <?php get_template_part('components/parts/shooting-star');?>
 </article>
+<?php get_template_part('components/parts/milky-way');?>

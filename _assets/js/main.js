@@ -12,7 +12,7 @@ import './common/myHeader.js';
 import './common/myHover';
 import './common/myInvalidHover';
 import './common/smooth-scroll';
-// import './common/myMilkyWay';
+import './common/myMilkyWay';
 import './common/mySwiper.js';
 import './common/myScrollShow.js';
 import './common/data-splitting';

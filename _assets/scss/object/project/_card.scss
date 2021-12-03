@@ -39,7 +39,7 @@
     }
   
     & .c-card-img__hover {
-      transform: scale(1.5,1.5) translateY(15%);//heightよりtransformで変更のほうが負荷が低い
+      transform: scale(1.5,1.5) translateY(15%);
       opacity: 0.3;
     }
     & .p-card-info {

@@ -1,4 +1,5 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
 
 .p-sec-works {
 	padding-top: v.$gap--sec-top;
@@ -6,4 +7,8 @@
   background-color: transparent;
   // background: linear-gradient(to bottom, rgba(55, 50, 133, 0), #373285);
   background: linear-gradient(to bottom, rgba(61, 136, 175, 0), #3d88af);
+
+  @include m.breakpoint(moon-mini) {
+    margin-top: -150px;
+  }
 }
