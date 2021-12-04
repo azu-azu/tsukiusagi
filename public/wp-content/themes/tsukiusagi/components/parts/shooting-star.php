@@ -1,1 +1,0 @@
-<div class="p-shooting-star--01 c-ball"></div>

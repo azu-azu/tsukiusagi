@@ -2,11 +2,11 @@
 const myParticleID = "js-milky-way-particle";
 const particle_shape = "star"; //シェイプの形（circle:丸、edge:四角、triangle:三角、polygon:多角形、star:星型、image:画像）
 const numOfStars = 400; //星の数
-const colorOfStars = '#ff0'; //星の色
+const colorOfStars = '#ffff55'; //星の色
 const opacityOfStars = 0.4; //星の透明度
 const sizeOfStars = 3; //星の大きさ
 const move_direction = "right"; //流れの向き(none、top、top-right、right、bottom-right、bottom、bottom-left、left、top-leftより選択)
-const move_speed = 2;  //シェイプの動くスピード
+const move_speed = 1;  //シェイプの動くスピード
 
 particlesJS(myParticleID, {
   "particles": {
@@ -40,7 +40,7 @@ particlesJS(myParticleID, {
       "random": true,
       "anim": {
         "enable": true, //シェイプの透明度をアニメーションさせる
-        "speed": 10,
+        "speed": 1,
         "opacity_min": 0.2, //透明度の最小値
         "sync": false //全てのシェイプを同時にアニメーションさせる
       }
@@ -50,7 +50,7 @@ particlesJS(myParticleID, {
       "random": true, //シェイプの大きさをランダムにする
       "anim": { //シェイプの大きさをアニメーションさせる
         "enable": true,
-        "speed": 10,
+        "speed": 1,
         "size_min": 0.2, //大きさの最小値
         "sync": false //全てのシェイプを同時にアニメーションさせる
       }

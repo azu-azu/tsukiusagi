@@ -3,7 +3,7 @@
 
 .p-train__container {
 	position: absolute;
-	top: 40%;
+	top: 38%;
 	width: 100%;
 	height: 100px;
 	display: flex;
@@ -38,7 +38,7 @@
 		animation: turn 100s infinite;
 		height: 0;
 		width: 100px;
-		box-shadow: 5px 5px 32px 7px v.$color--yellow;
+		box-shadow: 5px 5px 32px 7px v.$color--sub;
 	}
 
 	img {

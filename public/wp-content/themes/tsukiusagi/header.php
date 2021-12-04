@@ -13,8 +13,7 @@
   </head>
 
   <body class="is-close">
-    <header class="l-header">
-      <?php get_template_part('components/common/hamburger');?>
+    <header class="l-header" id="js-l-header">
       <section class="p-header p-header--top is-close" id="js-header">
         <h1 class="c-header-ttl">月うさぎWeb</h1>
         <nav class="p-gmenu">
@@ -23,8 +22,9 @@
             <li class="js-marker" style="--i:0;"><a class="c-bubbly-button--white js-bubbly" href="#works">Works</a></li>
             <li class="js-marker" style="--i:1;"><a class="c-bubbly-button--white js-bubbly" href="#profile">Profile</a></li>
             <li class="js-marker" style="--i:2;"><a class="c-bubbly-button--yellow js-bubbly" id="default" href="#contact">Contact</a></li>
-            <div class="js-marker" id="marker"></div>
+            <div class="c-marker js-marker" id="marker"></div>
           </ul>
         </nav>
       </section>
+      <?php get_template_part('components/common/hamburger');?>
     </header>

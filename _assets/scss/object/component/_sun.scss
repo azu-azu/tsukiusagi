@@ -7,13 +7,13 @@
 	border-radius: 50%;
 	left: 50%;
 	background-color: transparent;
-	background: v.$color--yellow;
+	background: v.$color--sub;
 
-	box-shadow: -1px -1px 20px 6px rgba(v.$color--yellow, 0.5),
-	1px 1px 20px 6px rgba(#d00, 0.5), 70px 40px 80px 10px rgba(v.$color--yellow, 0.5),
-	-70px -40px 80px 10px rgba(v.$color--yellow, 0.5),
-	-40px 70px 80px 10px rgba(v.$color--yellow, 0.5),
-	40px -70px 80px 10px rgba(v.$color--yellow, 0.5);
+	box-shadow: -1px -1px 20px 6px rgba(v.$color--sub, 0.5),
+	1px 1px 20px 6px rgba(#d00, 0.5), 70px 40px 80px 10px rgba(v.$color--sub, 0.5),
+	-70px -40px 80px 10px rgba(v.$color--sub, 0.5),
+	-40px 70px 80px 10px rgba(v.$color--sub, 0.5),
+	40px -70px 80px 10px rgba(v.$color--sub, 0.5);
 	filter: blur(3px);
 	animation: rise 24s ease forwards;
 }

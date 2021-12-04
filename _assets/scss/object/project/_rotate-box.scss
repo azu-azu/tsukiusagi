@@ -54,6 +54,7 @@ $move-z: 300px;
   }
   
   &--follow {
+    will-change: transform;
     animation: rotationY $delay linear infinite reverse;
   }
 }

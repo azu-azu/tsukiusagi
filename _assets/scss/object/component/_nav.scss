@@ -5,7 +5,6 @@
   width: 0;
   @include m.breakpoint( moon-mini ) {
     width: auto;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -15,12 +14,9 @@
   }
   
   li {
-    cursor: pointer;
-    width: 250px;
-
     position: absolute;
     width: 250px;
-    right: -100vw;
+    cursor: pointer;
 
     background: rgba(0, 0, 0, 0.6);
     border-radius: 50px;
@@ -51,12 +47,11 @@
       animation: none;
     }
 
-
     a {
       font-size: v.$font-size--hamburger-nav;
 
       @include m.breakpoint( moon-mini ) {
-        font-size: v.$font-size--header-nav-back;
+        font-size: v.$font-size--header-nav;
       }
     }
   }

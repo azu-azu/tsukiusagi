@@ -7,8 +7,7 @@
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 100;
   text-shadow: 1px 1px 0px #555;
-  color: rgba(255, 255, 195, 0.4);
-  // color: rgba(255, 255, 255, 0.2);
+  color: v.$font-color--skills--child;
 
   display: flex;
   justify-content: center;
@@ -20,243 +19,34 @@
     display: inline-block;
   }
 
-  &__language {
-    position: relative;
-    width: min(80vw, 530px);
-    height: 300px;
-  }
-  &__wordpress {
-    position: relative;
-    width: min(80vw, 530px);
-    height: 300px;
-  }
+  &__list {
+    .c-ball {
+      display: grid;
+      place-content: center;
+      text-align: center;
+      font-size: 1.5em;
+      line-height: 1.2;
 
-  .c-ball {
-    display: grid;
-    place-content: center;
-    text-align: center;
-    font-size: min(2vw, 1.5rem);
-    line-height: 1.2;
-    box-shadow: v.$shadow--bg-square-main;
+      &:first-child {
+        top: 0;
+        left: 0;
+        width: min(15vmin, 100px);
+        height: min(15vmin, 100px);
+        color: v.$font-color--skills--first;
+        text-shadow: v.$text-shadow--skills--first;
+      }
+  
+      &:not(:first-child) {
+        box-shadow: v.$shadow--bg-square-main;
 
-    &::before {
-      display: none;
+        &::before {
+          display: none;
+        }
+      }
     }
 
-    &.skill-html {
-      top: -30px;
-      left: 0;
-      width: min(15vmin, 100px);
-      height: min(15vmin, 100px);
-      animation: html 20s linear infinite;
-    }
-    &.skill-css {
-      top: 0;
-      left: 21vmin;
-      width: min(15vmin, 100px);
-      height: min(15vmin, 100px);
-      animation: css 15s linear infinite;
-    }
-    &.skill-php {
-      top: 0;
-      left: 38vmin;
-      width: min(15vmin, 100px);
-      height: min(15vmin, 100px);
-      animation: php 15s linear infinite;
-    }
-    &.skill-react {
-      top: 115px;
-      right: 8vmin;
-      width: min(10vmin, 50px);
-      height: min(10vmin, 50px);
-      box-shadow: v.$shadow--bg-square-sub;
-      animation: react 10s linear infinite;
-    }
-    &.skill-js {
-      top: 60px;
-      right: 0;
-      width: min(12vmin, 60px);
-      height: min(12vmin, 60px);
-      box-shadow: v.$shadow--bg-square-sub;
-      animation: js 20s linear infinite;
-    }
-    &.skill-gulp {
-      top: 160px;
-      left: 9vmin;
-      width: min(8vmin, 40px);
-      height: min(8vmin, 40px);
-      z-index: 2;
-      box-shadow: v.$shadow--bg-square-sub;
-      animation: gulp 15s linear infinite;
-    }
-    &.skill-git {
-      top: 116px;
-      left: 14vmin;
-      width: min(10vmin, 50px);
-      height: min(10vmin, 50px);
-      box-shadow: v.$shadow--bg-square-sub;
-      animation: git 15s linear infinite;
-    }
-    &.skill-wordpress {
-      top: 0;
-      left: 0;
-      width: min(15vmin, 100px);
-      height: min(15vmin, 100px);
-    }
-    &.skill-theme {
-      top: 0;
-      left: 28vmin;
-      width: min(15vmin, 100px);
-      height: min(15vmin, 100px);
-    }
-    &.skill-custom {
-      top: 0;
-      right: 2vmin;
-      width: min(15vmin, 90px);
-      height: min(15vmin, 90px);
-    }
-    &.skill-plugin {
-      font-size: min(2vw, 1rem);
-      top: 155px;
-      right: 0;
-      width: min(12vmin, 60px);
-      height: min(12vmin, 60px);
-      box-shadow: v.$shadow--bg-square-sub;
-    }
-    &.skill-block {
-      font-size: min(2vw, 1rem);
-      top: 120px;
-      left: 12vmin;
-      width: min(12vmin, 60px);
-      height: min(12vmin, 60px);
-      box-shadow: v.$shadow--bg-square-sub;
-      z-index: 2;
+    .txt-small {
+      font-size: min(10px,1.5em);
     }
   }
 }
-
-
-
-@keyframes html {
-  0% {
-    transform: translate(0);
-  }
-  10% {
-    transform: scale(1.5) rotateZ(20deg);
-  }
-  20% {
-    transform: scale(1.5) rotateZ(-80deg);
-  }
-  30% {
-    transform: scale(1) rotateZ(360deg);
-  }
-  35% {
-    transform: scale(1) rotateZ(-360deg);
-  }
-  100% {
-    transform: scale(0.5) rotateZ(-720deg);
-  }
-}
-
-@keyframes css {
-  0% {
-    transform: scale(1) rotateZ(0deg);
-  }
-  10% {
-    transform: scale(1.5) rotateZ(-360deg);
-  }
-  20% {
-    transform: scale(1.5) rotateZ(0deg);
-  }
-  30% {
-    transform: scale(1) rotateZ(360deg);
-  }
-  100% {
-    transform: scale(1) rotateZ(0deg);
-  }
-}
-
-
-@keyframes php {
-  0% {
-    transform: scale(1) rotateZ(0deg);
-  }
-  70% {
-    transform: scale(1.5) rotateZ(360deg);
-  }
-  80% {
-    transform: scale(1.5) rotateZ(0deg);
-  }
-  82% {
-    transform: scale(1) rotateZ(360deg);
-  }
-  84% {
-    transform: scale(1) rotateZ(-360deg);
-  }
-  100% {
-    transform: scale(1) rotateZ(0deg);
-  }
-}
-
-@keyframes js {
-  10% {
-    transform: scale(2) rotateZ(20deg);
-  }
-  12% {
-    transform: scale(2) rotateZ(-80deg);
-  }
-  20% {
-    transform: scale(1) rotateZ(360deg);
-  }
-  25% {
-    transform: scale(1) rotateZ(-360deg);
-  }
-  100% {
-    transform: scale(1) rotateZ(-720deg);
-  }
-}
-
-
-@keyframes react {
-  0% {
-    transform: rotateZ(0);
-  }
-  80% {
-    transform: rotateZ(360deg);
-  }
-  85% {
-    transform: rotateZ(-360deg);
-  }
-  100% {
-    transform: rotateZ(720deg);
-  }
-}
-
-
-@keyframes gulp {
-  0% {
-    transform: translateY(-40px) rotateZ(0deg);
-  }
-  50% {
-    transform: translateY(40px) rotateZ(360deg);
-  }  
-  100% {
-    transform: translateY(-40px) rotateZ(0deg);
-  }
-}
-
-@keyframes git {
-  0% {
-    transform: translateY(-40px) rotateZ(0deg);
-  }
-  50% {
-    transform: translateY(40px) rotateZ(-360deg);
-  }  
-  100% {
-    transform: translateY(-40px) rotateZ(0deg);
-  }
-}
-
-
-
-

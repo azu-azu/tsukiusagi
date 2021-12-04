@@ -2,9 +2,9 @@
       <div class="c-sun"></div>
       <div class="c-sky"></div>
       <div class="c-sea">
-        <div class="c-light"></div>
+        <div class="c-sea--light"></div>
       </div>
-      <div class="c-light"></div>
+      <div class="c-sea--light"></div>
 
       <div class="c-fin">
         <div class="c-fin__wave"></div>

@@ -6,21 +6,22 @@
 	width: v.$size--moon-big;
 	height: v.$size--moon-big;
 	top: v.$position--moon-big-top;
-	border-radius: 50%;
 	background: v.$color--moon-main;
+	border-radius: 50%;
 	filter: blur(4px);
 	transition: all 1s linear;
 
 	@include m.breakpoint( moon-mini ) {
 		width: v.$size--moon-mini;
 		height: v.$size--moon-mini;
+		background: v.$color--moon-main;
 		top: v.$position--moon-mini-top;
 	}
 
 	&__txt {
 		position: absolute;
 		width: auto;
-		color: v.$color--moon-main;
+		color: v.$font-color--moon-text;
 		font-family: "Gluten", cursive;
 		font-size: 2.5rem;
 		line-height: v.$line-height--wide;
@@ -48,23 +49,26 @@
 	}
 
 	&__waning {
+		position: relative;
 		width: 102%;
 		height: 100%;
 		margin: auto;
 		border-radius: 50%;
 		filter: blur(4px);
 		overflow: hidden;
+		z-index: 1;
 
 		//box-shadowのアニメーションをやめたため、疑似要素追加
 		&::before {
+			position: absolute;
 			content: '';
 			display: block;
 			width: 110%;
 			height: 100%;
 			border-radius: 50%;
-			background: v.$color--fuschia;
-			transform: rotate(237deg) translateY(83px) translateX(29px);
-			animation: moon-waning-sp 17s alternate-reverse infinite;
+			background: v.$color--accent;
+			transform: rotate(237deg) translateY(48px) translateX(15px);
+			z-index: 1;
 
 			@include m.breakpoint( moon-mini ) {
 				animation: moon-waning 17s alternate-reverse infinite -1s;
@@ -77,23 +81,24 @@
 		top: 16%;
 		width: 60%;
 		opacity: 0.7;
+		z-index: 2;
 	}
 }
 
 @keyframes moon-waning-sp {
-	0% {
-		transform: rotate(227deg) translateY(340px) translateX(17px);
-	}
 	100% {
 		transform: rotate(227deg) translateY(44px) translateX(17px);
+	}
+	0% {
+		transform: rotate(227deg) translateY(340px) translateX(17px);
 	}
 }
 
 @keyframes moon-waning {
-	0% {
-		transform: rotate(227deg) translateY(272px) translateX(17px);
-	}
 	100% {
 		transform: rotate(227deg) translateY(44px) translateX(17px);
+	}
+	0% {
+		transform: rotate(227deg) translateY(272px) translateX(17px);
 	}
 }

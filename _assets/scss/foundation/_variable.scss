@@ -9,15 +9,17 @@ $gap--sec-bottom: 200px;
 // フォントサイズ
 // *
 // ナビゲーション
-$font-size--header-nav: 1.8rem; // ナビゲーション:first-view
-$font-size--header-nav-back: 1.6rem; // ナビゲーション:back
-$font-size--header-back--ttl: 1.5rem; // ヘッダータイトル:back
-$font-size--hamburger-nav: 2.5rem; // ハンバーガーメニューのとき 
-
+$font-size--header-nav: 1.6rem; // ナビゲーションの文字
+$font-size--hamburger-nav: 2.5rem; // ハンバーガーメニューの文字
 $font-size--moon--pc: 2.5rem; // 月の中のテキスト
-$font-size--firstview--pc: 1.8rem; // ファーストビューのテキスト
-$font-size--firstview--small--pc: 1.5rem; // ファーストビューのテキスト
+$font-size--p-card__header: 1.5rem;//works-カードヘッダー
 
+
+// *
+// フォントファミリー
+// *
+$font-family--Raleway: 'Raleway', sans-serif;
+$font-family--p-card__header: $font-family--Raleway;
 
 // *
 // フォントウェイト
@@ -42,17 +44,9 @@ $line-height--very-wide: 3;
 // カラー設定
 // *
 // デフォルト
-$color--yellow: rgb(255, 255, 0);
-$color--green: #90feb5;
-$color--fuschia: rgb(103, 12, 103);
-
-$color--light-purple: rgb(210,189,255);
-$color--light-purple--opacity90: rgba($color--light-purple, .9);
-
-$color--light-green: rgb(200,255,230);
-$color--light-green--opacity70: rgba($color--light-green, .7);
-
-$color--pink--opacity80: rgba(255,200,200,.8);
+$color--main: #fff;
+$color--sub: rgb(255, 255, 85);
+$color--accent: rgb(102, 0, 102);
 
 $color--white: rgb(255, 255, 255);
 $color--white--opacity10: rgba(255, 255, 255, 0.1);
@@ -62,28 +56,46 @@ $color--white--opacity40: rgba(255, 255, 255, 0.4);
 $color--white--opacity50: rgba(255, 255, 255, 0.5);
 $color--white--opacity80: rgba(255, 255, 255, 0.8);
 
+$color--light-purple: rgb(210,189,255);
+$color--light-purple--opacity90: rgba($color--light-purple, .9);
+$color--light-green: rgb(200,255,230);
+$color--light-green--opacity70: rgba($color--light-green, .7);
+$color--pink--opacity80: rgba(255,200,200,.8);
 
 // 月
 $color--crater-waning: rgba(255, 140, 140, 0.5);
-$color--moon-main: $color--yellow;
-$color--moon-waning-shadow: $color--yellow;
-$color--moon-waning: rgba(102, 0, 102, 0.5);
+$color--moon-main: $color--sub;
+$color--moon-waning: rgba($color--accent, 0.5);
+// $color--moon-waning: rgba(102, 0, 102, 0.5);
+
+$color--moon-waning-shadow: $color--sub;
 $color--moon-shadow-start: rgba(255, 255, 1, 0.5);
 $color--moon-shadow-middle: rgba(255, 140, 140, 0.5);
 
+
 // 泡ボタン
-$color--bubbly-btn-white: #fff;
-$color--bubbly-btn-pink: $color--fuschia;
-$color--bubbly-btn-yellow: $color--yellow;
+$color--bubbly-btn-white: $color--main;
+$color--bubbly-btn-pink: $color--accent;
+$color--bubbly-btn-yellow: $color--sub;
 $color--bubbly-btn-text: #000;
 
 // swiperボタン
-$color--profile-swiper-btn: #a3519b;
+// $color--profile-swiper-btn: #a3519b;
+$color--profile-swiper-btn: rgba($color--accent, 0.4);
 
 // ホバーのマーカー
 $color--hover-marker--white: rgba(#fff, .2);
-$color--hover-marker--yellow: rgba($color--yellow, .2);
+$color--hover-marker--yellow: rgba($color--sub, .2);
 
+
+// *
+// 文字色
+// *
+$font-color--skills--first: rgba($color--sub, 0.7);//スキルfirst
+$font-color--skills--child: rgba($color--sub, 0.5);//スキルその他
+$font-color--moon-text: $color--sub;//月の中の文字
+
+$text-shadow--skills--first: 1px 1px 2px rgba($color--accent, 0.7);//スキルfirstのテキストシャドウ
 
 
 // *
@@ -106,77 +118,10 @@ $height--profile-swiper: min(43vmin, 232px);// swiper（プロフィール）の
 
 
 // *
-// バックグラウンド
-// *
-// 泡ボタン
-$bg-img--bubbly-btn--white-before:
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-  radial-gradient(circle, transparent 20%, $color--bubbly-btn-white 20%, transparent 30%),
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-  radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-  radial-gradient(circle, transparent 20%, $color--bubbly-btn-white 20%, transparent 30%),
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-  radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%);
-
-
-$bg-img--bubbly-btn--white-after:
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%);
-
-
-$bg-img--bubbly-btn--yellow-before:
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
-radial-gradient(circle, transparent 20%, $color--bubbly-btn-yellow 20%, transparent 30%),
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%), 
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
-radial-gradient(circle, transparent 10%, $color--bubbly-btn-yellow 15%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%);
-
-
-$bg-img--bubbly-btn--yellow-after:
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%), 
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
-radial-gradient(circle, transparent 10%, $color--bubbly-btn-yellow 15%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
-radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%);
-
-
-
-// *
 // ボックスシャドウ
 // *
-$shadow--bg-square-main: 0 25px 45px rgba($color--yellow, 0.1);
-$shadow--bg-square-sub: 0 25px 45px rgba(#f00, 0.1);
-
+$shadow--bg-square-main: 0 5px 45px rgba($color--sub, 0.1);
+$shadow--bg-square-sub: 0 25px 45px rgba($color--accent, 0.1);
 
 // 背景の星のbox-shadow
 $star-color--01: $color--white--opacity80;
@@ -368,7 +313,69 @@ $box-shadow--floating-star-02: 1907px 1575px #FFF , 893px 268px #FFF , 1819px 66
 $box-shadow--floating-star-03: 1994px 1692px #FFF , 961px 1928px #FFF , 819px 1320px #FFF , 1899px 52px #FFF , 28px 1937px #FFF , 157px 88px #FFF , 860px 1909px #FFF , 720px 427px #FFF , 1319px 1469px #FFF , 677px 960px #FFF , 1265px 1181px #FFF , 1176px 1361px #FFF , 1957px 753px #FFF , 1674px 1355px #FFF , 929px 1206px #FFF , 1038px 898px #FFF , 1229px 365px #FFF , 1085px 51px #FFF , 851px 650px #FFF , 385px 21px #FFF , 41px 1153px #FFF , 718px 70px #FFF , 1321px 579px #FFF , 497px 1458px #FFF , 1981px 813px #FFF , 776px 1187px #FFF , 1345px 31px #FFF , 1571px 400px #FFF , 339px 587px #FFF , 146px 750px #FFF , 64px 61px #FFF , 307px 981px #FFF , 388px 849px #FFF , 1398px 936px #FFF , 522px 765px #FFF , 1146px 350px #FFF , 19px 206px #FFF , 1767px 319px #FFF , 1203px 425px #FFF , 1917px 1018px #FFF , 91px 1401px #FFF , 898px 697px #FFF , 1712px 1121px #FFF , 633px 1119px #FFF , 137px 1266px #FFF , 1006px 931px #FFF , 1644px 1804px #FFF , 1596px 1057px #FFF , 1298px 543px #FFF , 1505px 996px #FFF , 1972px 1383px #FFF , 1210px 1497px #FFF , 804px 1840px #FFF , 913px 1047px #FFF , 187px 1824px #FFF , 1564px 1994px #FFF , 557px 1737px #FFF , 508px 1609px #FFF , 1259px 1911px #FFF , 1294px 1381px #FFF , 1845px 1843px #FFF , 667px 1497px #FFF , 1046px 945px #FFF , 937px 1889px #FFF , 982px 1806px #FFF , 1293px 671px #FFF , 668px 904px #FFF , 358px 1971px #FFF , 133px 766px #FFF , 1152px 1573px #FFF , 318px 694px #FFF , 578px 1184px #FFF , 1620px 1701px #FFF , 1359px 354px #FFF , 1807px 1367px #FFF , 458px 911px #FFF , 1387px 806px #FFF , 523px 81px #FFF , 1243px 341px #FFF , 906px 1730px #FFF , 1629px 474px #FFF , 1690px 419px #FFF , 847px 808px #FFF , 528px 1627px #FFF , 480px 718px #FFF , 537px 593px #FFF , 1432px 1333px #FFF , 200px 1228px #FFF , 1800px 1375px #FFF , 725px 1231px #FFF , 1749px 1432px #FFF , 1948px 303px #FFF , 1889px 252px #FFF , 1114px 1400px #FFF , 759px 646px #FFF , 222px 571px #FFF , 1908px 1401px #FFF , 1856px 1204px #FFF , 338px 1645px #FFF , 1528px 1050px #FFF;
 
 
+// *
+// バックグラウンド
+// *
+// 泡ボタン
+$bg-img--bubbly-btn--white-before:
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, transparent 20%, $color--bubbly-btn-white 20%, transparent 30%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, transparent 20%, $color--bubbly-btn-white 20%, transparent 30%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+  radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%);
 
+
+$bg-img--bubbly-btn--white-after:
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%), 
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, transparent 10%, $color--bubbly-btn-white 15%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-white 20%, transparent 20%);
+
+
+$bg-img--bubbly-btn--yellow-before:
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, transparent 20%, $color--bubbly-btn-yellow 20%, transparent 30%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%), 
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, transparent 10%, $color--bubbly-btn-yellow 15%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%);
+
+
+$bg-img--bubbly-btn--yellow-after:
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%), 
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, transparent 10%, $color--bubbly-btn-yellow 15%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%),
+radial-gradient(circle, $color--bubbly-btn-yellow 20%, transparent 20%);
 
 // *
 // tooltip

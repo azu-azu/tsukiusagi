@@ -11,15 +11,23 @@
   &__inner {
     background-color: #fff;
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
-    opacity: 0;
   }
 
   &__header {
     position: absolute;
-    padding: 16px;
+    display: grid;
+    place-content: center;
     width: 100%;
-    opacity: 0;
+    height: 30px;
     top: 0;
+    font-family: v.$font-family--p-card__header;
+    font-size: v.$font-size--p-card__header;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-shadow: 1px ​1px 5px #fff;
+    background: rgba(v.$color--accent, .9);
+    box-shadow: inset 0 -1px 10px rgba(v.$color--sub, .5);
+    z-index: 2;
   }
 
   &__info {
@@ -37,7 +45,6 @@
     & .p-scroll-anim::before {
       display: none;
     }
-  
     & .c-card-img__hover {
       transform: scale(1.5,1.5) translateY(15%);
       opacity: 0.3;
@@ -45,9 +52,6 @@
     & .p-card-info {
       opacity: 0;
       position: relative;
-    }
-    & .p-card__header {
-      opacity: 1;
     }
     .c-site-desc {
       display: block;
@@ -58,18 +62,18 @@
 
 
 
-.show {
-  &.p-card__inner {
-      animation: show .3s both;//早いv
-      // animation: show 1s both;//遅いv
+// .show {
+//   &.p-card__inner {
+//       animation: show .3s both;//早いv
+//       // animation: show 1s both;//遅いv
 
-    // @for $i from 1 to 4 {
-    //   &:nth-child(#{$i}) {
-    //     animation-delay: 2s * $i ;
-    //   }
-    // }
-  }
-}
+//     // @for $i from 1 to 4 {
+//     //   &:nth-child(#{$i}) {
+//     //     animation-delay: 2s * $i ;
+//     //   }
+//     // }
+//   }
+// }
 
 
 @keyframes show {

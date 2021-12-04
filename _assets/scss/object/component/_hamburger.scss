@@ -6,14 +6,13 @@
   display: inline;
   width: v.$size--hamburger-container;
   height: v.$size--hamburger-container;
-  user-select: none;
+  user-select: none;//テキスト選択するかどうか
   transition: transform 0.75s cubic-bezier(0.39, 1.52, 0.46, 0.92);
   
   background: rgba(0,0,0, 0.5);
   border-bottom-left-radius: 100%;
   top: -2px;
   right: 0;
-
   z-index: 1000;
 
   span {
@@ -46,6 +45,10 @@
 // is-openのとき
 // **
 body.is-open {
+  .l-header.back::before {
+    opacity: 0;
+  }
+
   .p-header,
   .p-header--back {
     transform: translateY(-250px);
@@ -85,6 +88,44 @@ body.is-open {
   }
 }
 
+
+
+// **
+// is-closeのとき
+// **
+body.is-close {
+  .c-nav {
+    width: 0;
+    transform: translateX(20px);
+    @include m.breakpoint( moon-mini ) {
+      width: auto;
+      transform: inherit;
+    }
+
+    li {
+      animation: list .6s linear forwards;
+    }
+  }
+}
+
+.c-hamburger.is-close {
+  .line-top {
+    animation: line-top-back .6s linear forwards;
+  }
+  .line-middle {
+    animation: line-middle-back .6s linear forwards;
+  }
+  .line-bottom {
+    animation: line-bottom-back .6s linear forwards;
+  }
+  & ~ .c-overlay {
+    // transition: transform .8s cubic-bezier(1, 0, 0, 1);
+    animation: overlay-back .6s linear forwards;
+  }
+}
+
+
+// is-openのとき
 @keyframes overlay {
   70% {
     transform: scale(20);
@@ -116,46 +157,18 @@ body.is-open {
 }
 
 @keyframes line-bottom {
-  99% {
+  0% {
     transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-135deg);
   }
   100% {
     transform: rotate(45deg);
   }
 }
 
-// **
 // is-closeのとき
-// **
-body.is-close {
-  .c-nav {
-    width: 0;
-    @include m.breakpoint( moon-mini ) {
-      width: auto;
-    }
-
-    li {
-      animation: list .6s linear forwards;
-    }
-  }
-}
-
-.c-hamburger.is-close {
-  .line-top {
-    animation: line-top-back .6s linear forwards;
-  }
-  .line-middle {
-    animation: line-middle-back .6s linear forwards;
-  }
-  .line-bottom {
-    animation: line-bottom-back .6s linear forwards;
-  }
-  & ~ .c-overlay {
-    // transition: transform .8s cubic-bezier(1, 0, 0, 1);
-    animation: overlay-back .6s linear forwards;
-  }
-}
-
 @keyframes overlay-back {
   0% {
     transform: scale(30);
