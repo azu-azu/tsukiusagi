@@ -12,17 +12,17 @@
     <?php wp_head();?>
   </head>
 
-  <body class="is-close">
+  <body class="">
     <header class="l-header" id="js-l-header">
-      <section class="p-header p-header--top is-close" id="js-header">
+      <section class="p-header p-header--top" id="js-header">
         <h1 class="c-header-ttl">月うさぎWeb</h1>
         <nav class="p-gmenu">
-          <a class="c-header-ttl--top js-page-top c-bubbly-button--white js-bubbly js-marker" href="#">月へ戻る</a>
+          <a class="c-header-ttl--top js-page-top c-bubbly-button--white js-marker" href="#">月へ戻る</a>
           <ul class="c-nav">
-            <li class="js-marker" style="--i:0;"><a class="c-bubbly-button--white js-bubbly" href="#works">Works</a></li>
-            <li class="js-marker" style="--i:1;"><a class="c-bubbly-button--white js-bubbly" href="#profile">Profile</a></li>
-            <li class="js-marker" style="--i:2;"><a class="c-bubbly-button--yellow js-bubbly" id="default" href="#contact">Contact</a></li>
-            <div class="c-marker js-marker" id="marker"></div>
+            <li class="js-marker" style="--i:0;"><a class="c-bubbly-button--white" href="#works">Works</a></li>
+            <li class="js-marker" style="--i:1;"><a class="c-bubbly-button--white" href="#profile">Profile</a></li>
+            <li class="js-marker" style="--i:2;"><a class="c-bubbly-button--yellow" id="default" href="#contact">Contact</a></li>
+            <div class="c-marker js-marker" id="js-marker"></div>
           </ul>
         </nav>
       </section>

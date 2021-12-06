@@ -7,26 +7,15 @@ window.addEventListener('scroll', () => {
 // ロードしたら関数呼び出し
 window.addEventListener('load', () => {
 	headerFade();
+	headerBackDown();
 });
 
-// ウィンドウ幅が切り替わったとき
-const moonMiniSize = 570;
-jQuery(function ($) {
-	$(window).resize(function () {
-		let x = $(window).width();
-		let y = moonMiniSize;
-		if (x >= y) {
-			$("#js-hamburger").removeClass("is-open");
-			$("body").removeClass("is-open");
-			$("#js-hamburger").addClass("is-close");
-			$("body").addClass("is-close");
+// ウィンドウ幅が切り替わったら関数呼び出し
+window.addEventListener('resize', () => {
+	resizeRemoveClass();//is-open, is-closeを外す
+	bodyFixedNone();//bodyのfixedを外す
+});
 
-			bodyFixedNone();//bodyのfixedを外す
-		}
-		else {
-		}
-	});
-})
 
 // **
 // ハンバーガーボタン：タッチ or クリック
@@ -57,7 +46,8 @@ const navList = document.querySelectorAll(".js-marker");
 navList.forEach((elm) => {
 	elm.addEventListener('touchstart', () => {
 		flag = true;
-		hamburgerOpenRemove();
+		removeOpen();// is-openを外す
+		addClose();// is-closeを付ける
 		bodyFixedNone();//bodyのfixedを外す
 	});
 });
@@ -67,7 +57,8 @@ navList.forEach((elm) => {
 		if (flag) {
 			flag = false;
 		} else {
-			hamburgerOpenRemove();
+			removeOpen();// is-openを外す
+			addClose();// is-closeを付ける
 			bodyFixedNone();//bodyのfixedを外す
 		}
 	});
@@ -121,6 +112,83 @@ const headerBackDown = () => {
 	}
 };
 
+
+const hamburgerClick = () => {
+	let myPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+	if (hamburgerClass.contains("is-close")) {//is-closeがあったら
+		removeClose();//is-closeを外す
+	} else {
+
+		if (hamburgerClass.contains("is-open")) {//is-openがあったら
+			const scrollY = myBody.style.top;// スクロール位置の記憶
+			removeOpen();// is-openを外す
+			addClose();// is-closeを付ける
+			bodyFixedNone();// bodyのfixedを外す
+			window.scrollTo(0, parseInt(scrollY || '0') * -1);// スクロール位置の保持
+		}
+	};
+
+	// is-closeもis-openもなかったら
+	if (!hamburgerClass.contains("is-close") && !hamburgerClass.contains("is-open")) {
+		addOpen();//is-openをつける
+		myBody.style.position = "fixed";
+		myBody.style.top = `-${myPosition}px`;
+	};
+};
+
+
+// **
+//ウィンドウ幅が切り替わったら、is-open||is-closeを外す
+// **
+const moonMiniSize = 570;
+const resizeRemoveClass = () => {
+	let x = document.body.clientWidth;
+	if (x >= moonMiniSize) {
+		if (hamburgerClass.contains("is-open")) {//is-openがあったら
+			removeOpen();// is-openを外す
+		} else {
+			if (hamburgerClass.contains("is-close")) {//is-closeがあったら
+				removeClose();//is-closeを外す
+			}
+		}
+	}
+};
+
+
+// **
+// is-closeを外す
+// **
+const removeClose = () => {
+	hamburgerClass.remove('is-close');
+	myBodyClass.remove('is-close');
+};
+
+// **
+// is-closeを付ける
+// **
+const addClose = () => {
+	hamburgerClass.add('is-close');
+	myBodyClass.add('is-close');
+};
+
+// **
+// is-openを外す
+// **
+const removeOpen = () => {
+	hamburgerClass.remove('is-open');
+	myBodyClass.remove('is-open');
+};
+
+// **
+// is-openを付ける
+// **
+const addOpen = () => {
+	hamburgerClass.add('is-open');
+	myBodyClass.add('is-open');
+};
+
+
 // **
 // bodyのfixedを外す
 // **
@@ -130,56 +198,28 @@ const bodyFixedNone = () => {
 	myBody.style.paddingTop = "";
 };
 
-// **
-// ハンバーガーボタンのクリック
-// **
-const hamburgerClick = () => {
-	let myPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-	//is-closeがあったら
-	if (hamburgerClass.contains("is-close")) {
-		//is-closeを外す
-		hamburgerClass.remove('is-close');
-		myBodyClass.remove('is-close');
 
-		//is-openをつける
-		hamburgerClass.add('is-open');
-		myBodyClass.add('is-open');
-		myBody.style.position = "fixed";
-		myBody.style.top = `-${myPosition}px`;
-	} else {
-		//is-openがあったら
-		if (hamburgerClass.contains("is-open")) {
-			// スクロール位置の記憶
-			const scrollY = myBody.style.top;
 
-			// is-openを外す
-			hamburgerClass.remove('is-open');
-			myBodyClass.remove('is-open');
 
-			// is-closeをつける
-			hamburgerClass.add('is-close');
-			myBodyClass.add('is-close');
+// // ウィンドウ幅が切り替わったとき
+// const moonMiniSize = 570;
+// jQuery(function ($) {
+// 	$(window).resize(function () {
+// 		let x = $(window).width();
+// 		let y = moonMiniSize;
+// 		if (x >= y) {
+// 			$("#js-hamburger").removeClass("is-open");
+// 			$("body").removeClass("is-open");
+// 			// $("#js-hamburger").addClass("is-close");
+// 			// $("body").addClass("is-close");
 
-			// bodyのfixedを外す
-			bodyFixedNone();
-
-			// スクロール位置の保持
-			window.scrollTo(0, parseInt(scrollY || '0') * -1);
-		}
-	}
-};
-
-// **
-// is-openを外す
-// **
-const hamburgerOpenRemove = () => {
-	hamburgerClass.remove('is-open');
-	myBodyClass.remove('is-open');
-	hamburgerClass.add('is-close');
-	myBodyClass.add('is-close');
-};
-
+// 			bodyFixedNone();//bodyのfixedを外す
+// 		}
+// 		else {
+// 		}
+// 	});
+// })
 
 
 

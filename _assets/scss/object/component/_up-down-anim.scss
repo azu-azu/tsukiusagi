@@ -1,7 +1,6 @@
 @use "../../foundation/variable" as v;
 
-.c-bg-square {
-  position: absolute;
+.c-up-down-anim {
   animation: square 5s linear infinite;
   animation-delay: calc(-1s * var(--i));
 }

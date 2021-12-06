@@ -1,10 +1,8 @@
 @use "../../foundation/variable" as v;
 
 .c-shooting-star {
-  position: absolute;
   width: 80px;
   height: 80px;
-  top: 0;
   
   &--01 {//白ボール
     @extend .c-shooting-star;

@@ -1,42 +1,41 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
 
 .c-marker {
-	position: absolute;
-	top: 7px;
-  left: calc(100% - 30px);
-	transition: .5s;
-	z-index: 1;
+  @include m.breakpoint( moon-mini ) {
+    transition: .5s;
 
-	&::before {
-		content: "";
-		position: absolute;
-		top: -10px;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 50px;
-		height: 40px;
-    filter: blur(5px);
-	}
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 40px;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: blur(5px);
+    }
+  }
 }
 
-$marker-color--white: rgba(#fff, .2);
-$marker-color--yellow: rgba(#ff0, .2);
 
 .p-header--back {
-  .c-header-ttl--top.marker-active ~ ul .c-marker::before,
-  .c-nav .js-marker.marker-active ~ .c-marker::before {
-    background: v.$color--hover-marker--white;
-    box-shadow: 0 0 15px v.$color--hover-marker--white,
-    0 0 30px v.$color--hover-marker--white,
-    0 0 45px v.$color--hover-marker--white,
-    0 0 60px v.$color--hover-marker--white;
-  }
+  @include m.breakpoint( moon-mini ) {
+    .c-header-ttl--top:hover ~ ul .c-marker::before,
+    .c-nav .js-marker:hover ~ .c-marker::before {
+      background: v.$color--hover-marker--white;
+      box-shadow: 0 0 15px v.$color--hover-marker--white,
+      0 0 30px v.$color--hover-marker--white,
+      0 0 45px v.$color--hover-marker--white,
+      0 0 60px v.$color--hover-marker--white;
+    }
 
-  .c-nav .js-marker:nth-child(3).marker-active ~ .c-marker::before {
-    background: v.$color--hover-marker--yellow;
-    box-shadow: 0 0 15px v.$color--hover-marker--yellow,
-    0 0 30px v.$color--hover-marker--yellow,
-    0 0 45px v.$color--hover-marker--yellow,
-    0 0 60px v.$color--hover-marker--yellow;
+    .c-nav .js-marker:nth-child(3):hover ~ .c-marker::before {
+      background: v.$color--hover-marker--yellow;
+      box-shadow: 0 0 15px v.$color--hover-marker--yellow,
+      0 0 30px v.$color--hover-marker--yellow,
+      0 0 45px v.$color--hover-marker--yellow,
+      0 0 60px v.$color--hover-marker--yellow;
+    }
   }
 }

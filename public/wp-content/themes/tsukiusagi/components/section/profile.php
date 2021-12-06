@@ -6,73 +6,62 @@
   </article>
 
   <article class="p-sec-profile__cards">
-    <section class="swiper-container js-swiper">
+    <section class="swiper js-swiper">
       <ul class="swiper-wrapper">
-        <li class="slider-item swiper-slide">
-          <figure class="slider-image-wrapper">
-            <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/1.png" alt="SliderImg">
-          </figure>
-          <div class="slider-item-content">
+        <li class="swiper-slide">
+          <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/1-s.png" alt="うさぎの背景画像">
+          <article class="swiper-slide__content">
             <h3>好きなこと</h3>
             <p>
               CSSとJavaScriptの<br>
               アニメーション
             </p>
-          </div>
+          </article>
         </li>
 
-        <li class="slider-item swiper-slide">
-          <figure class="slider-image-wrapper">
-            <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/2.png" alt="SliderImg">
-          </figure>
-          <div class="slider-item-content right">
+        <li class="swiper-slide">
+          <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/2-s.png" alt="うさぎの背景画像">
+          <article class="swiper-slide__content right">
           <h3>月うさぎWeb</h3>
           <p>
               管理人：まつもと<br>
               所在地：東京
             </p>
-          </div>
+          </article>
         </li>
 
-        <li class="slider-item swiper-slide">
-          <figure class="slider-image-wrapper">
-            <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/1.png" alt="SliderImg">
-          </figure>
-          <div class="slider-item-content">
+        <li class="swiper-slide">
+          <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/1-s.png" alt="うさぎの背景画像">
+          <article class="swiper-slide__content">
             <h3>コーディング</h3>
             <p>
               ・FLOCSSでのCSS設計<br>
               ・チーム制作
             </p>
-          </div>
+          </article>
         </li>
 
-        <li class="slider-item swiper-slide">
-          <figure class="slider-image-wrapper">
-            <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/4.png" alt="SliderImg">
-          </figure>
-          <div class="slider-item-content right">
+        <li class="swiper-slide">
+          <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/4-s.png" alt="うさぎの背景画像">
+          <article class="swiper-slide__content right">
             <h3>WordPress</h3>
             <p>
               ・テーマ開発<br>
               ・ブロックエディタ開発<br>
               ・プラグイン開発
             </p>
-          </div>
+          </article>
         </li>
 
-        <li class="slider-item swiper-slide">
-          <figure class="slider-image-wrapper">
-            <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/3.png" alt="SliderImg">
-          </figure>
-          <div class="slider-item-content">
+        <li class="swiper-slide">
+          <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/3-s.png" alt="うさぎの背景画像">
+          <article class="swiper-slide__content">
             <h3>経歴</h3>
             <p>
               ・企業でVBA開発<br>
-                ↓<br>
               ・2021.5〜 WEB制作
             </p>
-          </div>
+          </article>
         </li>
       </ul>
 

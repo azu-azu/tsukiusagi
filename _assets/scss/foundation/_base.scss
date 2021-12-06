@@ -3,7 +3,7 @@
 
 html {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-weight: 100;
+  font-weight: v.$font-weight--base;
   font-size: 62.5%;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;//スマホのカクカク回避
@@ -22,10 +22,15 @@ body {
   pointer-events: none;
 }
 
+h2 {
+  font-weight: v.$font-weight--h2;
+}
+h3 {
+  font-weight: v.$font-weight--h3;
+}
 a {
   text-decoration: none;
 }
-
 li {
   list-style: none;
 }

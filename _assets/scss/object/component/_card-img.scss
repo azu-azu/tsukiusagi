@@ -1,79 +1,39 @@
-.c-card-img,
-.c-card-img__hover {
-	background: url("../img/common/rabbit.png");
-}
-
-.c-card-img.card1,
-.c-card-img__hover.card1 {
-	background: url("../img/works/wishdesign3.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top;
-}
-.c-card-img.card2,
-.c-card-img__hover.card2 {
-	background: url("../img/works/italiadesign.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top;
-}
-// .c-card-img.card3,
-// .c-card-img__hover.card3 {
-// 	background: url("../img/works/sizuoka.png");
-// 	background-size: cover;
-// 	background-repeat: no-repeat;
-// 	background-position: bottom;
-// }
-// .c-card-img.card4,
-// .c-card-img__hover.card4 {
-//   background: url('/images/site/site_sizuoka.png');
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: bottom;
-// }
+@use "../../foundation/variable" as v;
 
 .c-card-img {
 	visibility: hidden;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 235px;
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
 
-	&:hover {
-		opacity: 0.5;
+	&--hover {
+		transition: 0.2s all ease-out;
 	}
 
-	&__hover {
-		position: absolute;
-		transition: 0.2s all ease-out;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
+	&,
+	&--hover {
 		width: 100%;
 		height: 235px;
 		border-top-left-radius: 12px;
 		border-top-right-radius: 12px;
-		top: 0;
+		background: url("../img/common/rabbit.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top;
 	}
-}
 
-$d: 700ms;
-$e: cubic-bezier(0.19, 1, 0.22, 1);
-.p-card__content {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	padding: 1rem;
-	transition: transform $d $e;
-	z-index: 1;
+	&--hover.card1 {
+		background: url("../img/works/wishdesign3.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top;
+	}
 
-	// > * + * {
-	//   margin-top: 1rem;
-	// }
+	&--hover.card2 {
+		background: url("../img/works/italiadesign.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top;
+	}
+
+	&:hover {
+		opacity: 0.5;
+	}
 }

@@ -5,10 +5,7 @@
         <div class="c-sea--light"></div>
       </div>
       <div class="c-sea--light"></div>
-
-      <div class="c-fin">
-        <div class="c-fin__wave"></div>
-      </div>
+      <div class="c-fin"></div>
       <canvas id="waveCanvas"></canvas>
     </footer>
     <?php wp_footer();?>

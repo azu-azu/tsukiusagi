@@ -7,31 +7,35 @@
 
   <ul class="p-cards">
     <li class="p-card c-shutter-anim js-scroll-show" data-js_delay="0">
-      <article class="p-card__inner js-scroll-show" data-js_delay="0">
-        <article class="p-card__header">WordPress</article>
-        <figure class="c-card-img card1"></figure>
-        <a href="#" class="card_link">
-          <div class="c-card-img__hover card1"></div>
+      <article class="p-card__container js-scroll-show" data-js_delay="0">
+        <article class="c-card-header">
+          <h3 class="c-card-ttl">WordPress</h3>
+        </article>
+        <div class="c-card-img card1"></div>
+        <a href="#">
+          <div class="c-card-img--hover card1"></div>
         </a>
-        <section class="p-card__info">
-          <span class="c-card-category">WordPress</span>
-          <h3 class="c-card-ttl">チーム制作</h3>
-          <span class="c-card-by">サイト名：<a href="#" class="c-card-by__author" title="author">Wish Design様</a></span>
+        <section class="p-card__inner c-card-info">
+          <p class="c-card-info--01">事業サイト</p>
+          <p class="c-card-info--02">チーム制作</p>
+          <p class="c-card-info--03">サイト名：<a href="#" class="c-card-info--name" title="author">Wish Design様</a></p>
         </section>
       </article>
     </li>
 
     <li class="p-card c-shutter-anim js-scroll-show" data-js_delay="300">
-      <article class="p-card__inner js-scroll-show" data-js_delay="300">
-        <article class="p-card__header">WordPress</article>
-        <figure class="c-card-img card2"></figure>
-        <a href="#" class="card_link">
-          <div class="c-card-img__hover card2"></div>
+      <article class="p-card__container js-scroll-show" data-js_delay="300">
+        <article class="c-card-header">
+          <h3 class="c-card-ttl">WordPress</h3>
+        </article>
+        <div class="c-card-img card2"></div>
+        <a href="#">
+          <div class="c-card-img--hover card2"></div>
         </a>
-        <section class="p-card__info">
-          <span class="c-card-category">WordPress</span>
-          <h3 class="c-card-ttl">カスタム投稿/WooCommerce</h3>
-          <span class="c-card-by">サイト名：<a href="#" class="c-card-by__author" title="author">Italia Design様</a></span>
+        <section class="p-card__inner c-card-info">
+          <p class="c-card-info--01">ショッピングサイト</p>
+          <p class="c-card-info--02">EC機能：WooCommerce</p>
+          <p class="c-card-info--03">サイト名：<a href="#" class="c-card-info--name" title="author">Italia Design様</a></p>
         </section>
       </article>
     </li>

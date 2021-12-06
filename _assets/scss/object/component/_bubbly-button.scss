@@ -1,27 +1,19 @@
 @use "../../foundation/variable" as v;
 
 .c-bubbly-button {
+  position: relative;
   display: inline-block;
   font-size: 1em;
   border: none;
   appearance: none;
   -webkit-appearance: none;
   cursor: pointer;
-  position: relative;
   // transition: transform ease-out .5s, box-shadow ease-out .5s;
   // transition: all ease-out .5s;
   // box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
   
-  &:focus {
-    outline: 0;
-  }
-
-  &:hover {
-    opacity: .8;
-  }
-  
-  &:before, 
-  &:after{
+  &::before, 
+  &::after{
     position: absolute;
     content: '';
     display: block;
@@ -34,33 +26,33 @@
   }
 
   // 泡
-  &:before{
+  &::before {
     display: none;
     top: -30%;
     background-size: 20% 20%, 40% 40%, 30% 30%, 40% 40%, 36% 36%, 20% 20%, 30% 30%, 20% 20%, 36% 36%;
     background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
   }
 
-  &:after{
+  &::after {
     display: none;
     bottom: -30%;
     background-size: 20% 20%, 40% 40%, 36% 36%, 40% 40%, 30% 30%, 20% 20%, 40% 40%;
     background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
   }
 
-  &:active{
-    transform: scale(0.9);
-    background-color: darken(v.$color--bubbly-btn-white, 5%);
-    // box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
-    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  &:focus {
+    outline: 0;
   }
-  
-  &.animate{
-    &:before{
+
+  &:hover {
+    opacity: .8;
+    transform: scale(0.9);
+
+    &::before {
       display: block;
       animation: topBubbles ease-in-out 0.75s forwards;
     }
-    &:after{
+    &::after {
       display: block;
       animation: bottomBubbles ease-in-out 0.75s forwards;
     }
@@ -81,10 +73,10 @@
   
   &--yellow {
     @extend .c-bubbly-button;
-    &:before{
+    &::before {
       background-image: v.$bg-img--bubbly-btn--yellow-before;
     }
-    &:after{
+    &::after {
       background-image: v.$bg-img--bubbly-btn--yellow-after;
     }
     &:hover {

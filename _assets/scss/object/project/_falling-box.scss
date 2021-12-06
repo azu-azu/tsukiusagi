@@ -7,7 +7,7 @@
 	position: relative;
   bottom: 15%;
 	left: 35%;
-	transform: translateX(-50%);
+	transform: translateX(-50%) translate3d(0,0,0);
 
 	@include m.breakpoint(moon-mini) {
 		left: 45%;
@@ -34,15 +34,15 @@ $last-sector: 340deg;
 	@for $s from 1 through $sectors {
 		&:nth-of-type(#{$s}) {
 			transform: rotate(math.div(-360deg, $sectors) * ($s - 1))
-				translateY(7.5em);
+				translateY(7.5em) translate3d(0,0,0);
 
 			.rotate {
-				transform: rotate(math.div(360deg, $sectors) * ($s - 1));
+				transform: rotate(math.div(360deg, $sectors) * ($s - 1)) translate3d(0,0,0);
 			}
 
 			.line-box {
 				transform: translateY(-50%)
-					rotate(math.div(-360deg, $sectors) * ($s - 1));
+					rotate(math.div(-360deg, $sectors) * ($s - 1)) translate3d(0,0,0);
 			}
 
 			.falling,
@@ -52,9 +52,9 @@ $last-sector: 340deg;
 		}
 	}
 	&:last-of-type {
-		transform: rotate(-$last-sector) translateY(-17.5em);
+		transform: rotate(-$last-sector) translateY(-17.5em) translate3d(0,0,0);
 		.rotate {
-			transform: rotate($last-sector);
+			transform: rotate($last-sector) translate3d(0,0,0);
 		}
 	}
 

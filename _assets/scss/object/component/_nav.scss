@@ -16,7 +16,7 @@
   li {
     position: absolute;
     width: 250px;
-    cursor: pointer;
+    transform: translateX(50%);
 
     background: rgba(0, 0, 0, 0.6);
     border-radius: 50px;
@@ -25,6 +25,7 @@
     transition: 0.2s;
     transition-delay: calc(0.1s * var(--i));
     transition: transform 0.75s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+    cursor: pointer;
     // transform-origin: 100px;
     // transform: rotate(0deg) translateX(100px);
 
@@ -44,6 +45,7 @@
       background: none;
       filter: none;
       border-radius: 0;
+      transform: inherit;
       animation: none;
     }
 

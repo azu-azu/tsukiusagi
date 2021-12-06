@@ -1,0 +1,44 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+$line-height: 1.2;
+.p-skill-list {
+  position: relative;
+  
+  .c-ball {
+    position: absolute;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-size: v.$font-size--p-skills-ball;
+    line-height: $line-height;
+
+    p {
+      @include m.lineHeightCrop-before($line-height);
+    }
+
+    &:first-child {
+      top: 0;
+      left: 0;
+      width: min(18vmin, 100px);
+      height: min(18vmin, 100px);
+      color: v.$font-color--skills--first;
+      text-shadow: v.$text-shadow--skills--first;
+    }
+
+    &:not(:first-child) {
+      color: v.$font-color--skills--child;
+      text-shadow: v.$text-shadow--skills--child;
+      box-shadow: v.$shadow--bg-square-main;
+        // text-shadow: 1px 1px 0px #555;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .txt-small {
+    font-size: v.$font-size--p-skills-ball--small;
+  }
+}

@@ -11,23 +11,23 @@
     .c-ball {
       &.skill-css {
         top: 0;
-        left: 21vmin;
-        width: min(15vmin, 100px);
-        height: min(15vmin, 100px);
+        left: 23vmin;
+        width: min(17vmin, 100px);
+        height: min(17vmin, 100px);
         animation: css 15s linear infinite;
       }
       &.skill-php {
         top: 0;
         left: 41vmin;
-        width: min(15vmin, 100px);
-        height: min(15vmin, 100px);
+        width: min(17vmin, 100px);
+        height: min(17vmin, 100px);
         animation: php 15s linear infinite;
       }
       &.skill-react {
         top: 115px;
         right: 8vmin;
-        width: min(10vmin, 50px);
-        height: min(10vmin, 50px);
+        width: min(12vmin, 50px);
+        height: min(12vmin, 50px);
         animation: react 10s linear infinite;
       }
       &.skill-js {
@@ -40,8 +40,8 @@
       &.skill-gulp {
         top: 160px;
         left: 9vmin;
-        width: min(8vmin, 40px);
-        height: min(8vmin, 40px);
+        width: min(10vmin, 40px);
+        height: min(10vmin, 40px);
         z-index: 2;
         animation: gulp 15s linear infinite;
       }
@@ -62,29 +62,29 @@
       &.skill-theme {
         top: 0;
         left: 28vmin;
-        width: min(15vmin, 100px);
-        height: min(15vmin, 100px);
+        width: min(17vmin, 100px);
+        height: min(17vmin, 100px);
         animation: php 30s linear infinite;
       }
       &.skill-custom {
         top: 0;
         right: 2vmin;
-        width: min(15vmin, 90px);
-        height: min(15vmin, 90px);
+        width: min(17vmin, 90px);
+        height: min(17vmin, 90px);
         animation: css 30s linear infinite;
       }
       &.skill-plugin {
         top: 155px;
         right: 0;
-        width: min(12vmin, 60px);
-        height: min(12vmin, 60px);
+        width: min(13vmin, 60px);
+        height: min(13vmin, 60px);
         animation: php 10s linear infinite;
       }
       &.skill-block {
         top: 120px;
         left: 12vmin;
-        width: min(12vmin, 60px);
-        height: min(12vmin, 60px);
+        width: min(13vmin, 60px);
+        height: min(13vmin, 60px);
         z-index: 2;
         animation: php 10s linear infinite;
       }

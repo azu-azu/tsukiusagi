@@ -1,128 +1,117 @@
 @use "../../foundation/variable" as v;
 
-.swiper {
-  &-container {
-    position: relative;
-    width: v.$width--profile-swiper;
-    height: v.$height--profile-swiper;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 1px 1px 14px -5px #fff;
-    margin: auto;
-    opacity: 0.7;
-  }
+// 以下のクラスの div 要素はスライダーの構造に必須の要素です
+// swiper/swiper-wrapper（全体&ラッパー）
+// swiper-slide（各スライドを入れる要素）
 
+// **
+// 全体&ラッパー
+// **
+.swiper {
+  &,
   &-wrapper {
     position: relative;
+  }
+
+  margin: auto;
+  width: v.$width--profile-swiper;
+  height: v.$height--profile-swiper;
+  border-radius: 10px;
+  box-shadow: 1px 1px 14px -5px #fff;
+  opacity: 0.7;
+  overflow: hidden;
+
+  &-wrapper {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     z-index: 1;
+  }
+}
 
-    h3 {
-      margin: 0;
-      font-size: 20px;
-      line-height: 32px;
-      color: #222;
-      transform: translateY(20px);
-      transition: all 0.4s ease;
-      transition-delay: 0.2s;
-      overflow: hidden;
-      max-width: 100%;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+// **
+// 各スライド
+// **
+.swiper-slide {
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  opacity: 0;
+  // background: linear-gradient(
+  //   270deg,
+  //   rgba(247, 249, 255, 1) 0%,
+  //   rgba(242, 246, 255, 1) 100%
+  // );
+  cursor: grab;
 
-      @media screen and (max-width: 520px) {
-          font-size: 16px;
-          line-height: 24px;
+  &__content {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 32px;
+    transition: 0.4s;
+    position: absolute;
+    top: 0;
+  
+    &.right {
+      padding-left: 40%;
+  
+      @media screen and (min-width: 440px) {
+        padding-left: 220px;
       }
     }
-
+  
+    h3,
     p {
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: v.$font-weight--light;
-      color: #111;
-      transform: translateY(20px);
-      transition: all 0.4s ease;
-      transition-delay: 0.3s;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
+      opacity: 0;
+      transform: translateY(0);//☆☆
+      transition: all 1s ease;
       overflow: hidden;
       text-overflow: ellipsis;
-
+      white-space: nowrap;
+    }
+  
+    h3 {
+      margin: 0;
+      padding: 10px 0;
+      font-size: v.$font-size--profile-slide--ttl--sp;
+      color: #222;
+      transition-delay: 0.2s;
+      max-width: 100%;
+  
+      @media screen and (max-width: 520px) {
+        font-size: v.$font-size--profile-slide--ttl--pc;
+        line-height: 24px;
+      }
+    }
+  
+    p {
+      font-size: v.$font-size--profile-slide--txt--sp;
+      font-weight: v.$font-weight--profile-slide--txt--sp;
+      color: #333;
+      transition-delay: 0.3s;
+  
       @media screen and (max-width: 520px) {
         & {
-          font-size: 14px;
-          line-height: 20px;
+          font-size: v.$font-size--profile-slide--txt--pc;
         }
       }
     }
   }
 }
 
-
-.slider-image-wrapper {
-  // height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-.slider-item {
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  opacity: 0;
-  // background: linear-gradient(
-  // 	270deg,
-  // 	rgba(247, 249, 255, 1) 0%,
-  // 	rgba(242, 246, 255, 1) 100%
-  // );
-  cursor: grab;
-
-  &-content {
-    width: 100%;
-    // padding: 32px;
-    padding-top: 32px;
-    padding-left: 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 0.4s;
-    position: absolute;
-    top: 0;
-
-    &.right {
-      padding-left: 40%;
-
-      @media screen and (min-width: 440px) {
-        padding-left: 220px;
-      }
-    }
-
-    > * {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    p {
-      color: #333;
-    }
-  }
-}
-
+// activeのとき
 .swiper-slide-active {
-  .slider-item-content > * {
-    transform: translateY(0px);
+  .swiper-slide__content > * {
+    transform: translateY(20px);//☆☆
     opacity: 1;
   }
 }
+// --------------------------
 
+// **
+// image
+// **
 .slider-image {
   width: min(80vw, 420px);
   // height: 100%;
@@ -130,6 +119,9 @@
   transition: 0.2s;
 }
 
+// **
+// ページネーション
+// **
 .swiper-pagination {
   position: absolute;
   left: 50%;
@@ -145,7 +137,7 @@
   height: 8px;
   border-radius: 50%;
   line-height: 30px;
-  font-size: 12px;
+  font-size: v.$font-size--profile-slide--pagination;
   opacity: 1;
   background: rgba(255, 185, 0, 0.3);
   display: inline-block;
@@ -160,6 +152,9 @@
   border-radius: 10px;
 }
 
+// **
+// ボタン
+// **
 .slider-buttons {
   display: flex;
   justify-content: space-between;
@@ -178,7 +173,7 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  font-size: 1.5rem;
+  font-size: v.$font-size--profile-slide--next-prev;
   background-color: transparent;
   border: none;
   cursor: pointer;

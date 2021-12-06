@@ -2,88 +2,44 @@
 
 .p-card {
   position: relative;
-  width: 250px;
+  width: v.$width--p-card;
   border-radius: 12px;
-  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   overflow: hidden;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   z-index: 2;
   
-  &__inner {
+  &__container {
     background-color: #fff;
-    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
   }
 
-  &__header {
+  .c-card-header {
     position: absolute;
-    display: grid;
-    place-content: center;
-    width: 100%;
-    height: 30px;
+    z-index: 2;
+  }
+  .c-card-img--hover {
+    position: absolute;
     top: 0;
-    font-family: v.$font-family--p-card__header;
-    font-size: v.$font-size--p-card__header;
-    letter-spacing: 2px;
-    font-weight: 500;
-    text-shadow: 1px ​1px 5px #fff;
-    background: rgba(v.$color--accent, .9);
-    box-shadow: inset 0 -1px 10px rgba(v.$color--sub, .5);
-    z-index: 2;
   }
 
-  &__info {
-    z-index: 2;
-    background-color: #fff;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    padding: 16px 24px 24px 24px;
-  }
-
-  // ホバー時
-  &:hover {
-    transform: scale(1.10, 1.10);
-
-    & .p-scroll-anim::before {
-      display: none;
-    }
-    & .c-card-img__hover {
-      transform: scale(1.5,1.5) translateY(15%);
-      opacity: 0.3;
-    }
-    & .p-card-info {
-      opacity: 0;
-      position: relative;
-    }
-    .c-site-desc {
-      display: block;
-    }
+  &__inner {
+    padding: 24px;
   }
 }
 
 
+// ホバー時
+.p-card:hover {
+  transform: scale(1.10, 1.10);
 
-
-// .show {
-//   &.p-card__inner {
-//       animation: show .3s both;//早いv
-//       // animation: show 1s both;//遅いv
-
-//     // @for $i from 1 to 4 {
-//     //   &:nth-child(#{$i}) {
-//     //     animation-delay: 2s * $i ;
-//     //   }
-//     // }
-//   }
-// }
-
-
-@keyframes show {
-  0% {
-    opacity: 0;
+  .p-scroll-anim::before {
+    display: none;
   }
-  99%{
-    opacity: 0;
+  .c-card-img--hover {
+    transform: scale(1.5,1.5) translateY(15%);
+    opacity: 0.3;
   }
-  100% {
-    opacity: 1;
+  .p-card__inner {
+    position: relative;
+    opacity: 0;
   }
 }

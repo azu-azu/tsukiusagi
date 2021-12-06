@@ -6,37 +6,37 @@
   display: inline;
   width: v.$size--hamburger-container;
   height: v.$size--hamburger-container;
-  user-select: none;//テキスト選択するかどうか
-  transition: transform 0.75s cubic-bezier(0.39, 1.52, 0.46, 0.92);
+  top: -2px;
+  right: 0;
+  user-select: none;//テキスト選択を可能にするかどうか
   
   background: rgba(0,0,0, 0.5);
   border-bottom-left-radius: 100%;
-  top: -2px;
-  right: 0;
+  transition: transform 0.75s cubic-bezier(0.39, 1.52, 0.46, 0.92);
   z-index: 1000;
 
   span {
     position: absolute;
-    background-color: #fff;
-    transition: all 0.3s linear;
-    border-radius: 4px;
     width: 30px;
     height: 4px;
     right: 12px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all 0.3s linear;
     z-index: 2000;
-  }
 
-  .line-top {
-    top: 16px;
-  }
-
-  .line-middle {
-    top: 26px;
-  }
-
-  .line-bottom {
-    top: 36px;
-    transform-origin: 100% 100%;
+    &.line-top {
+      top: 16px;
+    }
+  
+    &.line-middle {
+      top: 26px;
+    }
+  
+    &.line-bottom {
+      top: 36px;
+      transform-origin: 100% 100%;
+    }
   }
 }
 
@@ -60,8 +60,7 @@ body.is-open {
     z-index: 950;
 
     li {
-      right: -10%;
-      transform: rotate(360deg);
+      animation: list .6s linear forwards;
     }
   }
 }
@@ -103,7 +102,10 @@ body.is-close {
     }
 
     li {
-      animation: list .6s linear forwards;
+      animation: list-back .6s linear forwards;
+      @include m.breakpoint( moon-mini ) {
+        animation: none;
+      }
     }
   }
 }
@@ -135,6 +137,18 @@ body.is-close {
   }
 }
 
+@keyframes list {
+  0% {
+    transform: translateX(0) rotate(-360deg);
+  }
+  70% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes line-top {
   40% {
     transform: scale(2, 2) rotate(405deg);
@@ -150,6 +164,9 @@ body.is-close {
 @keyframes line-middle {
   0% {
     transform: translateX(0);
+  }
+  50% {
+    transform: translateY(360deg);
   }
   100% {
     transform: translateX(-110vw);
@@ -168,6 +185,8 @@ body.is-close {
   }
 }
 
+
+
 // is-closeのとき
 @keyframes overlay-back {
   0% {
@@ -181,15 +200,15 @@ body.is-close {
   }
 }
 
-@keyframes list {
+@keyframes list-back {
   0% {
-    right: -10%;
+    transform: translateX(-250px) rotate(360deg);
   }
   70% {
-    right: -10%;
+    transform: translateX(-250px);
   }
   100% {
-    right: -100vw;
+    transform: translateX(100px);
   }
 }
 
@@ -203,15 +222,6 @@ body.is-close {
 }
 
 
-@keyframes line-bottom-back {
-  // 40% {
-  //   transform: rotate(0);
-  // }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
 @keyframes line-middle-back {
   0% {
     transform: translateX(-110vw);
@@ -222,4 +232,22 @@ body.is-close {
   100% {
     transform: translateX(0);
   }
+}
+
+
+@keyframes line-bottom-back {
+  0% {
+    transform: rotateZ(45deg);
+  }
+  50% {
+    transform: rotateZ(90deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+
+
+  // 100% {
+  //   transform: rotate(-360deg);
+  // }
 }

@@ -22,4 +22,9 @@
     width: 80vmin;
     height: 80vmin;
   }
+
+  .c-moon {
+    position: absolute;
+    top: v.$position--moon-big-top;
+  }
 }

@@ -3,7 +3,28 @@
 	height: 50vh;
 	overflow: hidden;
 	position: relative;
+
+	.c-sun {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.c-sky {
+		position: absolute;
+		top: 0;
+		z-index: 10;
+	}
+
+	.c-sea {
+		position: absolute;
+		top: 45%;
+		z-index: 20;
+	}
+
+	.c-fin {
+		position: absolute;
+		top: 70%;
+		z-index: 100;
+	}
 }
-// .l-wrap {
-//   border-top: 1px rgba(#fd977b, .5);
-// }

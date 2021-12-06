@@ -7,12 +7,12 @@
   span {
     display: inline-block;
     transform-origin: 50% 70%;
-    transform: rotateX(0deg);
+    transform: rotateX(0);
 
     $count: 9;
     @for $i from 1 through $count {
-      $delay: $i * .5 +s;
       $time:  10s;
+      $delay: $i * .5 +s;
 
       .char:nth-child(#{$i}) {
         animation: StandUp $time cubic-bezier(0.68, -0.55, 0.26, 1.55) $delay infinite both;

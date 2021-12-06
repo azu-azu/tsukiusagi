@@ -26,6 +26,7 @@
   }
 
   .c-ball {
+    position: absolute;
     background: v.$color--white--opacity20;
     box-shadow: v.$shadow--bg-square-main;
     border-right: 1px solid v.$color--white--opacity20;
@@ -67,6 +68,6 @@
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: v.$font-size--p-sec-contact--ex;
   }
 }

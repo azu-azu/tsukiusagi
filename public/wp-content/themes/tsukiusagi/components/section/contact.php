@@ -22,11 +22,11 @@
         <p class="forget">非公開です<br>お気軽にお問い合わせください
         </p>
       </form>
-      <div class="c-ball c-bg-square" style="--i:0;"></div>
-      <div class="c-ball c-bg-square" style="--i:1;"></div>
-      <div class="c-ball c-bg-square" style="--i:2;"></div>
-      <div class="c-ball c-bg-square" style="--i:3;"></div>
-      <div class="c-ball c-bg-square" style="--i:4;"></div>
+      <div class="c-ball c-up-down-anim" style="--i:0;"></div>
+      <div class="c-ball c-up-down-anim" style="--i:1;"></div>
+      <div class="c-ball c-up-down-anim" style="--i:2;"></div>
+      <div class="c-ball c-up-down-anim" style="--i:3;"></div>
+      <div class="c-ball c-up-down-anim" style="--i:4;"></div>
     </div>
   </div>
   <article class="p-offset-text">

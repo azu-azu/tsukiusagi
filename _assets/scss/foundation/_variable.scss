@@ -8,27 +8,52 @@ $gap--sec-bottom: 200px;
 // *
 // フォントサイズ
 // *
-// ナビゲーション
+$font-size--sec-ttl: 2.4rem;
 $font-size--header-nav: 1.6rem; // ナビゲーションの文字
 $font-size--hamburger-nav: 2.5rem; // ハンバーガーメニューの文字
-$font-size--moon--pc: 2.5rem; // 月の中のテキスト
-$font-size--p-card__header: 1.5rem;//works-カードヘッダー
+$font-size--moon--sp: 2.5rem; // 月の中の文字
+$font-size--moon--pc: min(3.5vmin, 2.5rem); // 月の中の文字
 
+$font-size--card-ttl: 1.6rem;
+$font-size--c-card-info--01: 1.3rem;
+$font-size--c-card-info--03: 1.2rem;
 
-// *
-// フォントファミリー
-// *
-$font-family--Raleway: 'Raleway', sans-serif;
-$font-family--p-card__header: $font-family--Raleway;
+$font-size--profile-slide--ttl--sp: 2rem;
+$font-size--profile-slide--ttl--pc: 2rem;
+$font-size--profile-slide--txt--sp: 1.6rem;
+$font-size--profile-slide--txt--pc: 1.6rem;
+$font-size--profile-slide--pagination: 1.2rem;
+$font-size--profile-slide--next-prev: 1.5rem;
+
+$font-size--p-skills-ball: 1.5em;
+$font-size--p-skills-ball--small: min(10px,1.5em);
+
+$font-size--c-input-box: 1.6rem;
+$font-size--p-sec-contact--ex: 1.6rem;
+$font-size--p-offset-text: 2.5rem;
+
 
 // *
 // フォントウェイト
 // *
-$font-weight--normal: 100;
-$font-weight--ttl: 300;
-$font-weight--wide: 400;
+$font-weight--base: 100;//指定しなければ100
 $font-weight--light: 300;
 $font-weight--regular: 400;
+$font-weight--bold: 500;
+$font-weight--superBold: 600;
+
+// 見出し
+$font-weight--h2: $font-weight--light;
+$font-weight--h3: $font-weight--bold;
+
+// $font-weight--light: 300;
+$font-weight--card-ttl: $font-weight--light;
+$font-weight--c-sec-ttl: $font-weight--light;
+$font-weight--profile-slide--txt--sp: $font-weight--light;
+
+// $font-weight--superBold: 600;
+$font-weight--input-submit-btn: $font-weight--superBold;
+
 
 
 // *
@@ -89,13 +114,17 @@ $color--hover-marker--yellow: rgba($color--sub, .2);
 
 
 // *
-// 文字色
+// フォントカラー&テキストシャドウ
 // *
-$font-color--skills--first: rgba($color--sub, 0.7);//スキルfirst
-$font-color--skills--child: rgba($color--sub, 0.5);//スキルその他
 $font-color--moon-text: $color--sub;//月の中の文字
 
-$text-shadow--skills--first: 1px 1px 2px rgba($color--accent, 0.7);//スキルfirstのテキストシャドウ
+$font-color--card-ttl: #fff;//カードヘッダー
+
+$font-color--skills--first: rgba(255, 255, 220, 0.8);//スキルfirst
+$font-color--skills--child: rgba($color--sub, 0.7);//スキルその他
+$text-shadow--skills--first: 1px 1px 4px rgba($color--accent, 0.7);//スキルfirstのテキストシャドウ
+$text-shadow--skills--child: 1px 1px 2px rgba($color--accent, 0.7);//スキルfirstのテキストシャドウ
+
 
 
 // *
@@ -115,6 +144,10 @@ $gap--hamburger-nav: 80px;//メニューの縦gap
 // $height--swiper: 240px;
 $width--profile-swiper: min(80vw, 420px);
 $height--profile-swiper: min(43vmin, 232px);// swiper（プロフィール）の高さ
+
+//works
+$width--p-card: 250px;
+$height--p-card--header: 30px;
 
 
 // *

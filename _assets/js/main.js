@@ -7,10 +7,9 @@
 // import './lib/b_browser_switcher.js'; //ブラウザ判定のためライブラリ
 
 import './common/myTrain.js';
-import './common/myBubblyButton.js';
 import './common/myHeader.js';
 import './common/myHover';
-import './common/myInvalidHover';
+// import './common/myInvalidHover';
 import './common/smooth-scroll';
 import './common/myMilkyWay';
 import './common/mySwiper.js';
@@ -20,6 +19,8 @@ import './common/myFallingBox';
 import './common/myWave.js';
 
 
+
+// import './common/myBubblyButton.js';
 // import './common/myOrbit';
 // import './common/test.js';
 // import './common/myTextRotate.js';

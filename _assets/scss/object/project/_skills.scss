@@ -1,13 +1,10 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
 
 .p-skills {
   width: 100%;
-  margin-top: 200px;
-
+  margin-top: 100px;
   font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 100;
-  text-shadow: 1px 1px 0px #555;
-  color: v.$font-color--skills--child;
 
   display: flex;
   justify-content: center;
@@ -17,36 +14,5 @@
 
   span {
     display: inline-block;
-  }
-
-  &__list {
-    .c-ball {
-      display: grid;
-      place-content: center;
-      text-align: center;
-      font-size: 1.5em;
-      line-height: 1.2;
-
-      &:first-child {
-        top: 0;
-        left: 0;
-        width: min(15vmin, 100px);
-        height: min(15vmin, 100px);
-        color: v.$font-color--skills--first;
-        text-shadow: v.$text-shadow--skills--first;
-      }
-  
-      &:not(:first-child) {
-        box-shadow: v.$shadow--bg-square-main;
-
-        &::before {
-          display: none;
-        }
-      }
-    }
-
-    .txt-small {
-      font-size: min(10px,1.5em);
-    }
   }
 }

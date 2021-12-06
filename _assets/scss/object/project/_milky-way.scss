@@ -12,18 +12,19 @@
     overflow: hidden;
   }
 
-  // display: none;
+  display: block;
+  position: absolute;
+  width: 130%;
+  height: 300px;
+  top: 40%;
+  left: -15%;
+  transform: rotate(17deg);
+  z-index: 1;
 
-  // @include m.breakpoint(moon-mini) {
-    display: block;
+  .c-shooting-star {
     position: absolute;
-    width: 130%;
-    height: 300px;
-    top: 40%;
-    left: -15%;
-    transform: rotate(17deg);
-    z-index: 1;
-  // }
+    top: 0;
+  }
 }
 
 

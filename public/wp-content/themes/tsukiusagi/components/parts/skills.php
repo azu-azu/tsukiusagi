@@ -1,18 +1,18 @@
 <article class="p-skills">
-  <div class="p-skills__list c-skills-ball--language">
-    <div class="c-ball c-bg-square skill-html" style="--i:0;">HTML</div>
-    <div class="c-ball c-bg-square skill-css" style="--i:1;">CSS</div>
-    <div class="c-ball c-bg-square skill-php" style="--i:2;">PHP</div>
-    <div class="c-ball c-bg-square skill-react" style="--i:3;">React</div>
-    <div class="c-ball c-bg-square skill-js" style="--i:4;"><p>Java<span>Script</span></p></div>
-    <div class="c-ball c-bg-square skill-gulp" style="--i:5;">gulp</div>
-    <div class="c-ball c-bg-square skill-git" style="--i:6;">git</div>
-  </div>
-  <div class="p-skills__list c-skills-ball--wordpress">
-    <div class="c-ball c-bg-square skill-wordpress" style="--i:1;"><p><span>Word</span>Press</p></div>
-    <div class="c-ball c-bg-square skill-theme" style="--i:2;"><p>テーマ<span>開発</span></p></div>
-    <div class="c-ball c-bg-square skill-custom" style="--i:3;"><p>カスタム<span>投稿</span></p></div>
-    <div class="c-ball c-bg-square skill-plugin txt-small" style="--i:4;"><p>プラグ<span>イン</span></p></div>
-    <div class="c-ball c-bg-square skill-block txt-small" style="--i:5;"><p>ブロック<span>エディタ</span></p></div>
-  </div>
+  <ul class="p-skill-list c-skills-ball--language">
+    <li class="c-ball c-up-down-anim skill-html" style="--i:0;"><p>HTML</p></li>
+    <li class="c-ball c-up-down-anim skill-css" style="--i:1;"><p>CSS</p></li>
+    <li class="c-ball c-up-down-anim skill-php" style="--i:2;"><p>PHP</p></li>
+    <li class="c-ball c-up-down-anim skill-react" style="--i:3;"><p>React</p></li>
+    <li class="c-ball c-up-down-anim skill-js" style="--i:4;"><p>Java<span>Script</span></p></li>
+    <li class="c-ball c-up-down-anim skill-gulp" style="--i:5;"><p>gulp</p></li>
+    <li class="c-ball c-up-down-anim skill-git" style="--i:6;"><p>git</p></li>
+  </ul>
+  <ul class="p-skill-list c-skills-ball--wordpress">
+    <li class="c-ball c-up-down-anim skill-wordpress" style="--i:1;"><p><span>Word</span>Press</p></li>
+    <li class="c-ball c-up-down-anim skill-theme" style="--i:2;"><p>テーマ<br>開発</p></li>
+    <li class="c-ball c-up-down-anim skill-custom" style="--i:3;"><p>カスタム<span>投稿</span></p></li>
+    <li class="c-ball c-up-down-anim skill-plugin txt-small" style="--i:4;"><p>プラグ<span>イン</span></p></li>
+    <li class="c-ball c-up-down-anim skill-block txt-small" style="--i:5;"><p>ブロック<span>エディタ</span></p></li>
+  </ul>
 </article>

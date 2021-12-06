@@ -3,11 +3,12 @@
 
 .c-sec-ttl,
 .c-sec-ttl--small {
-  font-weight: v.$font-weight--ttl;
+  font-weight: v.$font-weight--c-sec-ttl;
   color: #fff;
   text-shadow: 2px 2px 5px #fff;
 }
 
+$letterSpacing: 8px;
 .c-sec-ttl {
   &__wrapper {
     text-align: center;
@@ -17,17 +18,7 @@
   position: relative;
   display: inline-block;
   text-align: center;
-  font-size: 2.4rem;
-  letter-spacing: 8px;
-
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   left: 50%;
-  //   bottom: -10px;
-  //   transform: translateX(-50%);
-  //   width: 80%;
-  //   height: 4px;
-  //   background: #fff;
-  // }
+  font-size: v.$font-size--sec-ttl;
+  letter-spacing: $letterSpacing;
+  text-indent: $letterSpacing;
 }
