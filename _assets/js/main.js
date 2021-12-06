@@ -8,14 +8,14 @@
 
 import './common/myTrain.js';
 import './common/myHeader.js';
-import './common/myHover';
-// import './common/myInvalidHover';
-import './common/smooth-scroll';
-import './common/myMilkyWay';
+import './common/myHover.js';
+import './common/myInvalidHover';
+import './common/smooth-scroll.js';
+import './common/myMilkyWay.js';
 import './common/mySwiper.js';
 import './common/myScrollShow.js';
-import './common/data-splitting';
-import './common/myFallingBox';
+import './common/data-splitting.js';
+import './common/myFallingBox.js';
 import './common/myWave.js';
 
 

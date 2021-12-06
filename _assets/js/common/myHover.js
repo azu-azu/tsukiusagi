@@ -28,6 +28,9 @@ function resize() {
   }
 }
 
+
+
+
 // window.addEventListener('resize', () => {
 //   let x = document.body.clientWidth;
 //   if (x >= moonMiniSize) {
@@ -38,11 +41,6 @@ function resize() {
 //     });
 //   } else {
 //     removeIndicator();
-//     myList.forEach((item) => {
-//       item.removeEventListener('mousemove', (e) => {
-//         moveIndicator(e.target);
-//       });
-//     });
 //   }
 // });
 
@@ -52,14 +50,15 @@ function resize() {
 // ----------------------------------------------------
 // 関数
 // ----------------------------------------------------
-const marker = document.getElementById('js-marker');
 function moveIndicator(e) {
+  let marker = document.getElementById('js-marker');
   marker.style.opacity = 1;
   marker.style.left = e.offsetLeft + 'px';
   marker.style.width = e.offsetWidth + 'px';
 }
 
 function removeIndicator() {
+  let marker = document.getElementById('js-marker');
   marker.style.opacity = '';
   marker.style.left = '';
   marker.style.width = '';
