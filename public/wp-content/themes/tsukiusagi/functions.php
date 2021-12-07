@@ -40,8 +40,8 @@ function my_style_loader_tag_filter($html, $handle) {
 function tsukiusagi_script() {
     // wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.6.1/css/all.css', array());
     wp_enqueue_style('m-plus-1p', 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&display=swap', array());
-    wp_enqueue_style('noto-sans', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap', array());
     wp_enqueue_style('gluten', 'https://fonts.googleapis.com/css2?family=Gluten:wght@100&display=swap', array());
+    wp_enqueue_style('noto-sans', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap', array());
 
     wp_enqueue_style('ress', 'https://unpkg.com/ress/dist/ress.min.css', array(), '1.0.0');
     wp_enqueue_style('style-css', get_template_directory_uri() . '/css/style.css', array(), date("YmdHi"));
@@ -57,7 +57,7 @@ wp_enqueue_script('jquery');
 wp_enqueue_script('bundle', get_template_directory_uri() . '/js/bundle.js', array(), date("YmdHi"), true);
 
 // cdnの読み込み
-wp_enqueue_script('particles', 'http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js', array(), true); //milky-way
+// wp_enqueue_script('particles', 'http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js', array(), true); //milky-way
 wp_enqueue_script('csspluguin', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js', array(), '', true);
 wp_enqueue_script('easing', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/easing/EasePack.min.js', array(), true);
 wp_enqueue_script('tweenlite', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js', array(), true);

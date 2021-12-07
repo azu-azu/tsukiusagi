@@ -24,45 +24,49 @@ const hamburger = document.getElementById('js-hamburger');
 const hamburgerClass = hamburger.classList;
 const myBody = document.body;
 const myBodyClass = myBody.classList;
-let flag = false;
 
-hamburger.addEventListener('touchstart', function () {
-	flag = true;
-	hamburgerClick();
-});
+let touch_event = window.ontouchstart;
+let touch_points = navigator.maxTouchPoints;
 
-hamburger.addEventListener('click', function () {
-	if (flag) {
-		flag = false;
-	} else {
+if (touch_event !== undefined && 0 < touch_points) {
+	hamburger.addEventListener('touchstart', function () {
 		hamburgerClick();
-	}
-});
+	});
+} else {
+	hamburger.addEventListener('click', function () {
+		hamburgerClick();
+	});
+}
+
 
 // **
-// ナビゲーションのリストをクリックしたらis-openを消す
+// ナビゲーションのリストをクリックしたらis-openを消す：タッチ or クリック
 // **
 const navList = document.querySelectorAll(".js-marker");
-navList.forEach((elm) => {
-	elm.addEventListener('touchstart', () => {
-		flag = true;
-		removeOpen();// is-openを外す
-		addClose();// is-closeを付ける
-		bodyFixedNone();//bodyのfixedを外す
-	});
-});
-
-navList.forEach((elm) => {
-	elm.addEventListener('click', () => {
-		if (flag) {
-			flag = false;
-		} else {
+if (touch_event !== undefined && 0 < touch_points) {
+	navList.forEach((elm) => {
+		elm.addEventListener('touchstart', () => {
 			removeOpen();// is-openを外す
 			addClose();// is-closeを付ける
 			bodyFixedNone();//bodyのfixedを外す
-		}
+		});
 	});
-});
+} else {
+	navList.forEach((elm) => {
+		elm.addEventListener('click', () => {
+			removeOpen();// is-openを外す
+			addClose();// is-closeを付ける
+			bodyFixedNone();//bodyのfixedを外す
+		});
+	});
+}
+
+
+
+
+
+
+
 
 
 

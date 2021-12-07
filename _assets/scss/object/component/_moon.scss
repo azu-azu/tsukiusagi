@@ -50,6 +50,7 @@
 			background: v.$color--accent;
 			transform: rotate(237deg) translateY(48px) translateX(15px);
 			z-index: 1;
+			animation: moon-waning-sp 17s alternate-reverse infinite -1s;
 
 			@include m.breakpoint( moon-mini ) {
 				animation: moon-waning 17s alternate-reverse infinite -1s;
@@ -67,19 +68,19 @@
 }
 
 @keyframes moon-waning-sp {
-	100% {
-		transform: rotate(227deg) translateY(44px) translateX(17px);
-	}
 	0% {
 		transform: rotate(227deg) translateY(340px) translateX(17px);
+	}
+	100% {
+		transform: rotate(227deg) translateY(44px) translateX(17px);
 	}
 }
 
 @keyframes moon-waning {
-	100% {
-		transform: rotate(227deg) translateY(44px) translateX(17px);
-	}
 	0% {
 		transform: rotate(227deg) translateY(272px) translateX(17px);
+	}
+	100% {
+		transform: rotate(227deg) translateY(44px) translateX(17px);
 	}
 }

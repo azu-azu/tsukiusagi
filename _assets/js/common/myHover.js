@@ -1,49 +1,24 @@
 const myList = document.querySelectorAll('.js-marker');
 const moonMiniSize = 570;
-// ロードしたとき
-window.addEventListener('load', () => {
-  let x = document.body.clientWidth;
-  if (x >= moonMiniSize) {
+const mediaQueryList = window.matchMedia(`(min-width: ${moonMiniSize}px)`);
+
+const listener = (mediaQueryList) => {
+  if (mediaQueryList.matches) {//pc
     myList.forEach((item) => {
       item.addEventListener('mousemove', (e) => {
         moveIndicator(e.target);
       });
     });
-  }
-});
-
-
-// resizeしたとき
-window.addEventListener("resize", resize());
-
-function resize() {
-  if (window.matchMedia(`(min-width: ${moonMiniSize}px)`).matches) {
-    myList.forEach((item) => {
-      item.addEventListener('mousemove', (e) => {
-        moveIndicator(e.target);
-      });
-    });
-  } else {
+  } else {//sp
     removeIndicator();
   }
-}
+};
 
+// リスナー登録
+mediaQueryList.addEventListener("change", listener);
 
-
-
-// window.addEventListener('resize', () => {
-//   let x = document.body.clientWidth;
-//   if (x >= moonMiniSize) {
-//     myList.forEach((item) => {
-//       item.addEventListener('mousemove', (e) => {
-//         moveIndicator(e.target);
-//       });
-//     });
-//   } else {
-//     removeIndicator();
-//   }
-// });
-
+// 初期化処理
+listener(mediaQueryList);
 
 
 

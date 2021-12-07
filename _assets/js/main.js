@@ -9,8 +9,9 @@
 import './common/myTrain.js';
 import './common/myHeader.js';
 import './common/myHover.js';
-import './common/myInvalidHover';
+// import './common/myInvalidHover';
 import './common/smooth-scroll.js';
+import './lib/particles.min.js';
 import './common/myMilkyWay.js';
 import './common/mySwiper.js';
 import './common/myScrollShow.js';
