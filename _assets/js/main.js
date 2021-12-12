@@ -6,11 +6,13 @@
 // import '@modules/svgxuse'; //SVGスプライトをIEで使用するためのライブラリ
 // import './lib/b_browser_switcher.js'; //ブラウザ判定のためライブラリ
 
+
+// import './lib/fastclick.js';
+// import './common/myFastClick.js';
 import './common/myTrain.js';
 import './common/myHeader.js';
-import './common/myHover.js';
-// import './common/myInvalidHover';
-import './common/smooth-scroll.js';
+import './common/myHamburger.js';
+// import './common/myHover.js';
 import './lib/particles.min.js';
 import './common/myMilkyWay.js';
 import './common/mySwiper.js';
@@ -21,12 +23,3 @@ import './common/myWave.js';
 
 
 
-// import './common/myBubblyButton.js';
-// import './common/myOrbit';
-// import './common/test.js';
-// import './common/myTextRotate.js';
-// import './common'
-// import './common/myStarWay';
-// import './common/myLoading.js';
-// import './common/myParticleRound';
-// import './common/myParticleBang';

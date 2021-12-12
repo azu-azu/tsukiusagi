@@ -138,8 +138,12 @@ $position--moon-big-top: 15vmin;
 
 // ハンバーガー
 $size--hamburger-container: 60px;// ボタン全体
-$position--hamburger-nav-top: 350px; //メニューのトップ位置
+$position--hamburger-nav-top: 50px; //メニューのトップ位置
 $gap--hamburger-nav: 80px;//メニューの縦gap
+
+$gap--header--sp: 10px;
+$gap--header--pc: 5vw;
+$gap--header--wide: 8vw;
 
 // $height--swiper: 240px;
 $width--profile-swiper: min(80vw, 420px);
@@ -148,6 +152,13 @@ $height--profile-swiper: min(43vmin, 232px);// swiper（プロフィール）の
 //works
 $width--p-card: 250px;
 $height--p-card--header: 30px;
+
+
+
+// *
+// タイム
+// *
+$time--hamburger-anim: .2s;
 
 
 // *

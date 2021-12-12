@@ -2,14 +2,38 @@
 @use "../../foundation/variable" as v;
 
 .p-header {
-  transition: all 1s ease-out;
   padding: 0 10px;
+  transition: 1s ease-in;
 
   @include m.breakpoint( moon-mini ) {
     padding: 0 20px;
   }
 
-  // **
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 100%;
+    top: 0;
+    background: rgba(#333, .5);
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+
+    opacity: 0;
+    width: calc(100% - v.$gap--header--sp * 2);
+    left: v.$gap--header--sp;
+
+    @include m.breakpoint( moon-mini ) {
+      width: calc(100% - v.$gap--header--pc * 2);
+      left: v.$gap--header--pc;
+    }
+    @media screen and (min-width:740px) {
+      width: calc(100% - v.$gap--header--wide * 2);
+      left: v.$gap--header--wide;
+    }
+  }
+
   // **トップ画面**
   &--top {
     opacity: 1;
@@ -21,8 +45,9 @@
     .c-header-ttl {
       display: none;
 
-      &--top {
+      &--totop {
         visibility: hidden;
+        white-space: nowrap;
       }
     }
 
@@ -38,13 +63,16 @@
     }
   }
 
-  // **
   // **スクロール途中からp-header--back**
   &--back {
+    &::before {
+      opacity: 1;
+    }
+
     .c-header-ttl {
       display: none;
 
-      &--top {
+      &--totop {
         visibility: visible;
         white-space: nowrap;
       }

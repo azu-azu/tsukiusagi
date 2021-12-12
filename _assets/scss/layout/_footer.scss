@@ -4,27 +4,36 @@
 	overflow: hidden;
 	position: relative;
 
-	.c-sun {
+	.c-sun,
+	.c-sky,
+	.c-sea,
+	.c-fin,
+	.c-copyright {
 		position: absolute;
+	}
+
+	.c-sun {
 		left: 50%;
 		transform: translateX(-50%);
 	}
 
 	.c-sky {
-		position: absolute;
 		top: 0;
 		z-index: 10;
 	}
 
 	.c-sea {
-		position: absolute;
 		top: 45%;
 		z-index: 20;
 	}
 
 	.c-fin {
-		position: absolute;
 		top: 70%;
-		z-index: 100;
+		z-index: 30;
+	}
+
+	.c-copyright {
+		bottom: 10%;
+		z-index: 30;
 	}
 }

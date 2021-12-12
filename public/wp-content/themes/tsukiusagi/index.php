@@ -6,7 +6,6 @@
 <article class="l-main">
   <?php get_template_part('components/section/moon');?>
   <?php get_template_part('components/section/works');?>
-  <?php get_template_part('components/parts/rotate-box');?>
   <?php get_template_part('components/section/profile');?>
   <?php get_template_part('components/section/contact');?>
 </article>

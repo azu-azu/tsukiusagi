@@ -6,7 +6,6 @@
 @forward "./foundation/_mixin";
 @forward "./foundation/_base";
 @forward "./foundation/_variable";
-@forward "./foundation/_test";
 
 // ==========================================================================
 // Layout
@@ -29,11 +28,13 @@
 @forward "./object/component/_card-img";
 @forward "./object/component/_card-info";
 @forward "./object/component/_card-ttl";
+@forward "./object/component/_copyright";
 @forward "./object/component/_crater";
 @forward "./object/component/_fin";
 @forward "./object/component/_floating-star";
 @forward "./object/component/_header-ttl";
 @forward "./object/component/_hamburger";
+@forward "./object/component/_ham-trigger";
 @forward "./object/component/_input-box";
 @forward "./object/component/_linear-light";
 @forward "./object/component/_marker";
@@ -65,8 +66,8 @@
 @forward "./object/project/_moon-circle";
 @forward "./object/project/_offset-text";
 @forward "./object/project/_particle";
+@forward "./object/project/_playing-box";
 @forward "./object/project/_random-txt";
-@forward "./object/project/_rotate-box";
 @forward "./object/project/_sec-moon";
 @forward "./object/project/_sec-works";
 @forward "./object/project/_sec-profile";
@@ -75,6 +76,7 @@
 @forward "./object/project/_skill-list";
 @forward "./object/project/_swiper";
 @forward "./object/project/_train";
+// @forward "./object/project/_rotate-box";
 
 // -----------------------------------------------------------------
 // Utility

@@ -1,15 +1,11 @@
 @use "../foundation/mixin" as m;
 @use "../foundation/variable" as v;
 
-$side-sp: 10px;
-$side-pc: 5vw;
-$side-wide: 8vw;
-
 .l-header {
   position: fixed;
   width: calc(100% - v.$size--hamburger-container - 10px);
   margin-top: 5px;
-  padding: 0 $side-sp;
+  padding: 0 v.$gap--header--sp;
   top: 0;
   z-index: 2000;
   transition: all 1s ease-in-out;
@@ -17,40 +13,10 @@ $side-wide: 8vw;
   @include m.breakpoint( moon-mini ) {
     width: 100%;
     margin-top: 10px;
-    padding: 0 $side-pc;
+    padding: 0 v.$gap--header--pc;
   }
 
   @media screen and (min-width:740px) {
-    padding: 0 $side-wide;
-  }
-
-  &::before {
-    position: absolute;
-    display: block;
-    content: '';
-    height: 100%;
-    top: 0;
-    background: rgba(#333, .5);
-    border-radius: 10px;
-    transition: all 1s ease-in-out;
-
-    opacity: 0;
-    width: calc(100% - $side-sp * 2);
-    left: $side-sp;
-
-    @include m.breakpoint( moon-mini ) {
-      width: calc(100% - $side-pc * 2);
-      left: $side-pc;
-    }
-    @media screen and (min-width:740px) {
-      width: calc(100% - $side-wide * 2);
-      left: $side-wide;
-    }
-  }
-
-  &.back {
-    &::before {
-      opacity: 1;
-    }
+    padding: 0 v.$gap--header--wide;
   }
 }

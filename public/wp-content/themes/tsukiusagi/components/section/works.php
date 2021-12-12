@@ -40,4 +40,5 @@
       </article>
     </li>
   </ul>
+  <?php get_template_part('components/parts/playing-box');?>
 </section>

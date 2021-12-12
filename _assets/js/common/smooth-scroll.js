@@ -27,26 +27,48 @@ const scrollAnimation = () => {
   }
 };
 
+const myTotop = document.getElementById('js-totop');
+
 // トップへ戻る要素をクリックしたらスクロールアニメーション実行
-document.querySelectorAll("a[href^='#']").forEach((element) => {
-  element.addEventListener("click", (e) => {
-    e.preventDefault();
+myTotop.addEventListener("click", (e) => {
+  e.preventDefault();
 
-    const targetId = e.target.getAttribute("href");// ターゲットの要素を取得
-    if (targetId === "#") {
-      targetScrollY = 0;// href="#"の場合はページトップなので0
+  const targetId = e.target.getAttribute("href");// ターゲットの要素を取得
+  if (targetId === "#") {
+    targetScrollY = 0;// href="#"の場合はページトップなので0
+  } else {
+    const targetElement = document.querySelector(targetId);// ターゲットの要素
+    const documentHeight = document.body.clientHeight;// ページ全体の高さ
+
+    if (targetElement.offsetTop + window.innerHeight > documentHeight) {// ターゲットのY座標取得
+      targetScrollY = documentHeight - window.innerHeight;// ターゲットのY座標+ウィンドウ高さがページ全体の高さを超えたとき（＝そこまでスクロールできない）は、ページ一番したまでの位置を取得
     } else {
-      const targetElement = document.querySelector(targetId);// ターゲットの要素
-      const documentHeight = document.body.clientHeight;// ページ全体の高さ
-
-      if (targetElement.offsetTop + window.innerHeight > documentHeight) {// ターゲットのY座標取得
-        targetScrollY = documentHeight - window.innerHeight;// ターゲットのY座標+ウィンドウ高さがページ全体の高さを超えたとき（＝そこまでスクロールできない）は、ページ一番したまでの位置を取得
-      } else {
-        targetScrollY = targetElement.offsetTop;// ターゲットのY座標
-      }
+      targetScrollY = targetElement.offsetTop;// ターゲットのY座標
     }
-    startTime = Date.now();// Date.now()で開始時間をセット
-    startScrollY = window.scrollY;// 現在のスクロール位置をセット
-    scrollAnimation();
-  });
+  }
+  startTime = Date.now();// Date.now()で開始時間をセット
+  startScrollY = window.scrollY;// 現在のスクロール位置をセット
+  scrollAnimation();
 });
+// document.querySelectorAll("a[href^='#']").forEach((element) => {
+//   element.addEventListener("click", (e) => {
+//     e.preventDefault();
+
+//     const targetId = e.target.getAttribute("href");// ターゲットの要素を取得
+//     if (targetId === "#") {
+//       targetScrollY = 0;// href="#"の場合はページトップなので0
+//     } else {
+//       const targetElement = document.querySelector(targetId);// ターゲットの要素
+//       const documentHeight = document.body.clientHeight;// ページ全体の高さ
+
+//       if (targetElement.offsetTop + window.innerHeight > documentHeight) {// ターゲットのY座標取得
+//         targetScrollY = documentHeight - window.innerHeight;// ターゲットのY座標+ウィンドウ高さがページ全体の高さを超えたとき（＝そこまでスクロールできない）は、ページ一番したまでの位置を取得
+//       } else {
+//         targetScrollY = targetElement.offsetTop;// ターゲットのY座標
+//       }
+//     }
+//     startTime = Date.now();// Date.now()で開始時間をセット
+//     startScrollY = window.scrollY;// 現在のスクロール位置をセット
+//     scrollAnimation();
+//   });
+// });

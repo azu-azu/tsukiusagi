@@ -30,7 +30,10 @@ $delay: 8000ms;
 $move-z: 300px;
 .rotation {
   position: absolute;
-  animation: rotationY $delay linear infinite;
+  animation-name: rotationY;
+  animation-delay: $delay;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 
   $count: 5;
   $interval: 1;
@@ -54,8 +57,11 @@ $move-z: 300px;
   }
   
   &--follow {
-    will-change: animation;
-    animation: rotationY $delay linear infinite reverse;
+    animation-name: rotationY;
+    animation-delay: $delay;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
   }
 }
 
