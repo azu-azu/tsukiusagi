@@ -15,15 +15,56 @@
 
   a {
     color: #fff;
-    padding: 10px;
   }
+}
 
-  .c-marker {
+
+.p-header--back {
+  .p-gmenu {
+    
+    $first-width: 84px;
+    $list-width: 77.75px;
     @include m.breakpoint( moon-mini ) {
-      position: absolute;
-      top: 7px;
-      left: calc(100% - 30px);
-      z-index: 1;
+      li {
+        &:first-child:hover ~ .c-marker::before {
+          transform: scale(1);
+          opacity: 1;
+        }
+        &:nth-child(2):hover ~ .c-marker::before {
+          transform: translateX($list-width + v.$gap--c-nav) scale(1);
+          opacity: 1;
+        }
+        &:nth-child(3):hover ~ .c-marker::before {
+          transform: translateX($list-width *2 + v.$gap--c-nav *2) scale(1);
+          opacity: 1;
+        }
+      }
+
+      .c-marker {
+        position: absolute;
+        top: 7px;
+        z-index: 1;
+
+        &::before {
+          width: $list-width;
+          transform: scale(0);
+        }
+      }
     }
   }
 }
+
+
+
+
+  // $middle-gap: 100vw - (v.$gap--header--wide *2) - (v.$gap--p-header-side--pc *2) - $first-width - ($list-width *2) - (v.$gap--c-nav *2);
+  // $middle-gap: calc(100% - $first-width - ($list-width *2) - (v.$gap--c-nav *2)); //100%から各リスト幅とgap幅を引いた数値
+
+    // .c-header-ttl--totop:hover ~ ul .c-marker {
+    //   left: 0;
+
+    //   &::before {
+    //     transform: scale(1);
+    //     opacity: 1;
+    //   }
+    // }

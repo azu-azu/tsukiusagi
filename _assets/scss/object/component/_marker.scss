@@ -3,39 +3,19 @@
 
 .c-marker {
   @include m.breakpoint( moon-mini ) {
-    transition: .5s;
+    display: none;
+    width: 100%;
 
     &::before {
-      content: "";
       position: absolute;
-      width: 50px;
+      content: "";
       height: 40px;
       top: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      filter: blur(5px);
-    }
-  }
-}
-
-
-.p-header--back {
-  @include m.breakpoint( moon-mini ) {
-    .c-header-ttl--top:hover ~ ul .c-marker::before,
-    .c-nav .js-marker:hover ~ .c-marker::before {
-      background: v.$color--hover-marker--white;
-      box-shadow: 0 0 15px v.$color--hover-marker--white,
-      0 0 30px v.$color--hover-marker--white,
-      0 0 45px v.$color--hover-marker--white,
-      0 0 60px v.$color--hover-marker--white;
-    }
-
-    .c-nav .js-marker:nth-child(3):hover ~ .c-marker::before {
-      background: v.$color--hover-marker--yellow;
-      box-shadow: 0 0 15px v.$color--hover-marker--yellow,
-      0 0 30px v.$color--hover-marker--yellow,
-      0 0 45px v.$color--hover-marker--yellow,
-      0 0 60px v.$color--hover-marker--yellow;
+      left: 0;
+      background: rgba(255,255,255, 0.3);
+      filter: blur(10px);
+      transition: .5s ease-in-out;
+      opacity: 0;
     }
   }
 }

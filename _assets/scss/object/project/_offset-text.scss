@@ -39,10 +39,13 @@
 					}
 				}
 
-				@for $i from 1 through 9 {
+				$char-num: 9;
+				$delay: -4.5s;
+				@for $i from 1 through $char-num {
 					&:nth-of-type(#{$i}) {
-						animation-delay: math.div($i, -2) +s;
+						animation-delay: $delay;
 					}
+					$delay: $delay + 0.5;
 				}
 
 				@include m.breakpoint(moon-mini) {
@@ -50,7 +53,7 @@
 						"M-64.5,28c44.4,0,44.4,26,88.9,26c44.4,0,44.4-26,88.9-26c44.4,0,44.4,26,88.9,26c44.4,0,44.4-26,88.9-26c44.4,0,44.4,26,88.9,26c44.4,0,44.4-26,88.9-26c44.4,0,44.4,26,88.9,26c44.4,0,44.4-26,88.9-26"
 					);
 		
-					offset-distance: 0;
+					offset-distance: 100%;
 					animation: waving 10s linear infinite;
 				}
 			}
@@ -63,16 +66,24 @@
 // offset
 @keyframes waving-sp {
 	0% {
-		transform: translateX(0);
+		transform: translateX(2000%);
+		opacity: 1;
 	}
 	100% {
-		transform: translateX(2000%);
+		transform: translateX(0);
+		opacity: 0.9;
 	}
+}
+
+@keyframes up-down {
+  100% {
+    transform: scale(1) translateY(100px) rotateZ(360deg);
+  }
 }
 
 
 @keyframes waving {
 	100% {
-		offset-distance: 100%;
+		offset-distance: 0;
 	}
 }

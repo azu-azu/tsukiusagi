@@ -128,8 +128,9 @@ $text-shadow--skills--child: 1px 1px 2px rgba($color--accent, 0.7);//スキルfi
 
 
 // *
-// サイズ
+// サイズと余白
 // *
+
 // 月サイズ
 $size--moon-mini: 35vmin;
 $size--moon-big: 80vw;
@@ -141,11 +142,14 @@ $size--hamburger-container: 60px;// ボタン全体
 $position--hamburger-nav-top: 50px; //メニューのトップ位置
 $gap--hamburger-nav: 80px;//メニューの縦gap
 
+// ヘッダー
 $gap--header--sp: 10px;
 $gap--header--pc: 5vw;
 $gap--header--wide: 8vw;
+$gap--c-nav: 20px;
+$gap--p-header-side--pc: 20px;
 
-// $height--swiper: 240px;
+// swiper(height:240px;)
 $width--profile-swiper: min(80vw, 420px);
 $height--profile-swiper: min(43vmin, 232px);// swiper（プロフィール）の高さ
 

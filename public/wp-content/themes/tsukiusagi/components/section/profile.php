@@ -33,10 +33,11 @@
         <li class="swiper-slide">
           <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/1-s.png" alt="うさぎの背景画像">
           <article class="swiper-slide__content">
-            <h3>コーディング</h3>
+          <h3>WordPress</h3>
             <p>
-              ・FLOCSSでのCSS設計<br>
-              ・チーム制作
+              ・テーマ開発<br>
+              ・プラグイン開発<br>
+              ・FLOCSSでのCSS設計
             </p>
           </article>
         </li>
@@ -44,11 +45,11 @@
         <li class="swiper-slide">
           <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/4-s.png" alt="うさぎの背景画像">
           <article class="swiper-slide__content right">
-            <h3>WordPress</h3>
+            <h3>VBA</h3>
             <p>
-              ・テーマ開発<br>
-              ・ブロックエディタ開発<br>
-              ・プラグイン開発
+              ・自動化ツール作成<br>
+              ・ヒアリング、提案<br>
+              ・機能設計
             </p>
           </article>
         </li>

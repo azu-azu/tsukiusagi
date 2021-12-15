@@ -4,7 +4,7 @@
 .c-nav {
   display: grid;
   grid-auto-rows: auto;
-  gap: 20px;
+  gap: v.$gap--c-nav;
   height: 0;
   transform: translateX(100vw);
   z-index: 90;
@@ -22,6 +22,7 @@
   
   li {
     width: 250px;
+    padding: 10px 80px;
 
     background: rgba(0, 0, 0, 0.6);
     border-radius: 50px;
@@ -36,6 +37,7 @@
     }
 
     @include m.breakpoint( moon-mini ) {
+      padding: 0;
       width: auto;
       background: none;
       filter: none;
@@ -46,7 +48,6 @@
 
     a {
       font-size: v.$font-size--hamburger-nav;
-      padding: 10px 80px;
 
       @include m.breakpoint( moon-mini ) {
         font-size: v.$font-size--header-nav;

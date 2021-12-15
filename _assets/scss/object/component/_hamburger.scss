@@ -26,6 +26,8 @@
     width: v.$size--hamburger-container + 10px;
     height: v.$size--hamburger-container + 10px;
     background: radial-gradient(#fff, rgba(v.$color--sub, .5));
+    background: -webkit-radial-gradient(#fff, rgba(v.$color--sub, .5));
+    background: -moz-radial-gradient(#fff, rgba(v.$color--sub, .5));
     border-bottom-left-radius: 100%;
     filter: blur(5px);
     animation: overlay-back v.$time--hamburger-anim linear forwards;

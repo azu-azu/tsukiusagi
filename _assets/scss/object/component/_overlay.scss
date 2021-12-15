@@ -8,6 +8,8 @@
   height: v.$size--hamburger-container + 10px;
 
   background: radial-gradient(#fff, rgba(v.$color--sub, .8));
+  background: -webkit-radial-gradient(#fff, rgba(v.$color--sub, .8));
+  background: -moz-radial-gradient(#fff, rgba(v.$color--sub, .8));
   border-bottom-left-radius: 100%;
   filter: blur(5px);
   // transition: transform v.$time--hamburger-anim cubic-bezier(1, 0, 0, 1);

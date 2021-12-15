@@ -53,6 +53,7 @@ add_action('wp_enqueue_scripts', 'tsukiusagi_script');
 //--------------------------------------------
 //jsを読み込む
 //--------------------------------------------
+// true:フッターで読み込み
 wp_enqueue_script('jquery');
 wp_enqueue_script('bundle', get_template_directory_uri() . '/js/bundle.js', array(), date("YmdHi"), true);
 

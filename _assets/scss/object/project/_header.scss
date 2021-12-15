@@ -6,7 +6,7 @@
   transition: 1s ease-in;
 
   @include m.breakpoint( moon-mini ) {
-    padding: 0 20px;
+    padding: 0 v.$gap--p-header-side--pc;
   }
 
   &::before {
@@ -34,61 +34,72 @@
     }
   }
 
-  // **トップ画面**
-  &--top {
-    opacity: 1;
+  .c-header-ttl--totop {
+    padding: 10px;
+  }
+}
 
-    // タイトル表示するならflexかける
-    // display: flex;
-    // justify-content: space-between;
 
-    .c-header-ttl {
-      display: none;
+// **
+// トップ画面
+// **
+.p-header--top {
+  opacity: 1;
 
-      &--totop {
-        visibility: hidden;
-        white-space: nowrap;
-      }
-    }
+  // タイトル表示するならflexかける
+  // display: flex;
+  // justify-content: space-between;
 
-    #marker {
+  .c-header-ttl {
+    display: none;
+
+    &--totop {
       visibility: hidden;
-    }
-
-    //下スクロールでフェード
-    &.is-fade {
-      @include m.breakpoint( moon-mini ) {
-        opacity: 0;
-      }
+      white-space: nowrap;
     }
   }
 
-  // **スクロール途中からp-header--back**
-  &--back {
-    &::before {
-      opacity: 1;
-    }
-
-    .c-header-ttl {
-      display: none;
-
-      &--totop {
-        visibility: visible;
-        white-space: nowrap;
-      }
-    }
-
-    a {
-      @include m.breakpoint( moon-mini ) {
-        backdrop-filter: blur(15px);
-      }
-    }
-
-    .c-bubbly-button--white:hover {
-      color: #fff;
+  //下スクロールでフェード
+  &.is-fade {
+    @include m.breakpoint( moon-mini ) {
+      opacity: 0;
     }
   }
 }
+
+
+// **
+// スクロール途中からp-header--back
+// **
+.p-header--back {
+  &::before {
+    opacity: 1;
+  }
+
+  .c-header-ttl {
+    display: none;
+
+    &--totop {
+      visibility: visible;
+      white-space: nowrap;
+    }
+  }
+
+  a {
+    @include m.breakpoint( moon-mini ) {
+      backdrop-filter: blur(15px);
+    }
+  }
+
+  .c-marker {
+    display: block;
+  }
+
+  .c-bubbly-button--white:hover {
+    color: #fff;
+  }
+}
+
 
 
 

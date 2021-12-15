@@ -5,9 +5,11 @@
 .p-falling-box {
 	margin: auto;
 	position: relative;
-  bottom: 15%;
 	left: 35%;
 	transform: translateX(-50%) translate3d(0,0,0);
+	transition: transform .5s;
+	-webkit-perspective: 500px;
+	perspective: 500px;
 
 	@include m.breakpoint(moon-mini) {
 		left: 45%;
@@ -22,6 +24,7 @@
 	.sector {
 		top: 50%;
 		left: 50%;
+		backface-visibility: hidden;
 
 		$sectors: 7;
 		@for $s from 1 through $sectors {
@@ -75,7 +78,6 @@
 	}
 
 	.line-box__line {
-		will-change: transform;
 		animation-name: fadeRotate;
 		animation-timing-function: linear;
 		border-radius: 100%;
