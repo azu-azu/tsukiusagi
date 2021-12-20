@@ -3,11 +3,14 @@
 	height: 50vh;
 	overflow: hidden;
 	position: relative;
+	background: #f3bf7c;
 
 	.c-sun,
 	.c-sky,
 	.c-sea,
 	.c-fin,
+	.c-wave,
+	.c-wave--color,
 	.c-copyright {
 		position: absolute;
 	}
@@ -15,6 +18,7 @@
 	.c-sun {
 		left: 50%;
 		transform: translateX(-50%);
+		z-index: 1;
 	}
 
 	.c-sky {
@@ -26,6 +30,17 @@
 		top: 45%;
 		z-index: 20;
 	}
+
+	.c-wave {
+    top: 36%;
+    z-index: 10;
+  
+    &--color {
+      top: 55%;
+      left: -5%;
+      z-index: 10;
+    }
+  }
 
 	.c-fin {
 		top: 70%;

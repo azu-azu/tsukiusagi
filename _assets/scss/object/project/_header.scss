@@ -101,55 +101,16 @@
 }
 
 
+// **
+// 固定ページ
+// **
+body.topic {
+  .p-header--top {
+    .c-header-ttl {
+      display: block;
+    }
+  }
+}
 
-
-
-
-
-// /*========= UpMove/DownMoveを使いたい場合 ===============*/
-// /*上に上がる動き*/
-// .js-header.UpMove{
-// 	position: fixed;
-// 	width:100%;
-// 	// animation: UpAnime 0.5s forwards;
-//   height: 70px;
-//   background: transparent;
-// }
-
-
-// .js-header.UpMove + .DownMove {
-//   background: none;
-// }
-
-// // /*下に下がる動き*/
-// .js-header.DownMove{
-// 	position: fixed;
-//   opacity: 1;
-// 	width:100%;
-// 	// animation: DownAnime 1s forwards;
-//   background:rgba(#333, .5);
-// }
-
-// @keyframes UpAnime{
-//   from {
-//   opacity: 1;
-// 	transform: translateY(0);
-//   }
-//   to {
-//   opacity: 0;
-// 	transform: translateY(-100px);
-//   }
-// }
-
-// @keyframes DownAnime{
-//   from {
-//     opacity: 0;
-//     transform: translateY(-100px);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
 
 

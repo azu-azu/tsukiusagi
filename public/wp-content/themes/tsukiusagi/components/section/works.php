@@ -12,7 +12,7 @@
           <h3 class="c-card-ttl">WordPress</h3>
         </article>
         <div class="c-card-img card1"></div>
-        <a href="#">
+        <a href="https://wish-design-sk.com/" target="_blank" rel="noopener noreferrer">
           <div class="c-card-img--hover card1"></div>
         </a>
         <section class="p-card__inner c-card-info">
@@ -29,7 +29,7 @@
           <h3 class="c-card-ttl">WordPress</h3>
         </article>
         <div class="c-card-img card2"></div>
-        <a href="#">
+        <a href="https://italiadesign.jp/" target="_blank" rel="noopener noreferrer">
           <div class="c-card-img--hover card2"></div>
         </a>
         <section class="p-card__inner c-card-info">

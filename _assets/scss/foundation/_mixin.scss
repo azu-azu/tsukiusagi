@@ -9,6 +9,11 @@
 			@content ;
 		}
 	}
+	@if $point == contact-col {
+		@media ( min-width: 800px ) {
+			@content ;
+		}
+	}
 }
 
 // **

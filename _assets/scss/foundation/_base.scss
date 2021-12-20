@@ -9,6 +9,11 @@ body {
   scroll-behavior: smooth;//スムーススクロール
 }
 
+// 固定ページのbody
+body.topic {
+  overflow: hidden;
+}
+
 html {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: v.$font-weight--base;

@@ -4,24 +4,11 @@
       Contactフォーム
     </h2>
   </article>
+
   <div class="p-sec-contact__container">
     <div class="p-sec-contact__inner">
-      <form action="">
-        <div class="c-input-box">
-          <input type="text" placeholder="お名前">
-        </div>
-        <div class="c-input-box">
-          <input type="email" placeholder="メールアドレス">
-        </div>
-        <div class="c-input-box text">
-          <input type="text" placeholder="お問い合わせ内容">
-        </div>
-        <div class="c-input-box">
-          <input type="submit" value="送信">
-        </div>
-        <p class="forget">非公開です<br>お気軽にお問い合わせください
-        </p>
-      </form>
+      <?php echo do_shortcode( '[contact-form-7 id="18" title="コンタクトフォーム 1"]' ); ?>
+      <!-- <?php echo do_shortcode( '[contact-form-7 id="14" title="Contact form 1"]' ); ?> -->
       <div class="c-ball c-up-down-anim" style="--i:0;"></div>
       <div class="c-ball c-up-down-anim" style="--i:1;"></div>
       <div class="c-ball c-up-down-anim" style="--i:2;"></div>
@@ -29,7 +16,5 @@
       <div class="c-ball c-up-down-anim" style="--i:4;"></div>
     </div>
   </div>
-  <article class="p-offset-text">
-    <p data-splitting>♪月うさぎＷｅｂ♪</p>
-  </article>
+  <?php get_template_part('components/common/offset-title');?>
 </section>

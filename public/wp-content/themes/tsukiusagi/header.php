@@ -12,7 +12,7 @@
     <?php wp_head();?>
   </head>
 
-  <body class="">
+  <body class="top">
     <header class="l-header" id="js-l-header">
       <input class="c-ham-trigger" id="ham-trigger" type="checkbox">
       <label onclick="" class="c-hamburger sp-only" for="ham-trigger">

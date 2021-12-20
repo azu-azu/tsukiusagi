@@ -55,7 +55,21 @@ add_action('wp_enqueue_scripts', 'tsukiusagi_script');
 //--------------------------------------------
 // true:フッターで読み込み
 wp_enqueue_script('jquery');
-wp_enqueue_script('bundle', get_template_directory_uri() . '/js/bundle.js', array(), date("YmdHi"), true);
+
+// ページごとに読み込みファイルを変える
+function file_load_scripts_styles() {
+    if (is_front_page() || is_home() || is_page('home')) {
+        wp_enqueue_script('bundle', get_template_directory_uri() . '/js/bundle.js', array(), date("YmdHi"), true);
+    }
+    if (is_page()) {
+        wp_enqueue_script('data-splitting', get_template_directory_uri() . '/js/data-splitting.js', array(), date("YmdHi"), true);
+    }
+    // elseif(is_page('about') || is_page('flow')) {
+    // }
+}
+add_action('wp_footer', 'file_load_scripts_styles'); // wp_footerに処理を登録
+
+
 
 // cdnの読み込み
 // wp_enqueue_script('particles', 'http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js', array(), true); //milky-way
@@ -71,17 +85,6 @@ wp_enqueue_script('splitting', 'https://unpkg.com/splitting@1.0.6/dist/splitting
 // wp_enqueue_script('coco', 'https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-1-8/js/5-1-8.js', array(), true);
 
 
-// ページごとに読み込みファイルを変えるとき
-// function file_load_scripts_styles() {
-//     if(is_front_page() || is_home() || is_page('home')) {
-//   }
-//   elseif(is_page('price')) {
-//   }
-//   elseif(is_page('about') || is_page('flow')) {
-//   }
-// }
-// add_action('wp_footer', 'file_load_scripts_styles'); // wp_footerに処理を登録
-
 //--------------------------------------------
 // uri指定のショートコード
 //--------------------------------------------
@@ -89,3 +92,23 @@ function shortcode_tp() {
     return get_template_directory_uri();
 }
 add_shortcode('uri', 'shortcode_tp');
+
+
+
+//--------------------------------------------
+// contact form 7
+//--------------------------------------------
+add_filter( 'wpcf7_validate_email*', 'custom_email_confirmation_validation_filter', 20, 2 );
+
+function custom_email_confirmation_validation_filter( $result, $tag ) {
+    if ( 'your-email-confirm' == $tag->name ) {
+        $your_email = isset( $_POST['your-email'] ) ? trim( $_POST['your-email'] ) : '';
+        $your_email_confirm = isset( $_POST['your-email-confirm'] ) ? trim( $_POST['your-email-confirm'] ) : '';
+
+        if ( $your_email != $your_email_confirm ) {
+            $result->invalidate( $tag, "Are you sure this is the correct address?" );
+        }
+    }
+
+    return $result;
+}
