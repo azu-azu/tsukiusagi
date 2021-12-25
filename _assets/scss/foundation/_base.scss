@@ -9,8 +9,8 @@ body {
   scroll-behavior: smooth;//スムーススクロール
 }
 
-// 固定ページのbody
-body.topic {
+// デフォルト固定ページのbody
+body.page-template-page-php {
   overflow: hidden;
 }
 

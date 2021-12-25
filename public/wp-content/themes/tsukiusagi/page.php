@@ -3,7 +3,8 @@
 Template Name: default
 */
 ?>
-<?php get_header('topic'); ?>
+<?php get_header(); ?>
+<?php get_template_part('components/header/topic-header');?>
 
 <main class="l-topic">
   <?php get_template_part('components/parts/floating-stars');?>

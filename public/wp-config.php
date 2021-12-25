@@ -13,7 +13,7 @@
  * * Database table prefix
  * * ABSPATH
  *
- * @link https://wordpress.org/support/article/editing-wp-config-php/
+ * @link https://codex.wordpress.org/Editing_wp-config.php
  *
  * @package WordPress
  */
@@ -46,14 +46,15 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '9q6kl+wRgm6f7wzNpbAiHbPAdBToPIMeXBDCViDDuHLsHUr7r6xJ0ulwatW/Xva2nIcvuJRoVaO4uWU/sMqzQQ==');
-define('SECURE_AUTH_KEY',  'gmIRxcS2Tnhr61C3MClR5n5v1e58PnVB0RI72BfPKqURbtiY90k7iL8LaMiMFFi1zy/wGA4royBRti59sITMBA==');
-define('LOGGED_IN_KEY',    'e652SyuM5wbcHV03Eck+iNuZ5PplT5VEeLDLz6NRQqhkx3iC+KdNk/C0sS1OXJ2ala01k6gYgORyHedUhJTIwg==');
-define('NONCE_KEY',        '8p41XRmm+IvPEC45eaetkVEs+iDBjAwTZwcl41Spufw/d5V5O/m9WV4e9uNSNWRIyI1YUd25/LObLsw7/04LfA==');
-define('AUTH_SALT',        'UG0t0UbD+eOFqrO6+SO6+wxkg6uhP1sF6WeKL5+oeCvq/g8p0Fu29hmCT0n+ZIJP9EcsXRbRfTkhicHiyq6apQ==');
-define('SECURE_AUTH_SALT', 'iBaF9vQbZ0xkvDpL95FJQCCEYR4Mif53FPXGEfD/3lnFITSM6CDVYjQwwp8qupZMGjV56HN22Lq2t/vKctRp0A==');
-define('LOGGED_IN_SALT',   'xCeuzCaOVsWrIvIl9zqLqAGD5tjMjTrEYkuqzQoQOvInlWU/a+fTKD/k18UXAUHQ3X6Dqq3+GCbB6G6INr6Feg==');
-define('NONCE_SALT',       'eXVi/9uhmPlYOYZXpL3uL0I5Og+SxMfgvFCsGyOTEzz4H+c24+QEHDETTamam8EDNNpa6uyiWxbHVrwZuuaiLA==');
+define('AUTH_KEY',         '5PGobiGkkPGwwrXXaWYLYSbhj2G+ZTcyfOABPVogki8RSMI9e8E1xnnk41JjI/o6VkTAG/IcVU7rWufyqvijzA==');
+define('SECURE_AUTH_KEY',  'JOeTZgC66/JGK3mDb72r2h9p9JQ+onUHutiCYie3pW/hxWnYmBaEspuN40UAa+SU7zevKcezpwbZlCcSQ6+Fhg==');
+define('LOGGED_IN_KEY',    'RptcLW/VUhHwJ4XUtjPtDyslk8UdH8HWyQrxSbByj/hkKmncyPyf+HTju9aCFxPIP9dnvKsguqrq9guEBpodmQ==');
+define('NONCE_KEY',        '1qdIn9jaCswXHfDG+aq2u2De6Xl+TkmYV+SCYUIgL/A/KUZ4WNtoeR2DMGgpCutRHU2sl/svDVZWd1HgFhuJJw==');
+define('AUTH_SALT',        'D8YJGg+Clxhy4p33NBqofzCgu+JDROcdGX7FXhzr4RRREQaN7bPdRsGKg2j5UcYZAAhr/qUGaut/NunUgxtySw==');
+define('SECURE_AUTH_SALT', 'yaCYZxV1Hu62K+necSMUMrvA6IvuFMGS8sKIXHzmfjENXwj02c+Z6idSe+xWg7DAzT85MgETGcHWC7v/SkY5LQ==');
+define('LOGGED_IN_SALT',   '8Eh4rnxnlSVLeiaHYDCnwMr1w7I9HV2rThT7dp+tXekxRYdTTkKSUFLZem/raXXt1DYfsU71BX3vt+02bwh5YQ==');
+define('NONCE_SALT',       'FLr92OwZOl/BV4nuWehRMgxWC7pMJelKiVaDaPMVaDPGnCHfwPBE10jb26MRjVKEQaipQybnhDWTA//xxfN/KQ==');
+define('WP_DEBUG',false);
 
 /**
  * WordPress Database Table prefix.

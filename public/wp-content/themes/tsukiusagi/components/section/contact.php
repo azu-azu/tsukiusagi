@@ -7,8 +7,8 @@
 
   <div class="p-sec-contact__container">
     <div class="p-sec-contact__inner">
-      <?php echo do_shortcode( '[contact-form-7 id="18" title="コンタクトフォーム 1"]' ); ?>
-      <!-- <?php echo do_shortcode( '[contact-form-7 id="14" title="Contact form 1"]' ); ?> -->
+      <!-- <?php echo do_shortcode( '[contact-form-7 id="18" title="コンタクトフォーム 1"]' ); ?> -->
+      <?php echo do_shortcode( '[contact-form-7 id="14" title="Contact form 1"]' ); ?>
       <div class="c-ball c-up-down-anim" style="--i:0;"></div>
       <div class="c-ball c-up-down-anim" style="--i:1;"></div>
       <div class="c-ball c-up-down-anim" style="--i:2;"></div>

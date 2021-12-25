@@ -1,4 +1,5 @@
 <?php get_header();?>
+<?php get_template_part('components/header/front-header'); ?>
 <?php get_template_part('components/parts/loading-panel');?>
 <?php get_template_part('components/parts/train');?>
 <?php get_template_part('components/parts/floating-stars');?>
