@@ -45,10 +45,9 @@
         <li class="swiper-slide">
           <img class="slider-image" src="<?php echo do_shortcode('[uri]'); ?>/img/profile/4-s.png" alt="うさぎの背景画像">
           <article class="swiper-slide__content right">
-            <h3>VBA</h3>
+            <h3>ExcelVBA</h3>
             <p>
               ・自動化ツール作成<br>
-              ・ヒアリング、提案<br>
               ・機能設計
             </p>
           </article>

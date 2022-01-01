@@ -18,7 +18,7 @@
       </svg>
       <div class="c-wave--color"></div>
 
-      <small class="c-copyright">&copy; 2021 TsukiUsagi.biz</small>
+      <p data-splitting class="c-copyright">&copy;2021 TsukiUsagi.biz</p>
     </footer>
     <?php wp_footer();?>
   </body>

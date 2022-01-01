@@ -54,7 +54,10 @@
 	}
 
 	.c-copyright {
-		bottom: 10%;
+		bottom: 5%;
 		z-index: 30;
+		@include m.breakpoint( moon-mini ) {
+			bottom: 10%;
+		}
 	}
 }

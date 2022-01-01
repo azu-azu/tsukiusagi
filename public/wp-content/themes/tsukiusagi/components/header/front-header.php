@@ -1,11 +1,6 @@
 <header class="l-header" id="js-l-header">
-  <input class="c-ham-trigger" id="ham-trigger" type="checkbox">
-  <label onclick="" class="c-hamburger sp-only" for="ham-trigger">
-    <span class="line-top"></span>
-    <span class="line-middle"></span>
-    <span class="line-bottom"></span>
-  </label>
-  <!-- <label class="c-overlay sp-only" for="ham-trigger"></label> -->
+  <?php get_template_part('components/common/hamburger');?>
+
   <section class="p-header p-header--top" id="js-p-header">
     <h1 class="c-header-ttl"><?php bloginfo('name'); ?></h1>
     <nav class="p-gmenu">

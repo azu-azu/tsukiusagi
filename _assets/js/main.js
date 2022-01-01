@@ -9,14 +9,13 @@
 
 // import './lib/fastclick.js';
 // import './common/myFastClick.js';
-import './common/myTrain.js';
-import './common/myHeader.js';
 import './common/myHamburger.js';
+import './common/myHeader.js';
+import './common/myTrain.js';
 import './lib/particles.min.js';
 import './common/myMilkyWay.js';
 import './common/mySwiper.js';
 import './common/myScrollShow.js';
-import './common/data-splitting.js';
 import './common/myFallingBox.js';
 
 

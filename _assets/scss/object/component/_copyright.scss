@@ -1,6 +1,34 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
 .c-copyright {
   display: block;
   width: 100%;
   text-align: center;
-  color: #111;
+  font-family: 'xmas', cursive;
+  font-size: 5vw;
+
+  @include m.breakpoint( moon-mini ) {
+    font-size: 2rem;
+  }
+
+  .char {
+    &:nth-child(odd) {
+      color: #035ee2;
+      background: -webkit-linear-gradient(transparent, transparent), 
+      url("../img/common/glitter/blue.gif") repeat;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    &:nth-child(even) {
+      color: gold;
+      background: -webkit-linear-gradient(transparent, transparent),
+      url("../img/common/glitter/gold.gif") repeat;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 }
